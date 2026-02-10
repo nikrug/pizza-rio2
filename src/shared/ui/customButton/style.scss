@@ -1,0 +1,36 @@
+@import "src/shared/styles";
+
+.customButton{
+    padding: 14px 34px;
+    display: flex;
+    background:#FF991F;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.customButton:hover{
+    background:#E17B00;
+}
+
+.customButton__reverse{
+    display: flex;
+    padding: 14px 34px;
+    border-radius: 10px;
+    color:#FF991F;
+    border:1px solid #FF991F;
+    background:#ffffff;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+   transition: background-color 0.3s ease;
+}
+
+.customButton__reverse:hover{
+    background:#E17B00;
+    color: white;
+    border:1ps solid #E17B00;
+}

@@ -1,0 +1,151 @@
+@import "src/shared/styles";
+.menu__option{
+  width: 100%;
+  padding:24px;
+}
+
+.option-none{
+    display: none;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.options-info{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 16px;
+  
+}
+
+.options-info-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 27px;
+  background-color: #efefef;
+  padding: 4px;
+  height: 40px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.option-button {
+  width: 100%;
+  border: none;
+  background-color: #efefef;
+  color: #9b9b9b;
+  transition: background-color 0.3s;
+  border-radius: 8px;
+    font-size: 16px;
+}
+
+.option-button.active {
+  background-color: #ffffff; /* Цвет для активной кнопки */
+  color: rgb(0, 0, 0); /* Цвет текста для активной кнопки */
+}
+
+.menu__item-button{
+    padding: 16px 40px;
+    gap:12px;
+    border-radius:10px;
+    background-color:#FF991F;
+    color:white;
+    cursor: pointer;
+}
+
+.menu__item-button:hover{
+    background-color:#E17B00;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__button-block{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.menu__price{
+    font-size:24px;
+    font-weight: 700;
+}
+
+
+.basket-button {
+  padding: 12px 36px;
+  background-color: #FF991F;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+   transition: background 0.2s ease;
+}
+
+.basket-button:hover {
+  background-color: #E17B00;
+}
+
+.counter{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.count-button {
+  height:40px;
+  width: 40px;
+  background-color: #FF991F;
+  border-radius: 8px;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+   transition: background 0.2s ease;
+}
+
+.count-button:hover {
+  background-color: #E17B00;
+  
+}
+
+.count-text {
+  font-size: 24px;
+  color: black; /* Цвет по умолчанию */
+  text-align: center;
+  margin: AUTO 0 AUTO;
+  min-width: 20px;
+}
+.count-text-button {
+  font-size: 16px;
+  color: black; /* Цвет по умолчанию */
+  text-align: center;
+  margin: AUTO 1.5rem AUTO;
+  min-width: 20px;
+}
+.active-text {
+  color: #FF991F; /* Укажите нужный цвет для count > 0 */
+}
+
+
+
+
+.buttons-active {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  padding: .1rem;
+  height: 48px;
+  width: 152px;
+  border:2px solid #FF991F;
+
+}

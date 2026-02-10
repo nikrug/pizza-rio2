@@ -1,0 +1,87 @@
+@import "src/shared/styles";
+.textarea__container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 14px;
+    padding: .3rem;
+}
+
+.input-label{
+    color:black;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.input-label-small{
+    color:black;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: .6rem;
+}
+
+.input-text{
+    padding: 13px 16px;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid #d8d8d8;
+    transition:border  0.3s ease;
+}
+
+.input-subtext{
+    color:#9B9B9B ;
+    font-size: 12px;
+    text-align: end;
+}
+
+.input__show-img{
+  width: auto;
+  height: auto;
+}
+
+.input-text:active {
+    border: 1px solid rgb(105, 105, 105);
+}
+
+.input-text:focus {
+    border: 1px solid green;
+}
+
+.input-text::placeholder {
+    transition: color 0.3s ease; /* Плавный переход для цвета placeholder */
+}
+
+.input-text:focus::placeholder {
+    color: rgba(255, 255, 255, 0); /* Цвет placeholder при фокусе */
+}
+
+.hide-button{
+  display:none;
+
+}
+
+.show-button {
+    display: flex;
+    position: absolute;              /* Абсолютное позиционирование для кнопки */
+    right: 10px;                    /* Отступ от правого края */
+    top: 50%;                       /* Центрирование по вертикали */
+    transform: translateY(-50%);    /* Компенсация вертикального центрирования */
+    background: none;               /* Убираем фон */
+    border: none;                   /* Убираем рамки */
+    cursor: pointer;                /* Указываем, что это кнопка */
+    padding: 0;   
+    width: 40px; /* Установите фиксированную ширину */
+    height: 40px; /* Установите фиксированную высоту */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

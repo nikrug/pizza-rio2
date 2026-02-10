@@ -1,0 +1,125 @@
+@import "src/shared/styles";
+
+.index-page {
+  h1 {
+    @extend %main;
+  }
+}
+
+.stock-list{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap:20px;
+    padding:10px;
+    justify-items: center;
+    background-color:white;
+    border-radius: 10px;
+
+}
+
+
+.stock{
+  background-image: url("/images/menu-item/pattern.png");
+  background-color: #198f30;
+  padding:50px 0;
+  min-height: 100vh;
+}
+
+.stock__page{
+    max-width: 1280px;
+    margin:2rem auto;
+    gap:3rem;
+}
+
+.stock__item-label{
+    display:flex;
+    flex-direction:row;
+    padding:5px;
+    background-color:#FBE7CE;
+    color:#FF991F;
+    border-radius:10px;
+}
+
+.stock__item-label-green{
+    display:flex;
+    flex-direction:row;
+    padding:5px;
+    background-color:#CDE5D2;
+    color:#009B3D;
+    border-radius:10px;
+}
+
+.stock__label-block{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: left;
+      margin: 2rem 0.5rem 2rem 0.5rem;
+}
+
+.stock__label{
+    font-size:48px;
+    color:white;
+
+}
+
+.stock__sublabel{
+    font-size:18px;
+    color:white;
+
+}
+
+  @media(min-width:#{$br-tablet}px){
+    .stock{
+    background-image: url("/images/menu-item/pattern.png");
+    background-color: #198f30;
+    padding:50px 0;
+    }
+
+    .stock-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+    padding:10px;
+    background-color:white;
+    border-radius: 10px;
+}
+.stock__page{
+    max-width: 1300px;
+    margin: auto;
+
+}
+.stock__label-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+
+  }
+  @media(min-width:#{$br-desktop}px){
+    .stock-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:40px;
+    margin: auto;
+    max-width: 1280px;
+    padding: 40px;
+}
+    .stock{
+    background-image: url("/images/menu-item/pattern.png");
+    background-color: #198f30;
+      
+    }
+    .stock__label-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+.stock__page{
+    max-width: 1300px;
+    margin: auto;
+}
+  }
+

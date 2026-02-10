@@ -1,0 +1,257 @@
+@import "@shared/styles";
+
+.footer {
+    padding: 1px;
+  
+    background-color: #198F30;
+    
+    &__container {
+      display: grid;
+      grid-template-rows: 1;
+      gap: 0;
+  
+    }
+  
+    &__copy {
+      text-align: right;
+    }
+  
+    &__body {
+      display: flex;
+      flex-direction: column;
+      
+    }
+  }
+  
+  .footer__logo-top{
+    display: flex;
+    margin: 0;
+  }
+  
+  /* Это правило применится ко всем блокам */
+  .footer__column {
+    grid-column: span 1; /* Каждый блок занимает одну ячейку */
+    padding-left: 1rem;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: left;
+    justify-items: left;
+    gap: 1rem;
+  }
+
+  .footer__text{
+    @include font-styles('Nekst',500, .875rem, 1.0625rem, white);
+  }
+
+
+
+  
+  .footer__img-block{
+    display: flex;
+    gap: 1.6rem;
+    padding: 1rem;
+  
+    border-bottom: none;
+  }
+  
+  .footer__img-box{
+    display: flex;
+    flex-direction: row;
+  
+    align-items: center;
+    justify-content: center; 
+    padding: 3.5rem 0 0;
+    
+    background-color: var(--footer-bk);
+  
+    border:3px solid var(--footer-bk);
+    border-bottom: 1px solid #f1dbb1;
+  }
+
+  .footer__q-btn{
+    padding: 1rem 0;
+ 
+  }
+
+  .footer__number-text{
+    color: white;
+    font-size: 16px;
+    transition: color 0.2s ease;
+  }
+
+  .footer__number-text:hover{
+    color: #FF991F;
+    font-size: 16px;
+  }
+
+  .footer__number{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    gap:1rem;
+    padding: 2.3rem;
+  }
+  .footer__logo-top{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .footer__vk-link {
+    cursor: pointer;
+    width: 20px;
+    height: 13px;
+    position: relative; /* Для позиционирования внутренних элементов */
+  }
+
+  .icon_normal,
+  .icon_hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: contain; /* Чтобы изображение scale */
+      background-repeat: no-repeat; /* Избегает повторения фона */
+      transition: opacity 0.2s ease; /* Плавный переход для opacity */
+  }
+
+  .icon_normal {
+      background-image: url("/images/footer/VK.svg");
+      opacity: 1; /* По умолчанию показываем первую иконку */
+  }
+
+  .icon_hover {
+      background-image: url("/images/footer/VK-hover.svg");
+      opacity: 0; /* Изначально скрываем вторую иконку */
+  }
+
+  /* При наведении изменяем opacity */
+  .footer__vk-link:hover .icon_normal {
+      opacity: 0; /* Скрываем первую иконку */
+  }
+
+  .footer__vk-link:hover .icon_hover {
+      opacity: 1; /* Показываем вторую иконку */
+  }
+  .footer__img-box-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0.3rem 5rem 1rem;
+  
+    background-color: var(--footer-bk);
+    border:3px solid var(--footer-bk);
+  
+  
+    @include font-styles('Nekst',400, .875rem, 1.0625rem, white);
+  }
+  
+
+  @media(min-width:768px) {
+    .footer__q-btn{
+      padding:0;
+ 
+    }
+    .footer__body {
+      flex-direction: row;
+    }
+    .footer__column {
+      grid-column: span 1; /* Каждый блок занимает одну ячейку */
+      padding-left: 1rem;
+      font-size: 16px;
+      padding: 3rem .7rem;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      justify-content: center;
+      gap: 0;
+    }
+    .footer__logo-top{
+        display: flex;
+        gap: 0;
+        flex-direction: row;
+        margin: auto;
+    }
+  
+    .footer__img-block{
+      border-bottom: 1px solid #f1dbb1;
+    }
+  
+    .footer__img-box{
+      width: 100%;
+  
+      border-bottom: none;
+    }
+    .footer__number{
+      padding: 3rem 0;
+      align-items: end;
+      text-align: end;
+
+    }
+  } 
+      
+  @media(min-width:1224px){
+    .footer__number{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: right;
+      justify-content: end;
+      gap:1rem;
+      padding: 2.3rem 0;
+    }
+    .footer__body {
+      flex-direction: column;
+      margin-left: 0;
+      white-space: normal;
+    }
+  
+    /* Убираем правило для размещения дополнительных блоков в первую колонну */
+    .footer__column:nth-child(n+3) {
+      grid-column: span 1; /* Размещаем все блоки так же, как и первые два */
+    }
+  
+    .footer__container{
+      max-width: 1280px;
+      margin: auto;
+    }
+  
+    .footer__logo-top{
+        display: flex;
+        gap: 17rem;
+        max-width: 1280px;
+        margin: auto;
+    }
+  
+    .footer__img-box{
+      gap: 2.8rem;
+  
+      padding: 1rem 4.4rem;
+    }
+  
+    .footer__img-block{
+      gap: 2.8rem;
+      
+      padding: 2.2rem 4rem 1rem;
+    }
+  .footer__column {
+    grid-column: span 1; /* Каждый блок занимает одну ячейку */
+    @include font-styles('Nekst',400, 1rem, 1.0625rem, white);
+        row-gap: 3rem;
+        padding: 2.5rem 0;
+        gap: 0rem;
+        align-content: baseline;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+  }
+  
+  .footer__img-box-text{
+    @include font-styles('Nekst',400, 1.125rem, 1.375rem, white);
+    padding: 0 0.3rem 5rem 1rem;
+  }
+  
+  }

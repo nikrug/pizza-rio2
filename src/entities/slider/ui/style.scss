@@ -1,0 +1,56 @@
+@import "src/shared/styles";
+
+     // text
+    .experiens__customer-card-text{
+        @include font-style(500, .875rem, 1.5rem, $description-dark);
+        width: 265px;
+    }
+    
+    .experiens__customer-card-title-text{
+        @include font-style(600, 1.125rem, 1.875rem, $dark-blue);
+    }
+    
+    .experiens__customer-card-subtitle-text{
+        @include font-style(500, .875rem, 1.5rem, $description-light);
+    }
+    
+    .experiens__text-box{
+        display: grid;
+        gap: 1px;
+    }
+    
+    .experiens__img{
+    
+
+    }
+    .experiens__customer{
+        justify-content: center;
+        
+        padding: 1rem ;
+
+        text-align: center;
+
+        border: 1px solid $title-light;
+        border-radius: .5rem;
+
+        gap: 10px;
+
+       }
+    
+    @media(min-width:#{$br-tablet}px) {
+        .experiens__title-text{
+            @include font-style(600, 1.5rem, 2.375rem, $dark-blue );
+       }
+
+
+    }
+    
+    @media(min-width:#{$br-desktop}px){
+        .show-experiens-desctop{
+            display: block;
+        }
+
+        
+      }
+
+          

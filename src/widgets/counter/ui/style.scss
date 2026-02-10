@@ -1,0 +1,68 @@
+@import "src/shared/styles";
+
+.basket-button {
+  padding: 12px 36px;
+  background-color: #FF991F;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+   transition: background 0.2s ease;
+}
+
+.basket-button:hover {
+  background-color: #E17B00;
+}
+
+.counter{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.count-button {
+  height:40px;
+  width: 40px;
+  background-color: #FF991F;
+  border-radius: 8px;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+   transition: background 0.2s ease;
+}
+
+.count-button:hover {
+  background-color: #E17B00;
+  
+}
+
+.count-text {
+  font-size: 24px;
+  color: black; /* Цвет по умолчанию */
+  text-align: center;
+  margin: AUTO 0 AUTO;
+  min-width: 20px;
+}
+.count-text-button {
+  font-size: 16px;
+  color: black; /* Цвет по умолчанию */
+  text-align: center;
+  margin: AUTO 1.5rem AUTO;
+  min-width: 20px;
+}
+.active-text {
+  color: #FF991F; /* Укажите нужный цвет для count > 0 */
+}
+
+
+
+
+.buttons-active {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  padding: .1rem;
+  height: 48px;
+  width: 152px;
+  border:2px solid #FF991F;
+
+}

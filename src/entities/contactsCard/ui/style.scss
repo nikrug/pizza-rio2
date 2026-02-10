@@ -1,0 +1,263 @@
+@import "src/shared/styles";
+
+.contacts__card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    background-color: white;
+    max-width: 1280px;
+
+    overflow: hidden;
+}
+
+.contacts__card-img-block{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    gap:1rem;
+    margin-left: 0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.contacts__img{
+    border-radius: 10px;
+}
+
+.contacts__card-info{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.contacts__number-block{
+    display: flex;
+    flex-direction: row;
+    gap:3rem;
+}
+.contacts__work-date{
+    display: flex;
+    flex-direction: row;
+    gap:5rem;
+
+}
+
+.contacts__work-time-block{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.contacts__work-date-out{
+    display: flex;
+    flex-direction: row;
+    gap:2.66rem;
+
+}
+
+.contacs__work{
+    display: flex;
+    flex-direction: row;
+    gap:5rem;
+}
+.contacts__map{
+    width: 980px;
+    height: 468px;
+    overflow: hidden;
+}
+
+.contacts__card-text{
+    padding: 20px 0 0 40px;
+    gap:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__yellow-text{
+    font-size: 14px;
+    color:#FF991F;
+    border-bottom: 1px solid #FF991F;
+}
+
+.contacts__adress-text{
+    font-size: 28px;
+    color:black;
+    max-width: 380px;
+}
+
+.contacts__number-text{
+    font-size: 20px;
+    color:black;
+}
+
+.contacts__label-text{
+    font-size: 20px;
+    color:black;
+}
+.contacts__work-time{
+    padding:  0;
+}
+@media(min-width:#{$br-tablet}px) {
+.contacts__card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    background-color: white;
+    max-width: 1280px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.contacts__card-info{
+    display:flex;
+    flex-direction: row;
+    
+}
+
+.contacts__card-img-block{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap:1rem;
+    margin-left: 0;
+    overflow-y: none;
+}
+.contacts__card-img-block img{
+
+    width: 224px;
+    height:169px;
+
+}
+.contacs__work{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.contacts__work-date{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.contacts__work-date-out{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.contacts__work-time{
+    padding: 2rem 0;
+}
+}
+
+@media(min-width:#{$br-desktop}px) {
+    .contacts__card-img-block img{
+
+    width: 160px;
+    height:120px;
+
+}
+.contacts__work-time{
+    padding:  0;
+}
+.contacts__card{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: white;
+    width: 1280px;
+    overflow: hidden;
+}
+
+.contacts__card-img-block{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap:1rem;
+    margin-left: auto;
+
+}
+
+.contacts__img{
+    border-radius: 10px;
+}
+
+.contacts__card-info{
+    display:flex;
+    flex-direction: row;
+    
+}
+
+.contacts__number-block{
+    display: flex;
+    flex-direction: row;
+    gap:3rem;
+}
+.contacts__work-date{
+    display: flex;
+    flex-direction: row;
+    gap:5rem;
+
+}
+
+.contacts__work-time-block{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.contacts__work-date-out{
+    display: flex;
+    flex-direction: row;
+    gap:2.66rem;
+
+}
+
+.contacs__work{
+    display: flex;
+    flex-direction: row;
+    gap:5rem;
+}
+.contacs__work{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contacts__map{
+    width: 680px;
+    height: 468px;
+    overflow: hidden;
+}
+
+.contacts__card-text{
+    padding: 20px 0 0 40px;
+    gap:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__yellow-text{
+    font-size: 14px;
+    color:#FF991F;
+    border-bottom: 1px solid #FF991F;
+}
+
+.contacts__adress-text{
+    font-size: 28px;
+    color:black;
+    max-width: 380px;
+}
+
+.contacts__number-text{
+    font-size: 20px;
+    color:black;
+}
+
+.contacts__label-text{
+    font-size: 20px;
+    color:black;
+}
+}

@@ -1,0 +1,185 @@
+@import "src/shared/styles";
+.address-block {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+.address-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 5px;
+    margin:0 0 2rem 0;
+}
+.address-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 130px;
+  background: #FBE7CE;    
+  border-radius: 10px;
+  padding: 10px;
+}
+.empty-address-item {
+  color:#D8D8D8;
+  font-size: 16px;
+  border: 1px solid #D8D8D8; /* Другая граница */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  height: 130px;
+  justify-content: center;
+  align-items: center;
+}
+.delete-button {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  background: none;
+  background-image: url("/images/adres/delete.svg");
+}
+
+.popup-delete {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  width: 334px;
+  gap: 1rem;
+  height: 126px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  right: 0;
+  font-size: 16px;
+  top: 40px;
+
+}
+
+
+.popup-delete-button-block {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.popup-delete-button1,
+.popup-delete-button2 {
+  width: 134px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.popup-delete-button1 {
+  color: #FF991F;
+  background-color: white;
+}
+
+.popup-delete-button2 {
+  background-color: white;
+  border: 1px solid #FF991F;
+  color: #FF991F;
+}
+  .icon_normal-popup,
+  .icon_hover-popup {
+    position: absolute;
+    top:12px;
+    right: 15px;
+    width: 24px;
+      height: 24px;
+      background-size: contain; /* Чтобы изображение scale */
+      background-repeat: no-repeat; /* Избегает повторения фона */
+      transition: opacity 0.3s ease; /* Плавный переход для opacity */
+  }
+
+  .icon_normal-popup {
+      background-image: url("/images/office/Plus.svg");
+      opacity: 1; /* По умолчанию показываем первую иконку */
+  }
+
+  .icon_hover-popup {
+      background-image: url("/images/office/Plus-hover.svg");
+      opacity: 0; /* Изначально скрываем вторую иконку */
+  }
+
+  /* При наведении изменяем opacity */
+  .add-button:hover .icon_normal-popup {
+      opacity: 0; /* Скрываем первую иконку */
+  }
+
+  .add-button:hover .icon_hover-popup {
+      opacity: 1; /* Показываем вторую иконку */
+  }
+.address-title-text{
+    font-size: 28px;
+}
+.address-widget{
+    width: 100%;
+}
+.address-title{
+    color: #FF991F;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.address-info{
+    display: flex;
+    flex-direction: row;
+}
+.add-button{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    border:1px solid #FF991F;
+    width: 219px;
+    height: 48px;
+    font-size: 16px;
+    color: #FF991F;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 50px 14px 35px;
+    gap: .5rem;
+}
+.add-button:hover{
+    background-color: #E17B00;
+    border:1px solid #FF991F;
+    color: white;
+    transition:background-color  0.3s ease;
+}
+@media(min-width:#{$br-tablet}px) {
+.address-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.address-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 5px;
+}
+}
+
+@media(min-width:#{$br-desktop}px) {
+ .address-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.address-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+}

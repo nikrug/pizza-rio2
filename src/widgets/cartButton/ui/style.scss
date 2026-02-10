@@ -1,0 +1,51 @@
+@import "@shared/styles";
+
+.button-text{
+  font-size: 18px;
+}
+.scrollDownmenu__cart-button{
+  position: fixed;
+  justify-content: center;
+  gap: 0.5rem;
+  display: inline-flex;
+  bottom:10px;
+  right:10px;
+  left: 10px;
+  color:white;
+  padding: 1px;
+  background-color: #FF991F;
+  border-radius: 5px;
+}
+
+.scrollDownmenu__cart-button:hover{
+  background-color: #E17B00;
+}
+
+
+  @media (min-width: 768px) {
+    .scrollDownmenu__cart-button{
+      position: fixed;
+      bottom:10px;
+      right:10px;
+      left: auto;
+      width: 200px;
+    }
+  }
+
+  @media (min-width: 1244px) {
+
+    .scrollDownmenu__cart-button{
+      position: static;
+      color:white;
+      padding: 10px;
+      width: auto;
+      background-color: #FF991F;
+      border-radius: 10px;
+      width: 140px;
+      height: 40;
+      gap:1rem;
+
+    }
+   
+
+  }

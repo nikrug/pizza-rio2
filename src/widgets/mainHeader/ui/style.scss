@@ -1,0 +1,144 @@
+@import "@shared/styles";
+.header{
+    background-color:  #ffff;
+
+    padding: 1.1rem;
+}
+
+.header__nav-text{
+    @include font-styles('Nekst',500, 16px,none, #333333);
+    white-space: nowrap;
+}
+
+.header__nav-text:hover{
+    @include font-styles('Nekst',500, none,none, #009B3D);
+    border-bottom:1px solid #009B3D;
+}
+.q-btn{
+  font-size:12px;
+}
+.display-none{
+  display: none;
+}
+  .visible{
+    display: none;
+  }
+  .visible-line{
+    display: none;
+  }
+.visible-line-tablet{
+  display: none;
+}
+  .header__orange-text{
+    color:#FF991F;
+    font-size:18px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 700;
+    transition: color 0.2s ease;
+  }
+
+  .header__orange-text:hover{
+    color:#E17B00;
+
+  }
+
+  .header__text{
+    color:black;
+    font-size:12px;
+  }
+
+  .header__info-text-block{
+    text-align: end;
+  }
+  @media (min-width: 768px) {
+    .visible-line-tablet{
+    display: flex;
+    }
+
+  }
+  @media (min-width: 1244px) {
+    .visible{
+
+    display: inline;
+
+  }
+  .visible-line-tablet{
+  display: flex;
+}
+    .visible-line{
+    display: flex;
+  }
+
+  }
+.simple-btn {
+    position: relative;
+  
+    display: block;
+    width: 78px;
+    height: 44px;
+    margin: 0;
+    
+    padding: 0;
+  
+    --bg:  #0432DF ;
+    background: #0432DF;
+    line-height: 120%;
+    text-align: center;
+
+    border-radius: 8px;
+  
+    @include font-styles('Nekst',700, 16px, 24px, white);
+  
+    transition: background-color .15s ease;
+  
+    @include hover {
+      border-color:var(--blue);
+  
+      @include font-styles('Nekst',700, 16px, 24px, var(--blue));
+  
+    }
+  
+    @include mobile-active {
+      --bg: var(--blue);
+    }
+  }
+ 
+
+
+@media(min-width:768px) {
+    .header__image{
+        display: flex;
+    }
+
+    } 
+      
+@media(min-width:1244px){
+    .simple-btn{
+        margin: 0 5.2rem 0 2rem;
+    }
+    
+    .header__title-text-block{
+        max-width: 850px;
+    }
+    
+    .header{
+        gap: 1rem;
+        background-color: white;
+        max-width: 1300px;
+        padding: 2rem 1rem 2rem 1rem;
+        margin: auto;
+    }
+    .image-container {
+        width: 950px; /* Ширина контейнера */
+        height: 600px; /* Высота контейнера */
+        
+        margin-top: 3rem;
+       
+    }
+
+    .header__title-text-gray{
+        margin-bottom: 0;
+    }
+    
+}

@@ -1,0 +1,73 @@
+@import "src/shared/styles";
+
+.contacts__label{
+    color:white;
+    font-size: 48px;
+    max-width: 100px;
+}
+.ymaps{
+    height: 265px;
+    width: 100%;
+}
+.contacts{
+    background-image: url("/images/menu-item/pattern.png");
+    background-color: #198f30;
+    padding:40px 0;
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+.contacts__list{
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 2rem;
+}
+
+
+
+  @media(min-width:#{$br-tablet}px){
+.ymaps{
+    height: 100%;
+    width: 500px;
+}
+.contacts{
+
+    padding:40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+
+.contacts__list{
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 2rem;
+}
+
+  }
+  @media(min-width:#{$br-desktop}px){
+    .ymaps{
+    height: 100%;
+    width: 620px;
+}
+    .contacts__list{
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto ;
+    gap: 2rem;
+}
+.contacts{
+    background-image: url("/images/menu-item/pattern.png");
+    background-color: #198f30;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+  }

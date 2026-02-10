@@ -1,0 +1,246 @@
+@import "src/shared/styles";
+
+.index-page {
+  h1 {
+    @extend %main;
+  }
+}
+
+.office__list{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 100%;
+    padding:0;
+    justify-items: center;
+    border-radius: 0;
+}
+
+.office__list-label{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.office__list-form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap:20px;
+    padding:40px;
+    justify-items: left;
+    text-align: left;
+    background-color:white;
+    border-radius: 0;
+
+}
+.imggg {
+    height: 10px;
+    width: 10px;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+.office__list-addres{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    justify-content: start;
+    padding: 2rem;
+    text-align: left;
+    border-radius: 0;
+    background-color:white;
+}
+
+.office__new-password-label{
+    font-size: 16px;
+    color: #FF991F;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+}
+
+.office__new-password{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ 
+}
+
+.office{
+  background-image: url("/images/menu-item/pattern.png");
+  background-color: #198f30;
+  padding:50px 0;
+  min-height: 100vh;
+}
+
+.office__page{
+    max-width: 1280px;
+    margin:2rem auto;
+    gap:3rem;
+}
+
+.office__item-label{
+    display:flex;
+    flex-direction:row;
+    padding:5px;
+    background-color:#FBE7CE;
+    color:#FF991F;
+    border-radius:10px;
+}
+
+.office__item-label-green{
+    display:flex;
+    flex-direction:row;
+    padding:5px;
+    background-color:#CDE5D2;
+    color:#009B3D;
+    border-radius:10px;
+}
+
+.office__label-block{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: left;
+      margin-bottom:1rem;
+      margin-top: 2rem;
+      margin-left: .4rem;
+}
+
+.office__label{
+    font-size:48px;
+    color:white;
+
+}
+
+.office__sublabel{
+    font-size:18px;
+    color:white;
+
+}
+
+.office__buttonn {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-items: left;
+    text-align: left;
+    margin: 1.5rem 0 0;
+}
+
+.error-message {
+    color: red; // Цвет текста ошибки
+    font-size: 12px; // Размер шрифта 
+}
+
+  @media(min-width:#{$br-tablet}px){
+    .office{
+    background-image: url("/images/menu-item/pattern.png");
+    background-color: #198f30;
+    padding:50px 0;
+    }
+    
+.office__list{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 100%;
+    padding:0;
+    justify-items: center;
+    border-radius: 0;
+}
+
+.office__page{
+    max-width: 1300px;
+    margin: auto;
+
+}
+
+.office__label-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.office__list-form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap:20px;
+    padding:40px;
+    justify-items: left;
+    text-align: left;
+    background-color:white;
+    border-radius: 0;
+
+}
+
+.office__list-addres{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    padding: 2rem;
+    text-align: left;
+    border-radius: 0;
+    background-color:white;
+
+}
+
+  }
+  @media(min-width:#{$br-desktop}px){
+.office__list{
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
+    gap:45px;
+    width: 100%;
+    padding:10px;
+    justify-items: center;
+    border-radius: 10px;
+}
+    .office{
+    background-image: url("/images/menu-item/pattern.png");
+    background-color: #198f30;
+      
+    }
+    .office__label-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+.office__page{
+    max-width: 1300px;
+    margin: auto;
+}
+.office__list-form{
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    gap:13px;
+    padding:40px;
+    justify-items: left;
+    text-align: left;
+    background-color:white;
+    border-radius: 10px;
+
+}
+
+.office__list-addres{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: start;
+    padding: 2rem;
+    text-align: left;
+    border-radius: 10px;
+    background-color:white;
+
+}
+  }
+

@@ -1,0 +1,428 @@
+@import "src/shared/styles";
+
+.menu__item {
+    width: 100%;
+    border-radius: 0;
+    display: flex;  /* Используйте flex для дочерних элементов */
+    align-items: center;  /* Вертикально центрируем */
+    justify-content: space-between;  /* Центрируем изображения */
+    background-color: white;
+    flex-direction: column;
+    border-bottom:1px solid #F0F0F0;
+    border-top:1px solid #F0F0F0;
+}
+    .menu__item-description-popup{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.menu__item-descriptions{
+  padding: 0;
+
+}
+.menu__item-img-popup{
+  width: 100px;
+}
+.menu-close-button {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%; /* Используйте 50% для круглой кнопки */
+    height: 48px;
+    width: 48px;
+    z-index: 1;
+    display: flex; /* Используйте flex для выравнивания */
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    top: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.icon_normal-close,
+.icon_hover-close {
+    position: absolute;
+    width: 24px;
+    height:24px;
+    top:12px;
+    left:12px;
+    background-size: contain; /* Масштабируем иконки */
+    background-repeat: no-repeat; /* Избегаем повторения фона */
+    transition: opacity 0.2s ease; /* Плавный переход для opacity */
+}
+
+   .icon_normal-close {
+    background-image: url("/images/menu-item/icon-Close.svg");
+    opacity: 1; /* По умолчанию показываем первую иконку */
+}
+
+.icon_hover-close {
+    background-image: url("/images/menu-item/icon-Close-hover.svg");
+    opacity: 0; /* Изначально скрываем вторую иконку */
+}
+
+.menu-close-button:hover {
+    background-color: #ffff;
+}
+
+/* При наведении изменяем opacity */
+.menu-close-button:hover .icon_normal-close {
+    opacity: 1; /* Скрываем первую иконку */
+}
+
+.menu-close-button:hover .icon_hover-close {
+    opacity: 0; /* Показываем вторую иконку */
+}
+
+.menu__item-img-container {
+    object-fit: cover;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    overflow: hidden; /* Позволяет скрыть выходящее за пределы контейнера */
+    border-radius: 10px;
+    position: relative; /* Применяется для более точного позиционирования */
+}
+
+.menu__item-img-container img.main-img { /* Основное изображение, которое будет увеличиваться */
+    display: block; /* Убирает пробелы под изображением */
+    transition: transform 0.3s ease; /* Плавное увеличение */
+}
+
+.menu__item-img-container:hover img.main-img {
+    transform: scale(1.1); /* Увеличение основного изображения при наведении */
+}
+
+
+.menu__item-description-container {
+    width: 100%;  /* Занимает всю ширину родителя */
+    padding: 24px 0px 0 20px;
+    object-fit: cover;
+    justify-content: space-between;
+    border-radius: .5rem; 
+    text-align: left;
+}
+
+.menu__item-img{
+    border-radius: 0px;
+
+    object-fit: cover;
+}
+    .menu__poup-item-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+.menu__spicy-img{
+
+}
+.menu__item-name{
+     @include font-style(400, 20px, 1.875rem, black );
+     display: flex;
+     gap:1rem;
+
+}
+
+.menu__item-name-popup{
+     @include font-style(400, 1.75rem, 1.875rem, black );
+     display: flex;
+     gap:1rem;color: black;
+    position: absolute;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* margin: 0 1rem 0 0; */
+    height: 80px;
+    align-items: anchor-center;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 1.875rem;
+    display: flex;
+
+}
+
+.menu__item-description{
+    @include font-style(400, 12px, 1.2rem, black );
+}
+.menu__item-img-container-popup {
+    object-fit: cover;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.menu__text-img{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.menu__option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  width: 100%;
+  padding:12px;
+}
+.menu-popup{
+  position: fixed;
+  display: flex;
+  flex-direction: column; /* Лучше использовать column для упорядочивания контента */
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 30; /* Поверх фона */
+  overflow: auto;
+}
+/* Контейнер для фона */
+.menu-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 53, 11, 0.5); 
+  z-index: 10000;
+}
+
+
+
+.menu__item-button{
+    padding:13px 40px;
+    gap:12px;
+    border-radius:10px;
+    background-color:#FF991F;
+    color:white;
+    cursor: pointer;
+}
+
+.menu__item-button:hover{
+    background-color:#E17B00;
+}
+
+.menu__button-block{
+    display:flex;
+    justify-content:space-between;
+}
+
+.menu__price{
+    font-size:24px;
+    font-weight: 700;
+}
+
+.img-container {
+  position: relative; /* Позволяет позиционировать вложенные элементы относительно этого контейнера */
+  display: inline-block; /* Чтобы элементы занимали минимально необходимое пространство */
+}
+
+
+.menu__over-img {
+  position: absolute; /* Позволяет наложить изображение поверх другого */
+  top: 20px; /* Положение сверху 0 */
+  left: 20px; /* Положение слева 0 */
+  pointer-events: none; /* Отключает взаимодействие с наложенным изображением, позволяет кликами проходить к нижнему */
+  z-index: 10;
+  transform: none;
+}
+@media(min-width:550px) {
+    .menu__item-description{
+    @include font-style(400, 1rem, 1.875rem, black );
+    }
+    .menu__item-name{
+    @include font-style(400, 1.75rem, 1.875rem, black );
+    }
+}
+@media(min-width:#{$br-tablet}px) {
+    .menu__item-description{
+    @include font-style(400, 1rem, 1.875rem, black );
+}
+.menu__item-description-container {
+    padding: 24px 24px 0 24px;
+}
+  .menu__text-img{
+  display: flex;
+  flex-direction: column;
+}
+  .menu__over-img {
+  position: absolute; /* Позволяет наложить изображение поверх другого */
+  top: 20px; /* Положение сверху 0 */
+  left: 20px; /* Положение слева 0 */
+  pointer-events: none; /* Отключает взаимодействие с наложенным изображением, позволяет кликами проходить к нижнему */
+}
+  .menu-popup{
+  position: fixed;
+  display: flex;
+  flex-direction: row-reverse; /* Лучше использовать column для упорядочивания контента */
+  height: 500px;
+  width: 720px;
+  margin: auto;
+  background-color: white;
+  z-index: 30; /* Поверх фона */
+  top: 50%; /* Центрировать по вертикали */
+  left: 50%; /* Центрировать по горизонтали */
+  transform: translate(-50%, -50%); /* Центрирует элемент по его середине */
+  border-radius:20px
+}
+}
+
+@media(min-width:#{$br-desktop}px) {
+        .menu__item-description{
+    @include font-style(400, 1rem, 1.875rem, black );
+}
+.menu__item-description-container {
+    padding: 24px 24px 0 24px;
+}
+  .menu__text-img{
+  display: flex;
+  flex-direction: column;
+}
+.menu__item-img-container-popup {
+    object-fit: cover;
+    cursor: pointer;
+    width: 140%;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+.menu-popup{
+  position: fixed;
+  display: flex;
+  flex-direction: row-reverse; /* Лучше использовать column для упорядочивания контента */
+  height: 500px;
+  width: 840px;
+  background-color: white;
+  z-index: 30; /* Поверх фона */
+  top: 50%; /* Центрировать по вертикали */
+  left: 50%; /* Центрировать по горизонтали */
+  transform: translate(-50%, -50%); /* Центрирует элемент по его середине */
+  border-radius:20px
+}
+}
+@media(min-width:#{$br-tablet}px) {
+    .categoryes__img-text{
+        @include font-style(600, 1.125rem, 1.875rem, $title-light );
+    }
+
+    .menu__item-img-container {
+
+    }
+    .menu__item-name-popup{
+     @include font-style(400, 1.75rem, 1.875rem, black );
+     display: flex;
+     position: relative;
+     gap:1rem;
+}
+.menu__item-name{
+     @include font-style(400, 1.75rem, 1.875rem, black );
+     display: flex;
+     gap:1rem;
+
+}
+
+    .menu__item-img{
+    border-radius: 20px;
+    width: 100%;
+    height: 272px;
+    object-fit: cover;
+}
+
+    .menu__item {
+    width: calc(50% - 20px);
+    border-bottom:0px solid #F0F0F0;
+    border-top:0px solid #F0F0F0;
+    }
+
+    .menu__item {
+        width: calc(50% - 26.6px);
+        border-radius: 10px;
+        display: flex;  /* Используйте flex для дочерних элементов */
+        align-items: center;  /* Вертикально центрируем */
+        justify-content: space-between;  /* Центрируем изображения */
+        background-color: white;
+        flex-direction: column;
+    }
+}
+
+@media(min-width:#{$br-desktop}px) {
+ 
+.icon_normal-close {
+    background-image: url("/images/menu-item/icon-Close.svg");
+    opacity: 1; /* По умолчанию показываем первую иконку */
+}
+
+.icon_hover-close {
+    background-image: url("/images/menu-item/icon-Close-hover.svg");
+    opacity: 0; /* Изначально скрываем вторую иконку */
+}
+
+.menu-close-button:hover {
+    background-color: #FF991F;
+}
+
+/* При наведении изменяем opacity */
+.menu-close-button:hover .icon_normal-close {
+    opacity: 0; /* Скрываем первую иконку */
+}
+
+.menu-close-button:hover .icon_hover-close {
+    opacity: 1; /* Показываем вторую иконку */
+}
+    .menu__item-img{
+        border-radius: 10px;
+        width: 100%;
+
+        object-fit: cover;
+    }
+    .menu__poup-item-img{
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+.menu__item-name{
+     @include font-style(400, 1.75rem, 1.875rem, black );
+     display: flex;
+     gap:.5rem;
+     margin: 0 0 1rem 0;
+
+}
+    .menu__item-name-popup{
+     @include font-style(400, 1.75rem, 1.875rem, black );
+     display: flex;
+     gap:1rem;
+}
+
+    .categoryes__img {
+        width: 98%;
+        height: 95%;
+        
+        border-radius: .5rem; 
+    }
+
+    .menu__item {
+        width: calc(33% - 26.6px);
+        border-radius: 10px;
+        display: flex;  /* Используйте flex для дочерних элементов */
+        align-items: center;  /* Вертикально центрируем */
+        justify-content: space-between;  /* Центрируем изображения */
+        background-color: white;
+        flex-direction: column;
+        border-bottom:0px solid #F0F0F0;
+        border-top:0px solid #F0F0F0;
+    }
+
+    .categoryes__img-text{
+        @include font-style(600, 1rem, 1.875rem, $title-light );
+        white-space: nowrap;
+    }
+
+}

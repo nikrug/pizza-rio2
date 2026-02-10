@@ -1,0 +1,42 @@
+@import "src/shared/styles";
+
+.input-checkbox__block {
+  display: flex;
+  flex-direction: row;
+
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.input-checkbox {
+  display: none; /* Скрываем стандартный чекбокс */
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border:  1px solid #D8D8D8;
+  border-radius: 4px;
+  background-repeat: no-repeat; /* Не повторяем изображение */
+  background-position: center; /* Центрируем изображение */
+}
+
+/* Изменяем стиль при отмеченном чекбоксе */
+.input-checkbox:checked + .custom-checkbox {
+  background-image: url("/images/headers/checkbox.svg"); /* Изображение для отмеченного состояния */
+}
+
+.input-checkbox__text {
+  color: black;
+}
+
+.input-checkbox__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-checkbox__sub-text {
+  color: gray;
+
+}

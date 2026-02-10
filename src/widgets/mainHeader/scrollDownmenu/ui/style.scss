@@ -1,0 +1,191 @@
+@import "@shared/styles";
+
+
+.scrollDownmenu__list{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: .5rem;
+    padding: 1rem;
+    z-index: 100;
+    overflow-y: scroll;
+    align-items: center;
+    width: 100%;
+}
+.dropdownl{
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+.dropdownl a{
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 7px 12px;
+  color: #000000;
+  
+}
+.cardbutton-none{
+  display: none;
+}
+/* Для скрытия полосы прокрутки в большинстве браузеров */
+.scrollDownmenu__list::-webkit-scrollbar {
+    display: none; /* Для Chrome, Safari и Opera */
+}
+.scrollDownmenu__list.active {
+  position: fixed;
+  top:0;
+  background-color: white;
+  color:rgb(0, 0, 0);
+  .scrollDownmenu__logo{
+  display:none;
+  }
+  .scrollDownmenu__list-link {
+  color:black;
+  }
+}
+
+  .scrollDownmenu__logo{
+  display:none;
+}
+
+.scrollDownmenu__list-link.active {
+  color:black;
+}
+.scrollDownmenu__list-link {
+  color:white;
+  white-space: nowrap;
+  padding: 7px 14px;
+  border-radius: 18px;
+  transition: background 0.2s ease;
+}
+
+.scrollDownmenu__list-link:hover{
+  background: rgba(240, 240, 240, 0.51);
+  transition: background 0.2s ease;
+
+  white-space: nowrap;
+}
+
+
+.scrollDownmenu__card-button{
+  position: fixed;
+  justify-content: center;
+  gap: 0.5rem;
+  display: inline-flex;
+  bottom:10px;
+  right:10px;
+  left: 10px;
+  color:white;
+  padding: 14px;
+  background-color: #FF991F;
+  border-radius: 5px;
+}
+
+.dropdownl{
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.dropdownl a{
+  background-color: #F0F0F0;
+  border-radius: 20px;
+  padding: 7px 12px;
+  
+}
+
+.cardbutton-none{
+  display: none;
+}
+
+
+  .visible{
+    display: none;
+  }
+  .visible-line{
+    display: none;
+  }
+
+  .header__orange-text{
+    color:#FF991F;
+    font-size:18px;
+  }
+
+  .header__text{
+    color:black;
+    font-size:12px;
+  }
+
+  .header__info-text-block{
+    text-align: end;
+  }
+  .scrollDownmenu__logo.active {
+    display: flex; // Или другой стиль, который должен применяться, когда элемент активен
+  }
+
+  .scrollDownmenu__logo {
+    display: none; // Также убедитесь, что изначально элемент отображается так, как вы ожидаете
+  }
+  @media (min-width: 768px) {
+    .scrollDownmenu__card-button{
+      position: fixed;
+      bottom:10px;
+      right:10px;
+      left: auto;
+      width: 200px;
+    }
+    .scrollDownmenu__list.active {
+    position: fixed;
+    top:0;
+    background-color: white;
+    color:rgb(0, 0, 0);
+    .scrollDownmenu__logo{
+    display:none;
+  }
+  }
+  }
+
+  @media (min-width: 1244px) {
+    .scrollDownmenu__list.active {
+    position: fixed;
+    top:0;
+    background-color: white;
+    color:rgb(0, 0, 0);
+    .scrollDownmenu__logo{
+    display:flex;
+  }
+}
+    
+    .scrollDownmenu__card-button{
+      position: static;
+      color:white;
+      padding: 10px;
+      width: auto;
+      background-color: #FF991F;
+      border-radius: 10px;
+      width: 140px;
+      gap:1rem;
+
+    }
+    .visible{
+
+    display: inline;
+
+  }
+    .visible-line{
+    display: flex;
+  }
+  .scrollDownmenu__list{
+    display: flex;
+    flex-direction: row;
+   
+    padding: 1rem;
+    overflow: auto;
+    position: absolute;
+    justify-content: center;
+  
+}
+
+  }

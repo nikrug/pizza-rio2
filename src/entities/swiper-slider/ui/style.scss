@@ -1,0 +1,121 @@
+ @import "src/shared/styles";
+ // SLYDER STYLE
+  .slider-styled .noUi-handle .noUi-touch-area {
+    border: 1px solid transparent;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    width: auto;
+    height: auto;
+}
+
+/* Show a border when hovering the area the handle responds to */
+.slider-styled .noUi-handle:hover .noUi-touch-area {
+    border: 1px dashed #7f7f7f;
+} 
+
+.slider-styled,
+.slider-styled .noUi-handle {
+    box-shadow: none;
+}
+
+/* Hide markers on slider handles */
+.slider-styled .noUi-handle::before,
+.slider-styled .noUi-handle::after {
+    display: none;
+}
+#slider-no-overlap .noUi-handle-lower {
+    right: 0;
+}
+#slider-no-overlap .noUi-handle-upper {
+    right: -34px;
+}
+   .slider {
+     height: 4px;
+     margin-top: 25px;
+     overflow: visible; 
+     border: none;
+
+     .noUi-target{
+      height: 4px;
+
+      border: 1px solid $title-light;
+      border-radius: 14px;
+     }
+
+    .slider .noUi-target{
+      width: 240px;
+      height: 4px ;
+    }
+
+   }
+
+   .slider .noUi-target{
+    width: 240px;
+    height: 4px ;
+   }
+   
+    .noUi-connect {
+     background: $deep-blue;
+   }
+
+   .slider .noUi-target {
+    height: 4px;
+
+    background: $pure-white;
+    border: 1px solid $title-light;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px $pure-white, 0 3px 6px -5px $title-light;
+    }
+
+   .noUi-base, .noUi-connects {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 4px;
+}
+   
+   .slider .noUi-horizontal .noUi-handle  {
+     top: -3px ;  /* Adjusted for better visibility */
+     right: -7px ;
+  
+     width: 8px ;
+     height: 8px ;
+  
+     background: $deep-blue;
+  
+     border: none;
+     border-radius: 9px;
+
+     box-shadow: none;
+   }
+   .noUi-origin {
+    height: 10%;
+    width: 100% !important;
+}
+
+   .slider-styled .noUi-horizontal .noUi-handle {
+    /* right: -17px; */
+    top: -3px;
+
+    width: 8px;
+    height: 8px;
+  }
+
+   .slider .noUi-tooltip {
+    @include font-style(400, .75rem, 1.1rem, $description-dark);
+  
+    left: 0;
+     z-index: 10;
+  
+     padding: 5px;
+  
+     white-space: nowrap; /* Prevent wrapping */
+  
+     background-color:$title-light;
+  
+     border: 0;
+   }
