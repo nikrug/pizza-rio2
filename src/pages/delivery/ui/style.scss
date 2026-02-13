@@ -42,7 +42,7 @@
     display: flex;
     flex-direction: column;
     gap:20px;
-    padding: 30px;
+    padding: 20px;
     background-color: white;
     border-radius: 0px;
 }
@@ -63,18 +63,18 @@
 .delivery__list{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 0rem;
     margin-bottom: auto;
 }
 
 .delivery__label{
     color:white;
-    font-size: 48px;
-    padding-left: 20px;
+    font-size: 28px;
+    padding: 20px 0 0 20px;
 }
 
 .delivery__item-label{
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .delivery__text-label{
@@ -98,19 +98,20 @@
     display:flex;
     flex-direction: column;
     gap:10px;
+    width: 290px;
 }
 
 .delivery__way-box{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 30px;
 }
 .delivery__way-block{
     display: flex;
     text-align: left;
-    flex-direction: column;
-    width: 250px;
-    font-size: 16px;
+    flex-direction: row;
+    width: auto;
+    font-size: 14px;
     gap:10px;
 }
 
@@ -135,45 +136,30 @@
             padding: 50px 0px;
             min-height: 100vh;
     }
-    @media(min-width:#{$br-tablet}px) {
-    .delivery__way-block{
-            width: 100%;
-    }
-    .delivery__row-block{
-        
-    }
-    .delivery__list{
-        max-width: 1280px;
-        margin: 0;
-    }
-    .delivery{
-            padding: 50px 0px;
-        }
-    }
-    
-    @media(min-width:#{$br-desktop}px){
-        .delivery__way-block{
-            width: 100%;
-        }
-        .show-experiens-desctop{
-            display: block;
-        }
 
-    .swiper{
-        max-width: 975px;
-        margin: auto;
-    }
-    .delivery__list{
-        max-width: 1280px;
-        margin:2rem auto;
-    }
-        
-      }
 @media(min-width:#{$br-tablet}px) {
     .delivery__row-block{
         flex-direction: column;
         gap: 0;
     }
+
+    .delivery__way-order{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        padding: 30px;
+        background-color: white;
+        border-radius: 0px;
+    }
+    .delivery__item-label{
+    font-size: 28px;
+}
+    .delivery__way-box{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
     .delivery__list{
         max-width: 1300px;
         margin: 0;
@@ -181,21 +167,26 @@
     .delivery{
             padding: 50px 0;
         }
-    }
+
     .delivery__item-top{
-    border-radius: 10px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px
+        border-radius: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px
+        
+        
+    }
+
+    .delivery__label{
+        color:white;
+        font-size: 36px;
+        padding-left: 20px;
+    }
 }
-.delivery__label{
-    color:white;
-    font-size: 48px;
-    padding-left: 20px;
-}
-    
+
+
 @media(min-width:#{$br-desktop}px){
     .delivery__row-block{
         display:flex;
@@ -206,6 +197,22 @@
         max-width: 1300px;
         margin: 3rem auto;
     }
+    .delivery__way-block{
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        width: 250px;
+        max-width: fit-content;
+        font-size: 16px;
+        gap:10px;
+    }
+.delivery__way-text-block{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    width: auto;
+
+}
 .delivery{
   background-image: url("/images/menu-item/pattern.png");
   background-color: #198f30;

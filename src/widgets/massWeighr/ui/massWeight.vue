@@ -67,20 +67,20 @@ methods: {
   async fetchWeightOptions() {
     try {
       const options = await getWeight();
-      console.log('Полученные опции:', options); // Для отладки
+      //console.log('Полученные опции:', options); // Для отладки
       const weightOptions = options[this.title] || {};
-      console.log('Weight Options:', weightOptions); // Для отладки
+      //console.log('Weight Options:', weightOptions); // Для отладки
 
       if (weightOptions.length > 0) {
         this.weightOptions = weightOptions;
 
         this.selectWeight(weightOptions[0].value, weightOptions[0].price, weightOptions[0].weight);
-      } else {
-        console.warn('Опции веса не найдены для данной категории.');
-      }
+      } //else {
+        //console.warn('Опции веса не найдены для данной категории.');
+      //}
       
-    } catch (error) {
-      console.error('Ошибка при загрузке данных:', error);
+    } catch {
+     // console.error('Ошибка при загрузке данных:', error);
     }    
   },
 

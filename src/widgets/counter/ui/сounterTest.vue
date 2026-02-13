@@ -20,7 +20,8 @@
 
 <script setup>
 import { ref, computed, defineProps, onMounted } from 'vue';
-import  {getCart}  from '@widgets/menuBlock/api/apiService.ts';
+
+
 const props = defineProps({
   price: {
     type: Number,
@@ -30,7 +31,7 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  weight:{
+  weight: {
     type: String,
     required: true,
   },
@@ -38,7 +39,6 @@ const props = defineProps({
     type: String,
     required: true,
   },
-
   id: {
     type: String,
     required: true,
@@ -56,6 +56,7 @@ const props = defineProps({
 const count = ref(0);
 const total = computed(() => count.value * props.price);
 const cartItems = ref([]); // Массив всех элементов в корзине
+//let hasErrorOccurred = false; // Флаг для отслеживания состояния ошибки
 
 const loadCartFromDB = async () => {
   try {
@@ -63,9 +64,11 @@ const loadCartFromDB = async () => {
     cartItems.value = await response.json();
     const existingItem = cartItems.value.find(item => item.id === props.id);
     count.value = existingItem ? existingItem.count : 0; // Устанавливаем count из БД
-  } catch  {
-    //console.error('Ошибка загрузки корзины из БД:', error);
-    alert('Ошибка при сохранении в БД'); 
+  } catch {
+    //if (!hasErrorOccurred) { // Проверяем флаг ошибки
+    //  hasErrorOccurred = true; // Устанавливаем флаг
+    //  alert('Ошибка при загрузке корзины из БД');
+    //}
   }
 };
 
@@ -96,14 +99,15 @@ const saveToDB = async (item) => {
       // Добавляем в локальный массив
       cartItems.value.push(item);
     }
-  } catch  {
-    //console.error('Ошибка при сохранении в БД:', error);
-    alert('Ошибка при сохранении в БД'); 
+  } catch {
+  //  if (!hasErrorOccurred) { // Проверяем флаг ошибки
+     // hasErrorOccurred = true; // Устанавливаем флаг
+     // alert('Ошибка при сохранении в БД');
+   // }
   }
 };
 
 const addToCart = async () => {
-
   count.value++;
   const item = {
     id: props.id,
@@ -111,8 +115,7 @@ const addToCart = async () => {
     price: props.price,
     label: props.label,
     imageSrc: props.imageSrc,
-    weight:props.weight,
-
+    weight: props.weight,
   };
   await saveToDB(item);
   props.onAddToCart();
@@ -122,15 +125,13 @@ const decrement = async () => {
   if (count.value > 0) {
     count.value--;
 
-
     const item = {
       id: props.id,
       count: count.value,
       price: props.price,
       label: props.label,
       imageSrc: props.imageSrc,
-      weight:props.weight,
-  
+      weight: props.weight,
     };
     
     if (count.value === 0) {
@@ -155,3 +156,4 @@ const handleDeleteToCart = () => {
   decrement();
 };
 </script>
+

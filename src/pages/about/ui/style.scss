@@ -23,7 +23,7 @@
 }
 
 .about__slider{
-        max-width: 1280px;
+        max-width: 360px;
         margin:auto ;
         color:white;
         display: flex;
@@ -44,7 +44,7 @@
         flex-direction: column;
         gap:1.5rem;
         width: 100%;
-        padding:  0 0 0 2rem;
+        padding:  0 0 1rem 0;
         justify-content: none;
 }
 
@@ -67,11 +67,11 @@
 .about__title{
  font-size:48px;
  color:white;
- padding: 0 2rem  0;
+ padding: 0 1rem  0;
 }
 
 .about__label{
-        font-size: 28px;
+        font-size: 20px;
 }
 
 .about__text{
@@ -98,16 +98,16 @@
         display: flex;
         flex-direction: column;
         align-items: left;
-        padding: 30px;
-        gap:10px
+        gap:10px;
+        width: 360px;
 }
 
 .swiper-top{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 400px;
-        height:424px;
+        width: 360px;
+        height:178px;
         border-radius:20px;
 }
 
@@ -165,7 +165,11 @@
   display: inline-block; /* Обеспечьте правильное отображение */
   overflow: hidden; /* Скрываем переполнение */
 }
-
+.about__slider{
+        max-width: 1280px;
+        margin:auto ;
+        
+}
 .about__swiper-block{
         display: flex;
         flex-direction: column;
@@ -173,13 +177,14 @@
         padding: 30px;
         gap:10px;
         margin:auto;
+        width: auto;
 }
 
 .swiper-top{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 400px;
+        width: 600px;
         height:424px;
         border-radius:20px;
 }
@@ -369,7 +374,7 @@
 .about__title{
  font-size:48px;
  color:white;
- padding: 0;
+ padding: 2rem 0;
 }
 
 .about__label{

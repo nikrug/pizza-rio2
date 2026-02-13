@@ -11,7 +11,7 @@
     border-bottom:1px solid #F0F0F0;
     border-top:1px solid #F0F0F0;
 }
-    .menu__item-description-popup{
+.menu__item-description-popup{
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -129,12 +129,14 @@
 .menu__item-name-popup{
      @include font-style(400, 1.75rem, 1.875rem, black );
      display: flex;
-     gap:1rem;color: black;
+     gap:1rem;
+     color: black;
     position: absolute;
     background: #ffffff;
     top: 0;
     left: 0;
     width: 100%;
+    padding: 0 0 0 1rem;
     /* margin: 0 1rem 0 0; */
     height: 80px;
     align-items: anchor-center;
@@ -225,23 +227,43 @@
 
 .menu__over-img {
   position: absolute; /* Позволяет наложить изображение поверх другого */
-  top: 20px; /* Положение сверху 0 */
-  left: 20px; /* Положение слева 0 */
+  top: 8px; /* Положение сверху 0 */
+  right: 8px; /* Положение слева 0 */
   pointer-events: none; /* Отключает взаимодействие с наложенным изображением, позволяет кликами проходить к нижнему */
   z-index: 10;
-  transform: none;
+  transform:scale(70%);
+
 }
 @media(min-width:550px) {
     .menu__item-description{
     @include font-style(400, 1rem, 1.875rem, black );
     }
+
     .menu__item-name{
     @include font-style(400, 1.75rem, 1.875rem, black );
+    }
+
+    .menu__item-description-popup{
+        font-size: 1rem;
     }
 }
 @media(min-width:#{$br-tablet}px) {
     .menu__item-description{
     @include font-style(400, 1rem, 1.875rem, black );
+}
+
+    .menu__item-description-popup{
+        font-size: 1rem;
+    }
+.menu__over-img {
+  position: absolute; /* Позволяет наложить изображение поверх другого */
+  top: 20px; /* Положение сверху 0 */
+  left: 20px; /* Положение слева 0 */
+  pointer-events: none; /* Отключает взаимодействие с наложенным изображением, позволяет кликами проходить к нижнему */
+  z-index: 10;
+  transform: none;
+  width: auto;
+  height: auto;
 }
 .menu__item-description-container {
     padding: 24px 24px 0 24px;
@@ -275,6 +297,14 @@
 @media(min-width:#{$br-desktop}px) {
         .menu__item-description{
     @include font-style(400, 1rem, 1.875rem, black );
+}
+.menu__over-img {
+  position: absolute; /* Позволяет наложить изображение поверх другого */
+  top: 20px; /* Положение сверху 0 */
+  left: 20px; /* Положение слева 0 */
+  pointer-events: none; /* Отключает взаимодействие с наложенным изображением, позволяет кликами проходить к нижнему */
+  z-index: 10;
+  transform: none;
 }
 .menu__item-description-container {
     padding: 24px 24px 0 24px;
@@ -320,6 +350,7 @@
      display: flex;
      position: relative;
      gap:1rem;
+     padding: 0rem;
 }
 .menu__item-name{
      @include font-style(400, 1.75rem, 1.875rem, black );
