@@ -24,11 +24,83 @@
   ],
   "cart": [
     {
-      "id": "2-counter2",
+      "id": "1-counter2",
       "count": 4,
+      "price": 545,
+      "label": "Дженнифер",
+      "imageSrc": "/images/menu-item/Jeniffer.jpg",
+      "weight": "690 г."
+    },
+    {
+      "id": "2-counter2",
+      "count": 5,
       "price": 545,
       "label": "Арканзас",
       "imageSrc": "/images/menu-item/Archcansas.png",
+      "weight": "690 г."
+    },
+    {
+      "id": "3-counter2",
+      "count": 3,
+      "price": 550,
+      "label": "Мичиган",
+      "imageSrc": "/images/menu-item/Michigan.png",
+      "weight": "680 г."
+    },
+    {
+      "id": "3-counter2",
+      "count": 2,
+      "price": 550,
+      "label": "Мичиган",
+      "imageSrc": "/images/menu-item/Michigan.png",
+      "weight": "680 г."
+    },
+    {
+      "id": "3-counter2",
+      "count": 3,
+      "price": 550,
+      "label": "Мичиган",
+      "imageSrc": "/images/menu-item/Michigan.png",
+      "weight": "680 г."
+    },
+    {
+      "id": "3-counter2",
+      "count": 1,
+      "price": 550,
+      "label": "Мичиган",
+      "imageSrc": "/images/menu-item/Michigan.png",
+      "weight": "680 г."
+    },
+    {
+      "id": "3-counter2",
+      "count": 2,
+      "price": 550,
+      "label": "Мичиган",
+      "imageSrc": "/images/menu-item/Michigan.png",
+      "weight": "680 г."
+    },
+    {
+      "id": "3-counter2",
+      "count": 1,
+      "price": 550,
+      "label": "Мичиган",
+      "imageSrc": "/images/menu-item/Michigan.png",
+      "weight": "680 г."
+    },
+    {
+      "id": "5-counter2",
+      "count": 4,
+      "price": 550,
+      "label": "Джорджия",
+      "imageSrc": "/images/menu-item/Jorjia.jpg",
+      "weight": "690 г."
+    },
+    {
+      "id": "5-counter2",
+      "count": 1,
+      "price": 550,
+      "label": "Джорджия",
+      "imageSrc": "/images/menu-item/Jorjia.jpg",
       "weight": "690 г."
     }
   ],

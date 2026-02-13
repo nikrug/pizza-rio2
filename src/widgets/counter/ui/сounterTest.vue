@@ -20,7 +20,7 @@
 
 <script setup>
 import { ref, computed, defineProps, onMounted } from 'vue';
-
+import  {getCart}  from '@widgets/menuBlock/api/apiService.ts';
 const props = defineProps({
   price: {
     type: Number,
@@ -65,7 +65,7 @@ const loadCartFromDB = async () => {
     count.value = existingItem ? existingItem.count : 0; // Устанавливаем count из БД
   } catch  {
     //console.error('Ошибка загрузки корзины из БД:', error);
-    alert('Ошибка загрузки корзины из БД'); 
+    alert('Ошибка при сохранении в БД'); 
   }
 };
 

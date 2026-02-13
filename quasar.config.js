@@ -103,7 +103,7 @@ module.exports = configure(function(ctx) {
           patterns: [
             {
               from: path.resolve(__dirname, 'db.json'), // замените на путь к вашему db.json
-              to: path.resolve(__dirname, 'dist/db.json') // или другой выходной путь
+              to: path.resolve(__dirname, 'dist/spa/json/db.json') // или другой выходной путь
             }
           ]
         }]);

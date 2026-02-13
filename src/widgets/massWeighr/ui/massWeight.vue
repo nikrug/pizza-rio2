@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import axios from 'axios';
 
+import  {getWeight}  from '@widgets/menuBlock/api/apiService.ts';
 export default {
   name: 'PizzaWeightSelector',
   props: {
@@ -63,22 +63,27 @@ export default {
   mounted() {
     this.fetchWeightOptions();
   },
-  methods: {
-    async fetchWeightOptions() {
-      try {
-        const response = await axios.get('http://localhost:3000/massWeight');
-        const options = response.data[this.title] || [];
-        
-        if (options.length > 0) {
-          this.weightOptions = options;
+methods: {
+  async fetchWeightOptions() {
+    try {
+      const options = await getWeight();
+      console.log('Полученные опции:', options); // Для отладки
+      const weightOptions = options[this.title] || {};
+      console.log('Weight Options:', weightOptions); // Для отладки
 
-          // Set initial weight and price
-          this.selectWeight(options[0].value, options[0].price, options[0].weight);
-        }
-      } catch (error) {
-        console.error('Ошибка при загрузке данных:', error);
+      if (weightOptions.length > 0) {
+        this.weightOptions = weightOptions;
+
+        this.selectWeight(weightOptions[0].value, weightOptions[0].price, weightOptions[0].weight);
+      } else {
+        console.warn('Опции веса не найдены для данной категории.');
       }
-    },
+      
+    } catch (error) {
+      console.error('Ошибка при загрузке данных:', error);
+    }    
+  },
+
 
     selectWeight(value, price, weight) {
         this.selectedWeight = value;
