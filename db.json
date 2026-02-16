@@ -25,66 +25,34 @@
   "cart": [
     {
       "id": "3-counter2",
-      "count": 5,
+      "count": 7,
       "price": 550,
       "label": "Мичиган",
       "imageSrc": "/images/menu-item/Michigan.png",
       "weight": "680 г."
     },
     {
-      "id": "3-counter2",
-      "count": 1,
-      "price": 550,
-      "label": "Мичиган",
-      "imageSrc": "/images/menu-item/Michigan.png",
-      "weight": "680 г."
-    },
-    {
-      "id": "6-counter2",
-      "count": 4,
-      "price": 550,
-      "label": "Манхеттен",
-      "imageSrc": "/images/menu-item/Manhattan.jpg",
+      "id": "2-counter2",
+      "count": 8,
+      "price": 545,
+      "label": "Арканзас",
+      "imageSrc": "/images/menu-item/Archcansas.png",
       "weight": "690 г."
     },
     {
-      "id": "5-counter2",
-      "count": 5,
-      "price": 550,
-      "label": "Джорджия",
-      "imageSrc": "/images/menu-item/Jorjia.jpg",
-      "weight": "690 г."
+      "id": "2-counter1",
+      "count": 9,
+      "price": 1065,
+      "label": "Арканзас",
+      "imageSrc": "/images/menu-item/Archcansas.png",
+      "weight": "1330 г."
     },
     {
       "id": "9-counter2",
-      "count": 3,
+      "count": 9,
       "price": 550,
       "label": "Манхеттен2",
       "imageSrc": "/images/menu-item/Manhattan.jpg",
-      "weight": "690 г."
-    },
-    {
-      "id": "7-counter2",
-      "count": 3,
-      "price": 550,
-      "label": "Пепперони2",
-      "imageSrc": "/images/menu-item/Peperoni.jpg",
-      "weight": "690 г."
-    },
-    {
-      "id": "8-counter2",
-      "count": 6,
-      "price": 550,
-      "label": "Джорджия2",
-      "imageSrc": "/images/menu-item/Jorjia.jpg",
-      "weight": "690 г."
-    },
-    {
-      "id": "11-counter2",
-      "count": 6,
-      "price": 545,
-      "label": "Арканзас2",
-      "imageSrc": "/images/menu-item/Archcansas.png",
       "weight": "690 г."
     }
   ],
