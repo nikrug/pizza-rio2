@@ -43,11 +43,11 @@
             </div>
           </div>
           <video class="carrer__video"  controls>
-            <source src="https://www.youtube.com/watch?v=3G6ZlP_hM80" type="video/mp4">
+            <source src="/images/carrer/video1.mp4" type="video/mp4">
           </video>
 
           <video class="carrer__video"  controls>
-            <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+            <source src="/images/carrer/video1.mp4" type="video/mp4">
           </video>
           <div class="carrer__slider">
             <div class="carrer__slider-img-block">
