@@ -87,11 +87,13 @@
 }
 
 .popup__text-forget-label{
-  padding: 15px 0px;
-  cursor: pointer;
   color: #FF991F; /* Измените на нужный цвет */
   border-radius: 10px;
   text-align: end;
+  transition: color 0.2s ease;
+}
+.popup__text-forget-label:hover{
+  color: #cf760a; /* Измените на нужный цвет */
 }
 .popup__button{
   padding: 14px 36px 14px 36px;

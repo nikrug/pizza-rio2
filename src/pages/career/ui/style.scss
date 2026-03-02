@@ -19,6 +19,11 @@
   color:#333333;
   font-size: 18px;
   font-weight: 700;
+  transition: color 0.2s ease;
+}
+.header__telephone-text:hover{
+  color:orange;
+
 }
 .header__telephone-subtext{
   color:#9B9B9B;

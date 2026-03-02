@@ -1,19 +1,45 @@
 @import "@shared/styles";
 .header{
     background-color:  #ffff;
-
+    gap:1rem;
     padding: 1.1rem;
 }
 
-.header__nav-text{
-    @include font-styles('Nekst',500, 16px,none, #333333);
-    white-space: nowrap;
+
+
+.header__nav-text {
+  @include font-styles('Nekst',500, 16px,none, #333333);
+  white-space: nowrap;
+  &:hover{
+    color: #009B3D;
+  }
+  &.active {
+    color: #009B3D;
+
+    .block {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: #009B3D;
+        transform: scaleX(1); // Показываем границу при активном состоянии
+        transition: transform 0.3s ease;
+      }
+
+      // Стили для hover
+      &:hover::after {
+        transform: scaleX(1); // Линия остаётся при наведении
+      }
+    }
+  }
 }
 
-.header__nav-text:hover{
-    @include font-styles('Nekst',500, none,none, #009B3D);
-    border-bottom:1px solid #009B3D;
-}
+
 .q-btn{
   font-size:12px;
 }

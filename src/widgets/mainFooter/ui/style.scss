@@ -42,9 +42,16 @@
 
   .footer__text{
     @include font-styles('Nekst',500, .875rem, 1.0625rem, white);
+    transition: color 0.2s ease;
+        &:hover {
+        color: orange; // Убрать смену цвета фона при наведении
+    }
+
+    &:active {
+        color: orange; // Убрать смену цвета фона при нажатии
+    }
+  
   }
-
-
 
   
   .footer__img-block{

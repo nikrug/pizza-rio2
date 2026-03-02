@@ -32,7 +32,9 @@
             <div v-if="loginError" class="error-message">{{ loginError }}</div>
             <inputCheckbox inputCheckboxLabel="Запомнить меня на сайте"></inputCheckbox>
             <div class="popup__forget-button-block">
-              <div class="popup__text-forget-label" @click="Popup = false, forgetPassword = true">Забыли пароль?</div>
+              <div @click="Popup = false, forgetPassword = true">
+                <div class="popup__text-forget-label">Забыли пароль?</div>
+              </div>
               <customButton @click="handleLogin" ButtonText="Войти"></customButton>
             </div>
           </div>

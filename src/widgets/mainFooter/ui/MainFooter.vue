@@ -9,7 +9,7 @@
                 </div>
 
                 <div class="footer__body">
-                    <div class="footer__column">
+                    <div class="footer__column" >
                         <q-btn class=" footer__text" v-for="link in footerBodyList" stretch flat :label="link.label"
                             :key="link.link" :to="link.link" />
                     </div>
@@ -35,4 +35,23 @@ import FooterLogo from 'src/widgets/mainFooter/footerLogo/ui/FooterLogo.vue';
 
 <style lang="scss">
 @import './style.scss';
+
+
+.q-hoverable:hover > .q-focus-helper {
+  visibility: hidden;
+
+}
+body.desktop .q-focusable:focus .q-focus-helper,
+body.desktop .q-hoverable:hover .q-focus-helper {
+  background: inherit;
+  opacity: 0;
+}
+body.ios .q-hoverable:active .q-focus-helper {
+  background: inherit;
+  opacity: 0;
+}
+.q-focus-helper {
+  opacity: 0;
+  transition: unset;
+}
 </style>

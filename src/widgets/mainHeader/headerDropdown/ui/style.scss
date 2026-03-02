@@ -84,6 +84,11 @@ body.no-scroll {
 .dropdown__footer-label {
   color: orange;
   font-size: 18px;
+  transition: color 0.2s ease;
+}
+.dropdown__footer-label:hover {
+  color: rgb(179, 116, 0);
+  font-size: 18px;
 }
 .q-btn{
   text-align: left;
