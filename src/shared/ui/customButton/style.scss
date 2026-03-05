@@ -10,6 +10,14 @@
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease;
+    &.disabled {
+        background-color: #ccc; // Цвет фона для отключенной кнопки
+        cursor: not-allowed; // Курсор для отключенной кнопки
+        opacity: 0.6; // Прозрачность для отключенной кнопки
+        &:hover{
+            background:#ccc;
+        }
+  }
 }
 
 .customButton:hover{

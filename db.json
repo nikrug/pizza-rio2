@@ -45,6 +45,21 @@
       "email": "domrrachev-nikitka@mail.ru",
       "password": "1234567",
       "phone": "+79521838624"
+    },
+    {
+      "id": "2b17",
+      "email": "OOO@MAIL.RU",
+      "password": "123456"
+    },
+    {
+      "id": "14b7",
+      "email": "OOO@MAIL.RU",
+      "password": "123456"
+    },
+    {
+      "id": "c5fc",
+      "email": "dacacs@mail.ru",
+      "password": "123456"
     }
   ],
   "posts": [
