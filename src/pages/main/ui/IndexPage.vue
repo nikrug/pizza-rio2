@@ -16,12 +16,12 @@
     <swiper-slide v-if="loading">
       <SkeletonLoader CustomClass="skeleton-img-slider" ></SkeletonLoader>
     </swiper-slide>
-    <swiper-slide v-else class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide
-    ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide
-    ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide
-    ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide
-    ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide
-    ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide
+    <swiper-slide v-else class="swiper-slide"> <img class="swiper-img" src="/images/slider-banner/slider-banner1.png"></swiper-slide
+    ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/slider-banner/slider-banner2.jpg"></swiper-slide
+    ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/slider-banner/slider-banner3.jpg"></swiper-slide
+    ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/slider-banner/slider-banner4.png"></swiper-slide
+    ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/slider-banner/slider-banner5.jpg"></swiper-slide
+    ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/slider-banner/slider-banner6.jpg"></swiper-slide
     ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide
     ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide
     ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide>
