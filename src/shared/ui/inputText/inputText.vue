@@ -73,8 +73,11 @@ watch(password, (newValue) => {
         />
       </div>
     </div>
+          <slot></slot>
     <div class="input-subtext">{{ inputSubtext }}</div>
+    
   </div>
+
 </template>
 
 <style lang="scss">

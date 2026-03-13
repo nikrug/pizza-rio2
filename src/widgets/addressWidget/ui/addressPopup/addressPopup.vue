@@ -68,7 +68,11 @@
             inputSubtext="необязательно"
           />
         </div>
-        <div v-if="floorError" class="error-message">{{ floorError }}</div>
+        <div class="error-block">
+          <div v-if="floorError" class="error-message">
+            {{ floorError }}
+          </div>
+        </div>
       </div>
       <CustomButton @click="addAddress" ButtonText="Сохранить адрес"></CustomButton>
     </div>

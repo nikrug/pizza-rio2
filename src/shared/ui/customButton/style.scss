@@ -3,34 +3,34 @@
 .customButton{
     padding: 14px 34px;
     display: flex;
-    background:#FF991F;
+    background:$orange;
     font-size: 16px;
-    color: white;
+    color: $pure-white;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease;
     &.disabled {
-        background-color: #ccc; // Цвет фона для отключенной кнопки
+        background-color: $border-gray; // Цвет фона для отключенной кнопки
         cursor: not-allowed; // Курсор для отключенной кнопки
         opacity: 0.6; // Прозрачность для отключенной кнопки
         &:hover{
-            background:#ccc;
+            background:$border-gray;
         }
   }
 }
 
 .customButton:hover{
-    background:#E17B00;
+    background:$orange-hover;
 }
 
 .customButton__reverse{
     display: flex;
     padding: 14px 34px;
     border-radius: 10px;
-    color:#FF991F;
-    border:1px solid #FF991F;
-    background:#ffffff;
+    color:$orange;
+    border:1px solid $orange;
+    background:$pure-white;
     font-size: 16px;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,7 @@
 }
 
 .customButton__reverse:hover{
-    background:#E17B00;
-    color: white;
-    border:1ps solid #E17B00;
+    background:$orange-hover;
+    color: $pure-white;
+    border:1ps solid $orange-hover;
 }

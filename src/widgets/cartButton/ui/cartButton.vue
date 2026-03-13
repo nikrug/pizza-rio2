@@ -1,5 +1,5 @@
 <template>
-  <button class="scrollDownmenu__cart-button">
+  <button class="scrolldownmenu__cart-button">
     <img src="/images/drop-down-menu/icon-basket.svg">
     <div class="cou" >
       <CartSummary></CartSummary>

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 0px;
-    background-color: white;
+    background-color: $pure-white;
     max-width: 1280px;
 
     overflow: hidden;
@@ -76,34 +76,38 @@
 
 .contacts__yellow-text{
     font-size: 14px;
-    color:#FF991F;
-    border-bottom: 1px solid #FF991F;
+    color:$orange;
+    border-bottom: 1px solid $orange;
 }
 
 .contacts__adress-text{
     font-size: 28px;
-    color:black;
+    color:$pure-black;
     max-width: 380px;
 }
 
 .contacts__number-text{
     font-size: 20px;
-    color:black;
+    color:$pure-black;
 }
 
 .contacts__label-text{
     font-size: 20px;
-    color:black;
+    color:$pure-black;
 }
 .contacts__work-time{
     padding:  0;
+    width: 120px; // Убедитесь, что ширина не слишком мала для содержимого
+    white-space: normal; // Позволяет тексту переходить на новую строку
+    overflow-wrap: break-word; // Разрешает разрыв длинных слов при необходимости
+    word-break: break-all; // Разрешает разрыв слов в любой точке
 }
 @media(min-width:#{$br-tablet}px) {
 .contacts__card{
     display: flex;
     flex-direction: column;
     border-radius: 0px;
-    background-color: white;
+    background-color: $pure-white;
     max-width: 1280px;
     margin: 0;
     overflow: hidden;
@@ -150,6 +154,10 @@
 }
 .contacts__work-time{
     padding: 2rem 0;
+    width: 120px; // Убедитесь, что ширина не слишком мала для содержимого
+    white-space: normal; // Позволяет тексту переходить на новую строку
+    overflow-wrap: break-word; // Разрешает разрыв длинных слов при необходимости
+    word-break: break-all; // Разрешает разрыв слов в любой точке
 }
 }
 
@@ -162,12 +170,16 @@
 }
 .contacts__work-time{
     padding:  0;
+    width: 120px; // Убедитесь, что ширина не слишком мала для содержимого
+    white-space: normal; // Позволяет тексту переходить на новую строку
+    overflow-wrap: break-word; // Разрешает разрыв длинных слов при необходимости
+    word-break: break-all; // Разрешает разрыв слов в любой точке
 }
 .contacts__card{
     display: flex;
     flex-direction: row;
     border-radius: 10px;
-    background-color: white;
+    background-color: $pure-white;
     width: 1280px;
     overflow: hidden;
 }
@@ -241,23 +253,23 @@
 
 .contacts__yellow-text{
     font-size: 14px;
-    color:#FF991F;
-    border-bottom: 1px solid #FF991F;
+    color:$orange;
+    border-bottom: 1px solid $orange;
 }
 
 .contacts__adress-text{
     font-size: 28px;
-    color:black;
+    color:$pure-black;
     max-width: 380px;
 }
 
 .contacts__number-text{
     font-size: 20px;
-    color:black;
+    color:$pure-black;
 }
 
 .contacts__label-text{
     font-size: 20px;
-    color:black;
+    color:$pure-black;
 }
 }

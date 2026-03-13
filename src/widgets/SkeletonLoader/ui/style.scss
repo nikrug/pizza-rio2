@@ -13,7 +13,7 @@
 .skeleton-img {
   width: 280px;
   height: 272px; 
-  background: linear-gradient(90deg, #bebebe 25%, #e0e0e0 50%, #bebebe 75%);
+  background: linear-gradient(90deg, $gray-be 25%, $gray-e0 50%, $gray-be 75%);
   background-size: 200% 100%;
   animation: shine 1.5s infinite;
 }
@@ -30,8 +30,8 @@
   width: 96%;
   height: 200px; 
   border-radius: 10px;
-  background: #bebebe; /* Цвет фона для скелета */
-  background: linear-gradient(90deg, #bebebe 25%, #e0e0e0 50%, #bebebe 75%);
+  background: $gray-be; /* Цвет фона для скелета */
+  background: linear-gradient(90deg, $gray-be 25%, $gray-e0 50%, $gray-be 75%);
   background-size: 200% 100%;
   animation: shine 1.5s infinite;
 }
@@ -47,8 +47,8 @@
     width: 96%;
     height: 300px; 
     border-radius: 10px;
-    background: #bebebe; /* Цвет фона для скелета */
-    background: linear-gradient(90deg, #bebebe 25%, #e0e0e0 50%, #bebebe 75%);
+    background: $gray-be; /* Цвет фона для скелета */
+    background: linear-gradient(90deg, $gray-be 25%, $gray-e0 50%, $gray-be 75%);
     background-size: 200% 100%;
     animation: shine 1.5s infinite;
   }
@@ -57,8 +57,8 @@
   height: 272px; 
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background: #bebebe; /* Цвет фона для скелета */
-  background: linear-gradient(90deg, #bebebe 25%, #e0e0e0 50%, #bebebe 75%);
+  background: $gray-be; /* Цвет фона для скелета */
+  background: linear-gradient(90deg, $gray-be 25%, $gray-e0 50%, $gray-be 75%);
   background-size: 200% 100%;
   animation: shine 1.5s infinite;
 }
@@ -70,8 +70,8 @@
     width: 90%;
     height: 590px; 
     border-radius: 10px;
-    background: #bebebe; /* Цвет фона для скелета */
-    background: linear-gradient(90deg, #bebebe 25%, #e0e0e0 50%, #bebebe 75%);
+    background: $gray-be; /* Цвет фона для скелета */
+    background: linear-gradient(90deg, $gray-be 25%, $gray-e0 50%, $gray-be 75%);
     background-size: 200% 100%;
     animation: shine 1.5s infinite;
   }
@@ -80,8 +80,8 @@
   height: 272px; 
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background: #bebebe; /* Цвет фона для скелета */
-  background: linear-gradient(90deg, #bebebe 25%, #e0e0e0 50%, #bebebe 75%);
+  background: $gray-be; /* Цвет фона для скелета */
+  background: linear-gradient(90deg, $gray-be 25%, $gray-e0 50%, $gray-be 75%);
   background-size: 200% 100%;
   animation: shine 1.5s infinite;
 }

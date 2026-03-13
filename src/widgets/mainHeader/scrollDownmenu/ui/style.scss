@@ -1,7 +1,7 @@
 @import "@shared/styles";
 
 
-.scrollDownmenu__list{
+.scrolldownmenu__list{
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -19,48 +19,48 @@
     margin: 1rem;
 }
 .dropdownl a{
-  background-color: #ffffff;
+  background-color: $pure-white;
   border-radius: 20px;
   padding: 7px 12px;
-  color: #000000;
+  color: $pure-black;
   
 }
 .cardbutton-none{
   display: none;
 }
 /* Для скрытия полосы прокрутки в большинстве браузеров */
-.scrollDownmenu__list::-webkit-scrollbar {
+.scrolldownmenu__list::-webkit-scrollbar {
     display: none; /* Для Chrome, Safari и Opera */
 }
-.scrollDownmenu__list.active {
+.scrolldownmenu__list.active {
   position: fixed;
   top:0;
-  background-color: white;
-  color:rgb(0, 0, 0);
-  .scrollDownmenu__logo{
+  background-color: $pure-white;
+  color:$pure-black;
+  .scrolldownmenu__logo{
   display:none;
   }
-  .scrollDownmenu__list-link {
-  color:black;
+  .scrolldownmenu__list-link {
+  color:$pure-black;
   }
 }
 
-  .scrollDownmenu__logo{
+  .scrolldownmenu__logo{
   display:none;
 }
 
-.scrollDownmenu__list-link.active {
-  color:black;
+.scrolldownmenu__list-link.active {
+  color:$pure-black;
 }
-.scrollDownmenu__list-link {
-  color:white;
+.scrolldownmenu__list-link {
+  color:$pure-white;
   white-space: nowrap;
   padding: 7px 14px;
   border-radius: 18px;
   transition: background 0.2s ease;
 }
 
-.scrollDownmenu__list-link:hover{
+.scrolldownmenu__list-link:hover{
   background: rgba(240, 240, 240, 0.51);
   transition: background 0.2s ease;
 
@@ -68,7 +68,7 @@
 }
 
 
-.scrollDownmenu__card-button{
+.scrolldownmenu__card-button{
   position: fixed;
   justify-content: center;
   gap: 0.5rem;
@@ -76,9 +76,9 @@
   bottom:10px;
   right:10px;
   left: 10px;
-  color:white;
+  color:$pure-white;
   padding: 14px;
-  background-color: #FF991F;
+  background-color: $orange;
   border-radius: 5px;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .dropdownl a{
-  background-color: #F0F0F0;
+  background-color: $white;
   border-radius: 20px;
   padding: 7px 12px;
   
@@ -109,61 +109,61 @@
   }
 
   .header__orange-text{
-    color:#FF991F;
+    color:$orange;
     font-size:18px;
   }
 
   .header__text{
-    color:black;
+    color:$pure-black;
     font-size:12px;
   }
 
   .header__info-text-block{
     text-align: end;
   }
-  .scrollDownmenu__logo.active {
+  .scrolldownmenu__logo.active {
     display: flex; // Или другой стиль, который должен применяться, когда элемент активен
   }
 
-  .scrollDownmenu__logo {
+  .scrolldownmenu__logo {
     display: none; // Также убедитесь, что изначально элемент отображается так, как вы ожидаете
   }
   @media (min-width: 768px) {
-    .scrollDownmenu__card-button{
+    .scrolldownmenu__card-button{
       position: fixed;
       bottom:10px;
       right:10px;
       left: auto;
       width: 200px;
     }
-    .scrollDownmenu__list.active {
+    .scrolldownmenu__list.active {
     position: fixed;
     top:0;
-    background-color: white;
-    color:rgb(0, 0, 0);
-    .scrollDownmenu__logo{
+    background-color: $pure-white;
+    color:$pure-black;
+    .scrolldownmenu__logo{
     display:none;
   }
   }
   }
 
   @media (min-width: 1244px) {
-    .scrollDownmenu__list.active {
+    .scrolldownmenu__list.active {
     position: fixed;
     top:0;
-    background-color: white;
-    color:rgb(0, 0, 0);
-    .scrollDownmenu__logo{
+    background-color: $pure-white;
+    color:$pure-black;
+    .scrolldownmenu__logo{
     display:flex;
   }
 }
     
-    .scrollDownmenu__card-button{
+    .scrolldownmenu__card-button{
       position: static;
-      color:white;
+      color:$pure-white;
       padding: 10px;
       width: auto;
-      background-color: #FF991F;
+      background-color: $orange;
       border-radius: 10px;
       width: 140px;
       gap:1rem;
@@ -177,7 +177,7 @@
     .visible-line{
     display: flex;
   }
-  .scrollDownmenu__list{
+  .scrolldownmenu__list{
     display: flex;
     flex-direction: row;
    

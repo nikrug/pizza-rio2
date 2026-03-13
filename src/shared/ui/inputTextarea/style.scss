@@ -2,7 +2,7 @@
 .textarea__container{
     display: flex;
     flex-direction: column;
-    border: 1px solid gray;
+    border: 1px solid $gray-subtitle;
     border-radius: 10px;
     width: 100%;
     font-size: 14px;
@@ -10,13 +10,13 @@
 }
 
 .input-label{
-    color:black;
+    color:$pure-black;
     font-weight: normal;
     font-size: 16px;
 }
 
 .input-label-small{
-    color:black;
+    color:$pure-black;
     font-weight: normal;
     font-size: 12px;
 }
@@ -32,12 +32,12 @@
     padding: 13px 16px;
     border-radius: 10px;
     width: 100%;
-    border: 1px solid #d8d8d8;
+    border: 1px solid $border-gray;
     transition:border  0.3s ease;
 }
 
 .input-subtext{
-    color:#9B9B9B ;
+    color:$gray-subtitle ;
     font-size: 12px;
     text-align: end;
 }
@@ -48,7 +48,7 @@
 }
 
 .input-text:active {
-    border: 1px solid rgb(105, 105, 105);
+    border: 1px solid $gray-active;
 }
 
 .input-text:focus {

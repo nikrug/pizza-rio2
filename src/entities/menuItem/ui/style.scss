@@ -6,10 +6,10 @@
     display: flex;  /* Используйте flex для дочерних элементов */
     align-items: center;  /* Вертикально центрируем */
     justify-content: space-between;  /* Центрируем изображения */
-    background-color: white;
+    background-color: $pure-white;
     flex-direction: column;
-    border-bottom:1px solid #F0F0F0;
-    border-top:1px solid #F0F0F0;
+    border-bottom:1px solid $white;
+    border-top:1px solid $white;
 }
 .menu__item-description-popup{
   padding: 40px;
@@ -28,52 +28,51 @@
 .menu-close-button {
     cursor: pointer;
     position: absolute;
-    border-radius: 50%; /* Используйте 50% для круглой кнопки */
+    border-radius: 50%; /* Круглая кнопка */
     height: 48px;
     width: 48px;
     z-index: 1;
-    display: flex; /* Используйте flex для выравнивания */
+    display: flex; /* Обеспечиваем выравнивание */
     justify-content: center; /* Выравнивание по горизонтали */
     align-items: center; /* Выравнивание по вертикали */
     top: 20px;
     right: 20px;
-    background-color: #ffffff;
+    background-color: $pure-white; /* Цвет фона */
     transition: background-color 0.3s ease;
 }
 
-.icon_normal-close,
-.icon_hover-close {
+.menu-close-button::before,
+.menu-close-button::after {
+    content: ''; 
     position: absolute;
-    width: 24px;
-    height:24px;
-    top:12px;
-    left:12px;
-    background-size: contain; /* Масштабируем иконки */
-    background-repeat: no-repeat; /* Избегаем повторения фона */
-    transition: opacity 0.2s ease; /* Плавный переход для opacity */
+    width: 24px; 
+    height: 24px; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    transition: opacity 0.2s ease; 
 }
 
-   .icon_normal-close {
-    background-image: url("/images/menu-item/icon-Close.svg");
-    opacity: 1; /* По умолчанию показываем первую иконку */
+.menu-close-button::before {
+    background-image: url("/images/menu-item/icon-Close.svg"); /* Иконка для состояния по умолчанию */
+    opacity: 1; /* Показываем первую иконку */
 }
 
-.icon_hover-close {
-    background-image: url("/images/menu-item/icon-Close-hover.svg");
+.menu-close-button::after {
+    background-image: url("/images/menu-item/icon-Close.svg"); /* Иконка для состояния ховера */
     opacity: 0; /* Изначально скрываем вторую иконку */
 }
 
-.menu-close-button:hover {
-    background-color: #ffff;
-}
 
 /* При наведении изменяем opacity */
-.menu-close-button:hover .icon_normal-close {
-    opacity: 1; /* Скрываем первую иконку */
+.menu-close-button:hover::before {
+    opacity: 0; /* Скрываем первую иконку */
 }
 
-.menu-close-button:hover .icon_hover-close {
-    opacity: 0; /* Показываем вторую иконку */
+.menu-close-button:hover::after {
+    opacity: 1; /* Показываем вторую иконку */
 }
 
 .menu__item-img-container {
@@ -112,7 +111,7 @@
     object-fit: cover;
 }
     .menu__poup-item-img{
-        width: 100%;
+        max-width: 100%;
         height: 100%;
         object-fit: cover;
     }
@@ -120,19 +119,19 @@
 
 }
 .menu__item-name{
-     @include font-style(400, 20px, 1.875rem, black );
+     @include font-style(400, 20px, 1.875rem, $pure-black );
      display: flex;
      gap:1rem;
 
 }
 
 .menu__item-name-popup{
-     @include font-style(400, 1.75rem, 1.875rem, black );
+     @include font-style(400, 1.75rem, 1.875rem, $pure-black );
      display: flex;
      gap:1rem;
-     color: black;
+     color:$pure-black;
     position: absolute;
-    background: #ffffff;
+    background: $pure-white;
     top: 0;
     left: 0;
     width: 100%;
@@ -148,11 +147,10 @@
 }
 
 .menu__item-description{
-    @include font-style(400, 12px, 1.2rem, black );
+    @include font-style(400, 12px, 1.2rem, $pure-black );
 }
 .menu__item-img-container-popup {
     object-fit: cover;
-    cursor: pointer;
     width: 100%;
     height: 100%;
     left: 0;
@@ -179,7 +177,7 @@
   flex-direction: column; /* Лучше использовать column для упорядочивания контента */
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: $pure-white;
   z-index: 30; /* Поверх фона */
   overflow: auto;
 }
@@ -200,13 +198,13 @@
     padding:13px 40px;
     gap:12px;
     border-radius:10px;
-    background-color:#FF991F;
-    color:white;
+    background-color:$orange;
+    color:$pure-white;
     cursor: pointer;
 }
 
 .menu__item-button:hover{
-    background-color:#E17B00;
+    background-color:$orange-hover;
 }
 
 .menu__button-block{
@@ -236,20 +234,39 @@
 }
 @media(min-width:550px) {
     .menu__item-description{
-    @include font-style(400, 1rem, 1.875rem, black );
+    @include font-style(400, 1rem, 1.875rem, $pure-black );
     }
 
     .menu__item-name{
-    @include font-style(400, 1.75rem, 1.875rem, black );
+    @include font-style(400, 1.75rem, 1.875rem, $pure-black );
     }
 
     .menu__item-description-popup{
         font-size: 1rem;
     }
+
+    .menu__poup-item-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 @media(min-width:#{$br-tablet}px) {
+    .menu-close-button::before {
+    background-image: url("/images/menu-item/icon-Close.svg"); /* Иконка для состояния по умолчанию */
+    opacity: 1; /* Показываем первую иконку */
+}
+
+.menu-close-button::after {
+    background-image: url("/images/menu-item/icon-Close-hover.svg"); /* Иконка для состояния ховера */
+    opacity: 0; /* Изначально скрываем вторую иконку */
+}
+
+.menu-close-button:hover {
+    background-color: $orange;
+}
     .menu__item-description{
-    @include font-style(400, 1rem, 1.875rem, black );
+    @include font-style(400, 1rem, 1.875rem, $pure-black );
 }
 
     .menu__item-description-popup{
@@ -285,19 +302,26 @@
   height: 500px;
   width: 720px;
   margin: auto;
-  background-color: white;
+  background-color: $pure-white;
   z-index: 30; /* Поверх фона */
   top: 50%; /* Центрировать по вертикали */
   left: 50%; /* Центрировать по горизонтали */
   transform: translate(-50%, -50%); /* Центрирует элемент по его середине */
   border-radius:20px
 }
+    .menu__poup-item-img{
+        max-width: 210%;
+        width: 210%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 @media(min-width:#{$br-desktop}px) {
         .menu__item-description{
-    @include font-style(400, 1rem, 1.875rem, black );
+    @include font-style(400, 1rem, 1.875rem, $pure-black );
 }
+
 .menu__over-img {
   position: absolute; /* Позволяет наложить изображение поверх другого */
   top: 20px; /* Положение сверху 0 */
@@ -315,8 +339,7 @@
 }
 .menu__item-img-container-popup {
     object-fit: cover;
-    cursor: pointer;
-    width: 140%;
+    width: 100%;
     height: 100%;
     left: 0;
     overflow: hidden;
@@ -329,7 +352,7 @@
   flex-direction: row-reverse; /* Лучше использовать column для упорядочивания контента */
   height: 500px;
   width: 840px;
-  background-color: white;
+  background-color: $pure-white;
   z-index: 30; /* Поверх фона */
   top: 50%; /* Центрировать по вертикали */
   left: 50%; /* Центрировать по горизонтали */
@@ -346,14 +369,14 @@
 
     }
     .menu__item-name-popup{
-     @include font-style(400, 1.75rem, 1.875rem, black );
+     @include font-style(400, 1.75rem, 1.875rem, $pure-black );
      display: flex;
      position: relative;
      gap:1rem;
      padding: 0rem;
 }
 .menu__item-name{
-     @include font-style(400, 1.75rem, 1.875rem, black );
+     @include font-style(400, 1.75rem, 1.875rem, $pure-black );
      display: flex;
      gap:1rem;
 
@@ -368,8 +391,8 @@
 
     .menu__item {
     width: calc(50% - 20px);
-    border-bottom:0px solid #F0F0F0;
-    border-top:0px solid #F0F0F0;
+    border-bottom:0px solid $white;
+    border-top:0px solid $white;
     }
 
     .menu__item {
@@ -378,33 +401,63 @@
         display: flex;  /* Используйте flex для дочерних элементов */
         align-items: center;  /* Вертикально центрируем */
         justify-content: space-between;  /* Центрируем изображения */
-        background-color: white;
+        background-color: $pure-white;
         flex-direction: column;
     }
 }
 
 @media(min-width:#{$br-desktop}px) {
  
-.icon_normal-close {
-    background-image: url("/images/menu-item/icon-Close.svg");
-    opacity: 1; /* По умолчанию показываем первую иконку */
+.menu-close-button {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%; /* Круглая кнопка */
+    height: 48px;
+    width: 48px;
+    z-index: 1;
+    display: flex; /* Обеспечиваем выравнивание */
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    top: 20px;
+    right: 20px;
+    background-color: $pure-white; /* Цвет фона */
+    transition: background-color 0.3s ease;
 }
 
-.icon_hover-close {
-    background-image: url("/images/menu-item/icon-Close-hover.svg");
+.menu-close-button::before,
+.menu-close-button::after {
+    content: ''; /* Пустое содержимое для псевдоэлемента */
+    position: absolute;
+    width: 24px; /* Размер иконки */
+    height: 24px; /* Размер иконки */
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Центрируем по центру кнопки */
+    background-size: contain; /* Масштабируем иконки */
+    background-repeat: no-repeat; /* Избегаем повторения фона */
+    transition: opacity 0.2s ease; /* Плавный переход для opacity */
+}
+
+.menu-close-button::before {
+    background-image: url("/images/menu-item/icon-Close.svg"); /* Иконка для состояния по умолчанию */
+    opacity: 1; /* Показываем первую иконку */
+}
+
+.menu-close-button::after {
+    background-image: url("/images/menu-item/icon-Close-hover.svg"); /* Иконка для состояния ховера */
     opacity: 0; /* Изначально скрываем вторую иконку */
 }
 
 .menu-close-button:hover {
-    background-color: #FF991F;
+    background-color: $orange;
 }
 
 /* При наведении изменяем opacity */
-.menu-close-button:hover .icon_normal-close {
+.menu-close-button:hover::before {
     opacity: 0; /* Скрываем первую иконку */
 }
 
-.menu-close-button:hover .icon_hover-close {
+.menu-close-button:hover::after {
     opacity: 1; /* Показываем вторую иконку */
 }
     .menu__item-img{
@@ -415,19 +468,20 @@
     }
     .menu__poup-item-img{
         border-radius: 10px;
-        width: 100%;
         height: 100%;
         object-fit: cover;
+        max-width: 200%;
+        width: 160%;
     }
 .menu__item-name{
-     @include font-style(400, 1.75rem, 1.875rem, black );
+     @include font-style(400, 1.75rem, 1.875rem, $pure-black );
      display: flex;
      gap:.5rem;
      margin: 0 0 1rem 0;
 
 }
     .menu__item-name-popup{
-     @include font-style(400, 1.75rem, 1.875rem, black );
+     @include font-style(400, 1.75rem, 1.875rem, $pure-black );
      display: flex;
      gap:1rem;
 }
@@ -445,10 +499,10 @@
         display: flex;  /* Используйте flex для дочерних элементов */
         align-items: center;  /* Вертикально центрируем */
         justify-content: space-between;  /* Центрируем изображения */
-        background-color: white;
+        background-color: $pure-white;
         flex-direction: column;
-        border-bottom:0px solid #F0F0F0;
-        border-top:0px solid #F0F0F0;
+        border-bottom:0px solid $white;
+        border-top:0px solid $white;
     }
 
     .categoryes__img-text{

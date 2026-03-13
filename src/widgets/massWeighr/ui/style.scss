@@ -29,7 +29,7 @@
   display: flex;
   gap: 10px;
   margin-bottom: 27px;
-  background-color: #efefef;
+  background-color: $gray-fe;
   padding: 4px;
   height: 40px;
   border-radius: 12px;
@@ -39,29 +39,29 @@
 .option-button {
   width: 100%;
   border: none;
-  background-color: #efefef;
-  color: #9b9b9b;
+  background-color: $gray-fe;
+  color: $gray-subtitle;
   transition: background-color 0.3s;
   border-radius: 8px;
     font-size: 16px;
 }
 
 .option-button.active {
-  background-color: #ffffff; /* Цвет для активной кнопки */
-  color: rgb(0, 0, 0); /* Цвет текста для активной кнопки */
+  background-color: $pure-white; /* Цвет для активной кнопки */
+  color: $pure-black; /* Цвет текста для активной кнопки */
 }
 
 .menu__item-button{
     padding: 16px 40px;
     gap:12px;
     border-radius:10px;
-    background-color:#FF991F;
-    color:white;
+    background-color:$orange;
+    color:$pure-white;
     cursor: pointer;
 }
 
 .menu__item-button:hover{
-    background-color:#E17B00;
+    background-color:$orange-hover;
 }
 
 .counter {
@@ -85,15 +85,15 @@
 
 .basket-button {
   padding: 12px 36px;
-  background-color: #FF991F;
+  background-color: $orange;
   border-radius: 8px;
-  color: white;
+  color: $pure-white;
   font-size: 16px;
    transition: background 0.2s ease;
 }
 
 .basket-button:hover {
-  background-color: #E17B00;
+  background-color: $orange-hover;
 }
 
 .counter{
@@ -106,34 +106,34 @@
 .count-button {
   height:40px;
   width: 40px;
-  background-color: #FF991F;
+  background-color: $orange;
   border-radius: 8px;
   font-size: 24px;
-  color: rgb(255, 255, 255);
+  color: $pure-white;
    transition: background 0.2s ease;
 }
 
 .count-button:hover {
-  background-color: #E17B00;
+  background-color: $orange-hover;
   
 }
 
 .count-text {
   font-size: 24px;
-  color: black; /* Цвет по умолчанию */
+  color: $pure-black; /* Цвет по умолчанию */
   text-align: center;
   margin: AUTO 0 AUTO;
   min-width: 20px;
 }
 .count-text-button {
   font-size: 16px;
-  color: black; /* Цвет по умолчанию */
+  color:$pure-black; /* Цвет по умолчанию */
   text-align: center;
   margin: AUTO 1.5rem AUTO;
   min-width: 20px;
 }
 .active-text {
-  color: #FF991F; /* Укажите нужный цвет для count > 0 */
+  color: $orange; /* Укажите нужный цвет для count > 0 */
 }
 
 
@@ -146,6 +146,6 @@
   padding: .1rem;
   height: 48px;
   width: 152px;
-  border:2px solid #FF991F;
+  border:2px solid $orange;
 
 }

@@ -9,7 +9,6 @@
         @click="selectWeight(option.value, option.price, option.weight)"
       >
         {{ option.weight }}
-  
       </button>
     </div>
 
@@ -54,10 +53,11 @@ export default {
   },
   data() {
     return {
-      selectedCounter: 'counter1',
+      selectedCounter: 'counter1', // Добавлено начальное значение
       selectedWeight: null,
       weightOptions: [],
       totalPrice: 0,
+      showCartButton: false,
     };
   },
   mounted() {
@@ -72,28 +72,36 @@ export default {
         if (options.length > 0) {
           this.weightOptions = options;
 
-          // Set initial weight and price
+          // Установка начального веса и цены
           this.selectWeight(options[0].value, options[0].price, options[0].weight);
         }
       } catch (error) {
         console.error('Ошибка при загрузке данных:', error);
       }
     },
-
     selectWeight(value, price, weight) {
-        this.selectedWeight = value;
-        this.totalPrice = price;
+      // Если выбранный вес не изменился, ничего не делаем
+      if (this.selectedWeight === value) {
+        return;
+      }
 
-        // Change counter
-        this.selectedCounter = this.selectedCounter === 'counter1' ? 'counter2' : 'counter1';
+      this.selectedWeight = value;
+      this.totalPrice = price;
 
-        // Emit weight data including price and weight
-        this.$emit('update-price', { title: this.title, price, value,weight });
-        
-        // Эмитим значение веса с ID элемента
-        this.$emit('update-weight', { weight, itemId: this.title }); // здесь title может быть ID элемента
+      // Показать корзину на мгновение
+      this.showCartButton = true; // Показываем кнопку корзины
+      setTimeout(() => {
+        this.showCartButton = false; // Скрываем через определенное время
+      }, 10); // Задержка
+
+      // Переключаем счетчики
+      this.selectedCounter = this.selectedCounter === 'counter1' ? 'counter2' : 'counter1';
+
+      // Эмитим данные о весе
+      this.$emit('update-price', { title: this.title, price, value, weight });
+      this.$emit('update-weight', { weight, itemId: this.title });
     }
-  },
+  }
 };
 </script>
 

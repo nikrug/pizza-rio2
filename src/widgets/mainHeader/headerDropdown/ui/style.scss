@@ -2,7 +2,7 @@
 
 .dropdown {
     position: absolute; // Оставляем абсолютное позиционирование
-    background: white;
+    background:$pure-white;
     z-index: 1000; // Чтобы быть поверх других элементов
     width: 100%; // Занимает всю ширину родителя
     height: 100vh;
@@ -38,24 +38,24 @@
     list-style: none; // Убираем маркеры списка
     padding: 20px 20px 20px 20px;
     margin: 0; // Убираем внешние отступы
-    background: white;
+    background: $pure-white;
     display: grid;
     max-width: fit-content;
               justify-items: left;
           justify-content: left;
     gap:1rem;
-    border-top: 1px solid #F0F0F0;
-    border-bottom: 1px solid #F0F0F0;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
 }
 
 .dropdown-list a {
     padding: 10px 0; // Отступ для элементов списка
     cursor: pointer; // Указатель на курсоре
-    @include font-styles('Nekst',400, .875rem, 1.0625rem, #333333);
+    @include font-styles('Nekst',400, .875rem, 1.0625rem, $black-33);
 }
 
 .dropdown-list a:hover {
-    @include font-styles('Nekst',400, .875rem, 1.0625rem, rgb(0, 0, 0));
+    @include font-styles('Nekst',400, .875rem, 1.0625rem, $pure-black);
 }
 
 .header-drop-menu__svg:hover path{
@@ -82,7 +82,7 @@ body.no-scroll {
 }
 
 .dropdown__footer-label {
-  color: orange;
+  color: $orange;
   font-size: 18px;
   transition: color 0.2s ease;
 }
@@ -101,12 +101,12 @@ span{
   text-align: left;
 }
 .dropdown-link{
-  color: black;
+  color:$pure-black;
   font-size: large;
   text-align: left;
 }
 .dropdown__footer-text {
-  color: black;
+  color:$pure-black;
 }
 
 @media (min-width:768px) {

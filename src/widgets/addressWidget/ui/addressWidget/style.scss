@@ -17,14 +17,14 @@
   flex-direction: column;
   justify-content: space-between;
   height: 130px;
-  background: #FBE7CE;    
+  background: $orange-fb;    
   border-radius: 10px;
   padding: 10px;
 }
 .empty-address-item {
-  color:#D8D8D8;
+  color:$border-gray;
   font-size: 16px;
-  border: 1px solid #D8D8D8; /* Другая граница */
+  border: 1px solid $border-gray; /* Другая граница */
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -43,10 +43,10 @@
 .popup-delete {
   position: absolute;
   z-index: 1;
-  background-color: white;
+  background-color: $pure-white;
   border-radius: 10px;
   text-align: center;
-  color: black;
+  color:$pure-black;
   width: 334px;
   gap: 1rem;
   height: 126px;
@@ -77,14 +77,14 @@
 }
 
 .popup-delete-button1 {
-  color: #FF991F;
-  background-color: white;
+  color: $orange;
+  background-color: $pure-white;
 }
 
 .popup-delete-button2 {
-  background-color: white;
-  border: 1px solid #FF991F;
-  color: #FF991F;
+  background-color: $pure-white;
+  border: 1px solid $orange;
+  color: $orange;
 }
   .icon_normal-popup,
   .icon_hover-popup {
@@ -123,7 +123,7 @@
     width: 100%;
 }
 .address-title{
-    color: #FF991F;
+    color: $orange;
     font-size: 20px;
     display: flex;
     flex-direction: row;
@@ -136,13 +136,13 @@
 }
 .add-button{
     position: relative;
-    background-color: white;
+    background-color: $pure-white;
     border-radius: 10px;
-    border:1px solid #FF991F;
+    border:1px solid $orange;
     width: 219px;
     height: 48px;
     font-size: 16px;
-    color: #FF991F;
+    color: $orange;
     white-space: nowrap;
     display: flex;
     flex-direction: row;
@@ -151,9 +151,9 @@
     gap: .5rem;
 }
 .add-button:hover{
-    background-color: #E17B00;
-    border:1px solid #FF991F;
-    color: white;
+    background-color: $orange-hover;
+    border:1px solid $orange;
+    color: $pure-white;
     transition:background-color  0.3s ease;
 }
 @media(min-width:#{$br-tablet}px) {

@@ -1,7 +1,7 @@
 @import "src/shared/styles";
 
 .contacts__label{
-    color:white;
+    color:$pure-white;
     font-size: 48px;
     max-width: 100px;
 }
@@ -11,7 +11,7 @@
 }
 .contacts{
     background-image: url("/images/menu-item/pattern.png");
-    background-color: #198f30;
+    background-color:$green-bk;
     padding:40px 0;
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@
 }
 .contacts{
     background-image: url("/images/menu-item/pattern.png");
-    background-color: #198f30;
+    background-color:$green-bk;
 
     display: flex;
     flex-direction: column;

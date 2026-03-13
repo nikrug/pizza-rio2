@@ -68,10 +68,7 @@ const props = defineProps({
           <div v-show="Popup" class="menu-popup" @mousedown="Popup=!Popup">
               <div class="menu-popup" @mousedown.stop>
 
-                <span class="menu-close-button" @click="Popup = !Popup">
-                  <div class="icon_normal-close"></div>
-                  <div class="icon_hover-close"></div>
-                </span>
+                <span class="menu-close-button" @click="Popup = !Popup"></span>
                 <div class="menu__item-img-container-popup">
                     <img class="menu__poup-item-img" :src="props.imageSrc">
                 </div>

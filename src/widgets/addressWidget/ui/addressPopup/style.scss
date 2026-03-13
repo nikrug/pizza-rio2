@@ -26,7 +26,7 @@
 }
 
 .popup {
-  background: white;
+  background:$pure-white;
   justify-content: center;
   padding: 40px;
   border-radius: 0;
@@ -52,19 +52,31 @@
 }
 
 .error-message {
-  color: red;
+  color: $c-red;
   font-size: 12px;
+  position: relative; /* Изменить на absolute */  
+  height: 0;
+
 }
+
+.error-block {
+    display: flex;
+    max-height: fit-content;
+    padding: 0 0 30px 0;
+    justify-content: center;
+}
+
+
 
 @media(min-width:#{$br-tablet}px) {
 .popup {
-  background: white;
+  background:$pure-white;
   padding: 30px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   width: 480px;
-  height: 652px;
+  height: min-content;
   gap:0;
   text-align: center;
   justify-content: space-between;
@@ -73,13 +85,13 @@
 
 @media(min-width:#{$br-desktop}px) {
 .popup {
-  background: white;
+  background:$pure-white;
   padding: 40px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   width: 480px;
-  height: 652px;
+  height: min-content;
   text-align: center;
   gap:0;
   justify-content: space-between;

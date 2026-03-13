@@ -1,6 +1,6 @@
 @import "@shared/styles";
 .header{
-    background-color:  #ffff;
+    background-color:  $pure-white;
     gap:1rem;
     padding: 1.1rem;
 }
@@ -8,13 +8,13 @@
 
 
 .header__nav-text {
-  @include font-styles('Nekst',500, 16px,none, #333333);
+  @include font-styles('Nekst',500, 16px,none, $black-33);
   white-space: nowrap;
   &:hover{
-    color: #009B3D;
+    color: $green-hover;
   }
   &.active {
-    color: #009B3D;
+    color: $green-hover;
 
     .block {
       position: relative;
@@ -26,7 +26,7 @@
         right: 0;
         bottom: 0;
         height: 2px;
-        background-color: #009B3D;
+        background-color: $green-hover;
         transform: scaleX(1); // Показываем границу при активном состоянии
         transition: transform 0.3s ease;
       }
@@ -56,7 +56,7 @@
   display: none;
 }
   .header__orange-text{
-    color:#FF991F;
+    color:$orange;
     font-size:18px;
     cursor: pointer;
     white-space: nowrap;
@@ -65,12 +65,12 @@
   }
 
   .header__orange-text:hover{
-    color:#E17B00;
+    color:$orange-hover;
 
   }
 
   .header__text{
-    color:black;
+    color:$pure-black;
     font-size:12px;
   }
 
@@ -107,14 +107,12 @@
     
     padding: 0;
   
-    --bg:  #0432DF ;
-    background: #0432DF;
     line-height: 120%;
     text-align: center;
 
     border-radius: 8px;
   
-    @include font-styles('Nekst',700, 16px, 24px, white);
+    @include font-styles('Nekst',700, 16px, 24px, $pure-white);
   
     transition: background-color .15s ease;
   
@@ -150,7 +148,7 @@
     
     .header{
         gap: 1rem;
-        background-color: white;
+        background-color: $pure-white;
         max-width: 1300px;
         padding: 2rem 1rem 2rem 1rem;
         margin: auto;

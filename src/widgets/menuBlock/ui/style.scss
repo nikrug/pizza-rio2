@@ -32,7 +32,7 @@
   text-align: left;
   font-size: 48px;
   font-weight: 600;
-  color: white;
+  color: $pure-white;
   margin: 4rem 1rem 2rem;
 }
 
@@ -40,18 +40,18 @@
   text-align: left;
   font-size: 48px;
   font-weight: 600;
-  color: white;
+  color: $pure-white;
   padding: 1rem 0 1.7rem 0;
 }
 .error-message {
-  color: red;
+  color: $c-red;
   font-weight: bold;
   margin-bottom: 1rem;
   font-size:48px
 }
 .menu{
   background-image: url("/images/menu-item/pattern.png");
-  background-color: #198f30;
+  background-color:$green-bk;
   padding: 100px 0;
 }
 
@@ -77,9 +77,6 @@
 
   }
   @media(min-width:#{$br-desktop}px){
-    body{
-  height: 100vh;
-}
   .menu-container{
     display: flex;
     flex-wrap:wrap;

@@ -1,7 +1,11 @@
 <template>
-
-    <Cart CartListClass="inviscible" PriceClass="price-class" :cart="cart" />
-
+  <div>
+    <Cart 
+      :cart="cart" 
+      CartListClass="inviscible" 
+      PriceClass="price-class" 
+    />
+  </div>
 </template>
 
 <script>

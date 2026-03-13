@@ -15,7 +15,7 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  border: 1px solid #D8D8D8;
+  border: 1px solid $border-gray;
   border-radius: 20px;
   background-repeat: no-repeat; /* Не повторяем изображение */
   background-position: center; /* Центрируем изображение */
@@ -31,12 +31,12 @@
 }
 
 .input-radioButton__text {
-  color: #9B9B9B;
+  color: $gray-subtitle;
   font-size: 14px;
 }
 
 .input-radioButton__text.active {
-  color: #000000;
+  color: $pure-black;
 }
 
 .input-radioButton__label {
@@ -50,5 +50,5 @@
 
 .input-radioButton__sub-text.active {
   display: block;
-  color: #009B3D;
+  color: $green-hover;
 }

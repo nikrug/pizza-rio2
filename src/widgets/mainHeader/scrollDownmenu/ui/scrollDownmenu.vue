@@ -2,16 +2,16 @@
 
     <div :class="CustomClass" >
         <div :class="LinkClass" >
-            <img class="scrollDownmenu__logo" src="/images/drop-down-menu/dropdown-logo.svg">
-            <a class="scrollDownmenu__list-link" href="#Pizza" @click="handleClick('Pizza')">Пицца </a>
-            <a class="scrollDownmenu__list-link" href="#BeriPeki" @click="handleClick('BeriPeki')">Заготовка пиццы «Бери-пеки»</a>
-            <a class="scrollDownmenu__list-link" href="#Snacks"  @click="handleClick('Snacks')">Закуски</a>
-            <a class="scrollDownmenu__list-link" href="#Mexican" @click="handleClick('Mexican')">Мексиканские блюда</a>
-            <a class="scrollDownmenu__list-link" href="#Salat" @click="handleClick('Salat') ">Салаты</a>
-            <a class="scrollDownmenu__list-link" href="/">Супы</a>
-            <a class="scrollDownmenu__list-link" href="/">Напитки</a>
-            <a class="scrollDownmenu__list-link" href="/">Десерты</a>
-            <a class="scrollDownmenu__list-link" href="/">Другое</a>
+            <img class="scrolldownmenu__logo" src="/images/drop-down-menu/dropdown-logo.svg">
+            <a class="scrolldownmenu__list-link" href="#Pizza" @click="handleClick('Pizza')">Пицца </a>
+            <a class="scrolldownmenu__list-link" href="#BeriPeki" @click="handleClick('BeriPeki')">Заготовка пиццы «Бери-пеки»</a>
+            <a class="scrolldownmenu__list-link" href="#Snacks"  @click="handleClick('Snacks')">Закуски</a>
+            <a class="scrolldownmenu__list-link" href="#Mexican" @click="handleClick('Mexican')">Мексиканские блюда</a>
+            <a class="scrolldownmenu__list-link" href="#Salat" @click="handleClick('Salat') ">Салаты</a>
+            <a class="scrolldownmenu__list-link" href="/">Супы</a>
+            <a class="scrolldownmenu__list-link" href="/">Напитки</a>
+            <a class="scrolldownmenu__list-link" href="/">Десерты</a>
+            <a class="scrolldownmenu__list-link" href="/">Другое</a>
             <router-link :to="{ path: '/cart' }" :class="ButtonClass">
                   <CartButton :cartItems="cartItems" :onRemoveItem="removeFromCart" />
             </router-link>
@@ -29,7 +29,7 @@ import CartButton from '@widgets/cartButton/ui/cartButton.vue';
 const props = defineProps({
   CustomClass: {
     type: String,
-    default: 'scrollDownmenu',
+    default: 'scrolldownmenu',
   },
   
   ButtonClass:{
@@ -38,7 +38,7 @@ const props = defineProps({
   },
   LinkClass: {
     type: String,
-    default: 'scrollDownmenu__list',
+    default: 'scrolldownmenu__list',
   },
 
     // Новый проп для передачи дополнительного действия
@@ -108,9 +108,9 @@ const handleClick = (sectionId: string): void => {
 // Обработчик прокрутки
 const handleScroll = (): void => {
   const scrollPosition = window.scrollY;
-  const scrollDownmenuList = document.querySelector('.scrollDownmenu__list') as HTMLElement;
-  const scrollDownmenuLogo = document.querySelector('.scrollDownmenu__logo') as HTMLElement;
-    const scrollDownmenuLink = document.querySelector('.scrollDownmenu__list-link') as HTMLElement;
+  const scrollDownmenuList = document.querySelector('.scrolldownmenu__list') as HTMLElement;
+  const scrollDownmenuLogo = document.querySelector('.scrolldownmenu__logo') as HTMLElement;
+    const scrollDownmenuLink = document.querySelector('.scrolldownmenu__list-link') as HTMLElement;
 
   if (scrollPosition > 100) {
     scrollDownmenuList.classList.add('active');

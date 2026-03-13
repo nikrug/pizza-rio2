@@ -8,7 +8,7 @@
     /* margin-right: auto; */
 }
 .popup-content {
-        background: var(--pure-white);
+        background: $pure-white;
         background-image: none;
         padding: 2rem 2.5rem;
         border-radius: 24px;
@@ -16,17 +16,17 @@
         height: 100%;
     }
 .header__telephone-text{
-  color:#333333;
+  color:$black-33;
   font-size: 18px;
   font-weight: 700;
   transition: color 0.2s ease;
 }
 .header__telephone-text:hover{
-  color:orange;
+  color:$orange-hover;
 
 }
 .header__telephone-subtext{
-  color:#9B9B9B;
+  color:$gray-subtitle;
   font-size: 12px;
 
 }
@@ -34,8 +34,8 @@
 .swiper-pagination{
   position: relative;
   margin: 10px;
-  --swiper-pagination-color: white;
-  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-color: $pure-white;
+  --swiper-pagination-bullet-inactive-color: $pure-white;
   --swiper-pagination-bullet-inactive-opacity: 0.3;
   --swiper-pagination-bullet-opacity: 1;
 }
@@ -46,7 +46,7 @@
 }
 .carrer{
   background-image: url("/images/menu-item/pattern.png");
-  background-color: #198f30;
+  background-color:$green-bk;
   padding: 150px 50px 50px ;
 }
 .carrer__body{
@@ -62,7 +62,7 @@
   display: flex;
   max-width: 1280px;
   padding: 16px;
-  background-color: white;
+  background-color: $pure-white;
   border-radius: 10px;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .carrer__welcome-label{
-  color:white;
+  color:$pure-white;
   font-size: 48px;
   font-weight: bold;
 }
@@ -92,7 +92,7 @@
   display: flex;
   max-width: 620px;
   flex-direction: column;
-  color:white;
+  color:$pure-white;
   font-size: 16px;
   font-weight: medium;
   text-align: left;
@@ -121,7 +121,7 @@
 }
 
 .carrer__comments-label{
-  color: white;
+  color: $pure-white;
   font-size: 36px;
 
 }
@@ -134,8 +134,8 @@
 }
 
 .carrer__comments-add-text{
-  color: white;
-  background-color:#FFFFFF66;
+  color: $pure-white;
+  background-color:$gray-ff;
   border-radius: 16px;
   padding: 4px;
   margin: auto;
@@ -155,7 +155,7 @@
   flex-direction: row;
   align-items: center;
   font-size: 40px;
-  color: white;
+  color: $pure-white;
   font-weight: 500;
   gap:1rem;
 }
@@ -187,13 +187,13 @@
   flex-direction: row;
   align-items: center;
   font-size: 32px;
-  color: white;
+  color: $pure-white;
   font-weight: 500;
   gap:0.5rem;
 }
 
 .popup-content {
-        background: var(--pure-white);
+        background: $pure-white;
         background-image: none;
         padding: 2rem 2.5rem;
         border-radius: 24px;
@@ -202,7 +202,7 @@
     }
   .carrer{
   background-image: url("/images/menu-item/pattern.png");
-  background-color: #198f30;
+  background-color:$green-bk;
   padding: 150px 50px 50px ;
 }
 .carrer__head-hunter{
@@ -215,7 +215,7 @@
   display: flex;
   max-width: 1280px;
   padding: 26px;
-  background-color: white;
+  background-color: $pure-white;
   border-radius: 10px;
 }
 
@@ -242,7 +242,7 @@
 }
 
 .swiper-button-prev {
-  background-color: white;
+  background-color: $pure-white;
   border-radius: 30px;
   position: relative;
   bottom: 300px;
@@ -254,7 +254,7 @@
   background-repeat: no-repeat;
 }
 .swiper-button-next {
-  background-color: white;
+  background-color: $pure-white;
   position: relative;
   bottom: 325px;
   left: 640px;
@@ -269,7 +269,7 @@
 
 @media(min-width:1200px){
 .popup-content {
-        background: var(--pure-white);
+        background: $pure-white;
         background-image: none;
         padding: 2rem 2.5rem;
         border-radius: 24px;
@@ -284,11 +284,11 @@
   display: flex;
   max-width: 1280px;
   padding: 40px;
-  background-color: white;
+  background-color: $pure-white;
   border-radius: 20px;
 }
 .swiper-button-prev {
-  background-color: white;
+  background-color: $pure-white;
   border-radius: 30px;
   width: 48px; /* Ширина кнопок */
   height: 48px; /* Высота кнопок */
@@ -304,7 +304,7 @@
 }
 .swiper-button-next {
   display: flex;
-  background-color: white;
+  background-color: $pure-white;
   border-radius: 30px;
   width: 48px; /* Ширина кнопок */
   height: 48px; /* Высота кнопок */
@@ -321,17 +321,10 @@
 
 }
 
-.swiper {
-    margin-left: 0;
-    margin-right: 0;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-    display: block;
-}
 .swiper{
     width: 1420px;
     border-radius: 10px;
+    height: 590px;
     justify-items: center;
 }
 .carrer__slider-img{
@@ -353,9 +346,10 @@
 }
 .swiper-button-next{
   display: flex;
-  background-color: white;
+  background-color: $pure-white;
   border-radius: 30px;
   width: 48px; /* Ширина кнопок */
+  top: -325px;
   height: 48px; /* Высота кнопок */
   z-index: 10; /* Обеспечение правильного наложения */
   font-weight: 700;
@@ -365,8 +359,9 @@
 }
 .swiper-button-prev{
   display: flex;
-  background-color: white;
+  background-color: $pure-white;
   border-radius: 30px;
+  top: -300px;
   width: 48px; /* Ширина кнопок */
   height: 48px; /* Высота кнопок */
   z-index: 10; /* Обеспечение правильного наложения */
@@ -378,7 +373,42 @@
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: #FF991F;
+  background-color: $orange;
 }
 
+}
+@media(max-width:1244px){
+
+.swiper-button-prev,.swiper-button-next {
+
+  display: none;
+}
+
+
+}
+@media(max-width:1519px){
+
+.swiper-button-prev {
+  bottom: 300px;
+  left: -510px;
+
+}
+
+.swiper-button-next {
+  bottom: 325px;
+  left: 510px;
+
+}
+}
+@media(min-width:1520px){
+
+.swiper-button-prev {
+  bottom: 300px;
+  left: -640px;
+}
+
+.swiper-button-next {
+  bottom: 325px;
+  left: 640px;
+}
 }

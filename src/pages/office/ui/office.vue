@@ -16,10 +16,11 @@
                         ></inputText>
                         <div v-if="emailError" class="error-message">{{ emailError }}</div>
                         
-                        <inputText
+                      <inputText
                             v-model="phone"
                             inputPlaceholder="Введите номер телефона"
                             inputTextLabel="Ваш телефон"
+                            v-mask="'(###) ###-####'"  
                             :class="{ 'input-error': phoneError }"
                         ></inputText>
                         <div v-if="phoneError" class="error-message">{{ phoneError }}</div>

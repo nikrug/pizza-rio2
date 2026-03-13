@@ -56,18 +56,17 @@ interface CartItem {
   imageSrc: string;
 }
 
-const props = defineProps<{
-  cart: CartItem[];
-  CartListClass:{
-    type: string,
-    default: 'cart-list',
-  },
-  PriceClass: {
-    type: string,
-    default: 'invicible',
-  },
-}>();
-
+const props = withDefaults(
+  defineProps<{
+    cart: CartItem[];
+    CartListClass?: string;
+    PriceClass?: string;
+  }>(),
+  {
+    CartListClass: 'cart-list', // Значение по умолчанию для className
+    PriceClass: 'invicible', // Значение по умолчанию для additionalClasses
+  }
+);
 const localCart = ref<CartItem[]>([]);
 const totalPrice = ref(0);
 

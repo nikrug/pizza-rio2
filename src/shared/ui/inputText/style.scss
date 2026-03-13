@@ -6,13 +6,13 @@
 }
 
 .input-label{
-    color:black;
+    color:$pure-black;
     font-weight: normal;
     font-size: 16px;
 }
 
 .input-label-small{
-    color:black;
+    color:$pure-black;
     font-weight: normal;
     font-size: 12px;
 }
@@ -29,12 +29,12 @@
     padding: 13px 16px;
     border-radius: 10px;
     width: 100%;
-    border: 1px solid #d8d8d8;
+    border: 1px solid $border-gray;
 
 }
 
 .input-subtext{
-    color:#9B9B9B ;
+    color:$gray-subtitle ;
     font-size: 12px;
     text-align: start;
 }
@@ -46,7 +46,7 @@
 
 
 .input-text:hover {
-    border: 1px solid rgb(105, 105, 105);
+    border: 1px solid $gray-active;
     transition:border  0.3s ease-in-out;
 }
 
@@ -88,15 +88,15 @@
 
 .input-error {
     input{
-        border: 1px solid red; // Красная рамка при ошибке
-        background-color: #fff0f0; // Светлый фон для ошибки
-        color: red; // Цвет текста при ошибке
+        border: 1px solid $c-red; 
+        background-color: $red-ff; 
+        color: $c-red; // Цвет текста при ошибке
     }
     .input-text::placeholder {
-    color: red; /* Цвет placeholder при фокусе */
+    color: $c-red; /* Цвет placeholder при фокусе */
     }
     .input-text:hover {
-    border: 1px solid red;
+    border: 1px solid $c-red;
     transition:border  0.3s ease-in-out;
 }
 
@@ -108,8 +108,8 @@
     font-size: 23px;
     font-family: Verdana;
     letter-spacing: 1.45px;
-    max-height: 50px;
-    color: red;
+    max-height: 49px;
+    color: $c-red;
     padding-right: 55px;
   }
 
@@ -119,8 +119,8 @@
     font-size: 23px;
     font-family: Verdana;
     letter-spacing: 1.45px;
-    max-height: 50px;
-    color: #009b3d;
+    max-height: 49px;
+    color: $green-hover;
     padding-right: 55px;
   }
 }

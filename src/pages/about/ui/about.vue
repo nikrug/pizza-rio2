@@ -9,19 +9,20 @@
                 
         </div>
         <div class="about__swiper-block"> 
-        <swiper 
+        <swiper class="swiper-top"
         :spaceBetween="10"
-        :navigation="true"
         :thumbs="{ swiper: thumbsSwiper }"
         :modules="modules"
         :loop="true"
-        class="swiper-top"
+        :navigation="{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }"
         >
         <swiper-slide class="swiper-slide-top"><img src="/images/about/cake.jpg" /></swiper-slide>
         <swiper-slide class="swiper-slide-top"><img src="/images/about/vase.jpg" /></swiper-slide>
         <swiper-slide class="swiper-slide-top"><img src="/images/about/desert.png" /></swiper-slide>
         <swiper-slide class="swiper-slide-top"><img src="/images/about/beri-peki.jpg" /></swiper-slide>
         <swiper-slide class="swiper-slide-top"><img src="/images/about/pizza.png" /></swiper-slide>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
         </swiper>
         
         <swiper
@@ -40,6 +41,7 @@
         <swiper-slide><img class="swiper-slide-bottom" src="/images/about/beri-peki.jpg" /></swiper-slide>
         <swiper-slide><img class="swiper-slide-bottom" src="/images/about/pizza.png" /></swiper-slide>
         </swiper>
+
         </div>
 
         </div> 
@@ -90,7 +92,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import './style.scss';
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { FreeMode, Navigation, Thumbs , Pagination} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
 export default {
@@ -108,7 +110,7 @@ export default {
     return {
       thumbsSwiper,
       setThumbsSwiper,
-      modules: [FreeMode, Navigation, Thumbs],
+      modules: [FreeMode, Navigation,Pagination, Thumbs],
     };
   },
 };
@@ -118,6 +120,7 @@ export default {
 <style lang="scss" scoped>
 @import './style.scss';
 @import '/node_modules/swiper/swiper-bundle.min.css';
+
 </style>
 
 

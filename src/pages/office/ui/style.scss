@@ -29,7 +29,7 @@
     padding:40px;
     justify-items: left;
     text-align: left;
-    background-color:white;
+    background-color:$pure-white;
     border-radius: 0;
 
 }
@@ -50,12 +50,12 @@
     padding: 2rem;
     text-align: left;
     border-radius: 0;
-    background-color:white;
+    background-color:$pure-white;
 }
 
 .office__new-password-label{
     font-size: 16px;
-    color: #FF991F;
+    color: $orange;
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -71,7 +71,7 @@
 
 .office{
   background-image: url("/images/menu-item/pattern.png");
-  background-color: #198f30;
+  background-color:$green-bk;
   padding:50px 0;
   min-height: 100vh;
 }
@@ -86,8 +86,8 @@
     display:flex;
     flex-direction:row;
     padding:5px;
-    background-color:#FBE7CE;
-    color:#FF991F;
+    background-color:$orange-fb;
+    color:$orange;
     border-radius:10px;
 }
 
@@ -95,8 +95,8 @@
     display:flex;
     flex-direction:row;
     padding:5px;
-    background-color:#CDE5D2;
-    color:#009B3D;
+    background-color:$green-cd;
+    color:$green-hover;
     border-radius:10px;
 }
 
@@ -112,13 +112,13 @@
 
 .office__label{
     font-size:48px;
-    color:white;
+    color:$pure-white;
 
 }
 
 .office__sublabel{
     font-size:18px;
-    color:white;
+    color:$pure-white;
 
 }
 
@@ -132,14 +132,14 @@
 }
 
 .error-message {
-    color: red; // Цвет текста ошибки
+    color: $c-red; // Цвет текста ошибки
     font-size: 12px; // Размер шрифта 
 }
 
   @media(min-width:#{$br-tablet}px){
     .office{
     background-image: url("/images/menu-item/pattern.png");
-    background-color: #198f30;
+    background-color:$green-bk;
     padding:50px 0;
     }
     
@@ -174,7 +174,7 @@
     padding:40px;
     justify-items: left;
     text-align: left;
-    background-color:white;
+    background-color:$pure-white;
     border-radius: 0;
 
 }
@@ -187,7 +187,7 @@
     padding: 2rem;
     text-align: left;
     border-radius: 0;
-    background-color:white;
+    background-color:$pure-white;
 
 }
 
@@ -205,7 +205,7 @@
 }
     .office{
     background-image: url("/images/menu-item/pattern.png");
-    background-color: #198f30;
+    background-color:$green-bk;
       
     }
     .office__label-block{
@@ -226,7 +226,7 @@
     padding:40px;
     justify-items: left;
     text-align: left;
-    background-color:white;
+    background-color:$pure-white;
     border-radius: 10px;
 
 }
@@ -239,7 +239,7 @@
     padding: 2rem;
     text-align: left;
     border-radius: 10px;
-    background-color:white;
+    background-color:$pure-white;
 
 }
   }

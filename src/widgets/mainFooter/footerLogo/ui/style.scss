@@ -23,13 +23,13 @@
     }
   
     &__label {
-      @include font-styles('Nekst',400, 14px, 24px, white);
+      @include font-styles('Nekst',400, 14px, 24px, $pure-white);
     }
   
     &__text {
-      @include font-styles('Nekst',400, 14px, 20px, white);
+      @include font-styles('Nekst',400, 14px, 20px, $pure-white);
       position: absolute;
-      bottom: 0;
+      bottom: 80px;
     }
   }
   
@@ -39,7 +39,7 @@
       margin: 3rem 0 5rem 0rem;
     }
     .footer-logo__text {
-      @include font-styles('Nekst',400, 14px, 20px, white);
+      @include font-styles('Nekst',400, 14px, 20px, $pure-white);
       position:relative;
       bottom: 0;
     }

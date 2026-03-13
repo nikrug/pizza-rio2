@@ -2,9 +2,6 @@
   <div class="counter">
     <div class="count-text" v-if="count < 1">
       {{ price }} ₽
-
-      
-      
     </div>
     <div class="count-text" v-if="count > 0" :class="{ 'active-text': count > 0 }">
       {{ total }} ₽

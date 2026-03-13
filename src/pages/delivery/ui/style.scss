@@ -2,7 +2,7 @@
 
 .delivery{
   background-image: url("/images/menu-item/pattern.png");
-  background-color: #198f30;
+  background-color:$green-bk;
   padding: 50px 200px;
 }
 
@@ -15,7 +15,7 @@
 
 .delivery__item{
     border-radius: 0px;
-    background-color: white;
+    background-color: $pure-white;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -24,7 +24,7 @@
 
 .delivery__item-top{
     border-radius: 10px;
-    background-color: white;
+    background-color: $pure-white;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -43,7 +43,7 @@
     flex-direction: column;
     gap:20px;
     padding: 20px;
-    background-color: white;
+    background-color: $pure-white;
     border-radius: 0px;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .delivery__label{
-    color:white;
+    color:$pure-white;
     font-size: 28px;
     padding: 20px 0 0 20px;
 }
@@ -82,16 +82,16 @@
 }
 
 .delivery__text-white{
-    color:white;
+    color:$pure-white;
 }
 
 .delivery__text-orange{
-    color:#FF991F;
+    color:$orange;
     width: 400;
 }
 .delivery__way-orange{
     font-size: 20px;
-    color:orange;
+    color:$orange;
 }
 
 .delivery__way-text-block{
@@ -118,13 +118,13 @@
 .delivry__way-span{
     display: flex;
     flex-direction: column;
-    background-color: orange;
+    background-color: $orange;
     border-radius: 40px;
     width: 40px;
     height: 40px;
     text-align: center;
     justify-content: center;
-    color:white;
+    color:$pure-white;
     font-size: 16px;
 }
     .delivery__list{
@@ -148,7 +148,7 @@
         flex-direction: column;
         gap:20px;
         padding: 30px;
-        background-color: white;
+        background-color: $pure-white;
         border-radius: 0px;
     }
     .delivery__item-label{
@@ -170,7 +170,7 @@
 
     .delivery__item-top{
         border-radius: 10px;
-        background-color: white;
+        background-color: $pure-white;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -180,7 +180,7 @@
     }
 
     .delivery__label{
-        color:white;
+        color:$pure-white;
         font-size: 36px;
         padding-left: 20px;
     }
@@ -215,7 +215,7 @@
 }
 .delivery{
   background-image: url("/images/menu-item/pattern.png");
-  background-color: #198f30;
+  background-color:$green-bk;
   padding: 50px 200px;
 }
 
@@ -229,7 +229,7 @@
 .delivery__item{
     border-radius: 10px;
 
-    background-color: white;
+    background-color: $pure-white;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -238,7 +238,7 @@
 
 .delivery__item-top{
     border-radius: 10px;
-    background-color: white;
+    background-color: $pure-white;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -256,7 +256,7 @@
     display: flex;
     flex-direction: column;
     gap:20px;
-    background-color: white;
+    background-color: $pure-white;
     padding: 30px;
     width: 49%;
     border-radius: 10px;
@@ -275,7 +275,7 @@
 }
 
 .delivery__label{
-    color:white;
+    color:$pure-white;
     font-size: 48px;
     padding-left: 0;
 }

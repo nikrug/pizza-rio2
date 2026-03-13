@@ -2,7 +2,7 @@
 
 .notFound{
   background-image: url("/images/menu-item/pattern.png");
-  background-color: #198f30;
+  background-color:$green-bk;
   padding: 150px 250px 250px ;
   height: 100vh;
 }
@@ -41,15 +41,15 @@
 
 .notFound__label{
   font-size: 48px;
-  color: white;
+  color: $pure-white;
 }
 
 .notFound__title{
   font-size: 36px;
-  color: white;
+  color: $pure-white;
 }
 
 .notFound__subtitle{
   font-size: 28px;
-  color: white;
+  color: $pure-white;
 }

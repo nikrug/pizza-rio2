@@ -8,7 +8,7 @@
     max-width: 580px;
     min-width: fit-content;
     height: 692px;
-    border: 1px solid #EEEEEE;
+    border: 1px solid $white-ee;
 }
 
 .stock__item-text-block{
@@ -52,8 +52,8 @@
     display:flex;
     flex-direction:row;
     padding:8px 10px 8px 10px ;
-    background-color:#FBE7CE;
-    color:#FF991F;
+    background-color:$orange-fb;
+    color:$orange;
     font-size: 16px;
     border-radius:10px;
     
@@ -63,8 +63,8 @@
     display:flex;
     flex-direction:row;
     padding:8px 10px 8px 10px ;
-    background-color:#CDE5D2;
-    color:#009B3D;
+    background-color:$green-cd;
+    color:$green-hover;
     font-size: 16px;
     border-radius:10px;
 }

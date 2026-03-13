@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(#01350B, 0.8);
+    background-color: rgba($green-01, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@
 .popup__text {
   padding: 15px 40px;
   cursor: pointer;
-  color: #000000; /* Измените на нужный цвет */
+  color: $pure-black; /* Измените на нужный цвет */
   border-radius: 10px;
   text-align: center;
   width: 100%;
@@ -81,24 +81,24 @@
 .popup__text-forget{
   padding: 15px 0px;
   cursor: pointer;
-  color: #000000; /* Измените на нужный цвет */
+  color: $pure-black; /* Измените на нужный цвет */
   border-radius: 10px;
   text-align: left;
 }
 
 .popup__text-forget-label{
-  color: #FF991F; /* Измените на нужный цвет */
+  color: $orange; /* Измените на нужный цвет */
   border-radius: 10px;
   text-align: end;
   transition: color 0.2s ease;
 }
 .popup__text-forget-label:hover{
-  color: #cf760a; /* Измените на нужный цвет */
+  color:  $orange-hover; /* Измените на нужный цвет */
 }
 .popup__button{
   padding: 14px 36px 14px 36px;
-  background-color: #FF991F;
-  color: white;
+  background-color: $orange;
+  color: $pure-white;
   border-radius: 10px;
   margin: 1rem 0;
 }
@@ -110,12 +110,12 @@ flex-direction: row;
   padding: 10px;
 }
 .popup__text.active {
-  background-color: white; /* Измените на нужный цвет */
+  background-color: $pure-white; /* Измените на нужный цвет */
    text-align: center;
 }
 
 .popup__choose-block{
-  background-color: #F0F0F0;
+  background-color: $white;
   border-radius: 10px;
   display: flex;
   padding: 5px;
@@ -131,20 +131,20 @@ flex-direction: row;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(#01350B, 0.8);
+    background-color: rgba($green-01, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
   .error-message {
-    color: red; // Цвет текста ошибки
+    color: $c-red; // Цвет текста ошибки
     font-size: 12px; // Размер шрифта 
     text-align: left;
 }
 
   .popup-content {
-    background: var(--pure-white);
+    background: $pure-white;
     background-image: url("/images/headers/pattern.svg");
     padding: 90px 20px;
     border-radius: 0px;
@@ -169,7 +169,7 @@ flex-direction: row;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(#01350B, 0.8);
+    background-color: rgba($green-01, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,7 +182,7 @@ flex-direction: row;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(#01350B, 0.8);
+    background-color: rgba($green-01, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,7 +190,7 @@ flex-direction: row;
   }
   
   .popup-content {
-    background: var(--pure-white);
+    background: $pure-white;
     background-image: url("/images/headers/pattern.svg");
     padding: 2rem 2.5rem;
     border-radius: 24px;
@@ -207,7 +207,7 @@ flex-direction: row;
   }
   @media (min-width:#{$br-desktop}px) {
   .popup-overlay {
-    background-color: rgba(#01350B, 0.8);
+    background-color: rgba($green-01, 0.8);
   }
   
 
