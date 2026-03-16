@@ -1,16 +1,16 @@
 @import "src/shared/styles";
 
-.notFound{
-  background-image: url("/images/menu-item/pattern.png");
-  background-color:$green-bk;
-  padding: 150px 250px 250px ;
-  height: 100vh;
-}
+// .notFound{
+//   background-image: url("/images/menu-item/pattern.png");
+//   background-color:$green-bk;
+//   padding: 150px 250px 250px ;
+//   height: 100vh;
+// }
+
 .notFound__button{
   padding: 12px 36px;   
    transition: background 0.3s ease, color 0.3s ease;
 }
-
 
 .notFound__block{
   max-width: 1300px;

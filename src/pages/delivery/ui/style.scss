@@ -1,10 +1,10 @@
 @import "src/shared/styles";
 
-.delivery{
-  background-image: url("/images/menu-item/pattern.png");
-  background-color:$green-bk;
-  padding: 50px 200px;
-}
+// .delivery{
+//   background-image: url("/images/menu-item/pattern.png");
+//   background-color:$green-bk;
+//   padding: 50px 200px;
+// }
 
 .delivery__pay-block{
     display: grid;
@@ -132,10 +132,10 @@
         margin: 0;
     }
 
-    .delivery{
-            padding: 50px 0px;
-            min-height: 100vh;
-    }
+    // .delivery{
+    //         padding: 50px 0px;
+    //         min-height: 100vh;
+    // }
 
 @media(min-width:#{$br-tablet}px) {
     .delivery__row-block{
@@ -164,9 +164,9 @@
         max-width: 1300px;
         margin: 0;
     }
-    .delivery{
-            padding: 50px 0;
-        }
+    // .delivery{
+    //         padding: 50px 0;
+    // }
 
     .delivery__item-top{
         border-radius: 10px;
@@ -194,8 +194,8 @@
         gap: 10px;
     }
     .delivery__list{
-        max-width: 1300px;
-        margin: 3rem auto;
+        max-width: 1280px;
+        margin: 0rem auto;
     }
     .delivery__way-block{
         display: flex;
@@ -213,11 +213,11 @@
     width: auto;
 
 }
-.delivery{
-  background-image: url("/images/menu-item/pattern.png");
-  background-color:$green-bk;
-  padding: 50px 200px;
-}
+// .delivery{
+//   background-image: url("/images/menu-item/pattern.png");
+//   background-color:$green-bk;
+//   padding: 50px 200px;
+// }
 
 .delivery__pay-block{
     display: grid;

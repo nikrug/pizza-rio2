@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <MainHeaderComponent />
-    <q-page-container>
+    <q-page-container class="layout">
       <div class="notFound">
         <div class="notFound__block">
             <div class="notFound__block-text">

@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout  view="lHh Lpr lFf">
     <q-toolbar class="header">
         <a href="/">
           <img  src="/images/headers/header-logo.svg">

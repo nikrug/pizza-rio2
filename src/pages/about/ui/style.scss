@@ -1,13 +1,13 @@
 @import "src/shared/styles";
 //BLOX
-.about{
-        background-image: url("/images/menu-item/pattern.png");
-        background-color:$green-bk;
-        padding:50px 0px;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-}
+// .about{
+//         background-image: url("/images/menu-item/pattern.png");
+//         background-color:$green-bk;
+//         padding:50px 0px;
+//         display: flex;
+//         flex-direction: column;
+//         min-height: 100vh;
+// }
 
 .about__block{
         max-width: 100%;
@@ -265,9 +265,9 @@
                 margin: 0;
                 width: 100%;
         }   
-        .about{
-                padding:50px 200px;
-        }
+        // .about{
+        //         padding:50px 200px;
+        // }
 }
 .about__title{
  font-size:48px;
@@ -360,9 +360,9 @@
         justify-content: end;
 }
 
-.about{
-    padding:50px 200px;
-}
+// .about{
+//     padding:50px 200px;
+// }
 
 .about__block{
         max-width: 1280px;

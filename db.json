@@ -22,7 +22,16 @@
       "quantity": 0
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "9-counter2",
+      "count": 10,
+      "price": 550,
+      "label": "Манхеттен2",
+      "imageSrc": "/images/menu-item/Manhattan.jpg",
+      "weight": "690 г."
+    }
+  ],
   "users": [
     {
       "id": "cad7",

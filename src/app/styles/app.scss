@@ -7,6 +7,30 @@ body {
   font-family:'Nekst';
 }
 
+.layout{
+  background-image: url("/images/menu-item/pattern.png");
+  background-color:$green-bk;
+  padding: 100px 0;
+}
+
+@media(min-width:#{$br-tablet}px) {
+  .layout{
+    background-image: url("/images/menu-item/pattern.png");
+    background-color:$green-bk;
+    padding: 100px 0;
+  }
+
+}
+
+@media(min-width:#{$br-desktop}px){
+.layout{
+  background-image: url("/images/menu-item/pattern.png");
+  background-color:$green-bk;
+  padding: 100px 0;
+}
+
+        
+}
 h1,
 h2,
 h3,
