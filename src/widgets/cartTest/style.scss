@@ -22,7 +22,7 @@
 }
 
 .cart {
-  padding: 1rem;
+  padding: 0rem;
 }
 
 h2 {
@@ -136,6 +136,11 @@ li {
     border-bottom: 1px solid $border-gray;
 }
 
+
+.cart {
+  padding: 0rem;
+}
+
 .cart-list__bottom{
     display: flex;
     flex-direction: row;
@@ -157,6 +162,9 @@ li {
 }
 
 @media (min-width: 1244px) {
+.cart {
+  padding: 0rem;
+}
 
 .cart-list__item{
     display: flex;
@@ -169,6 +177,7 @@ li {
     margin-bottom: 2rem;
     border-bottom: 1px solid $border-gray;
 }
+
 .cart-list{
     border-radius: 10px;
     background-color: $pure-white;

@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import axios from 'axios';
 
+import axiosInstance from '@widgets/menuBlock/api/axiosInstance'; // Импортируем созданный экземпляр
 export default {
   name: 'PizzaWeightSelector',
   props: {
@@ -66,7 +66,7 @@ export default {
   methods: {
     async fetchWeightOptions() {
       try {
-        const response = await axios.get('http://localhost:3000/massWeight');
+        const response = await axiosInstance.get('/massWeight');
         const options = response.data[this.title] || [];
         
         if (options.length > 0) {

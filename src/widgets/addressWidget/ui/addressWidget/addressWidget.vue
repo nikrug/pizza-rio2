@@ -37,18 +37,11 @@
           </div>
         </div>
       </div>
-      <div v-if="addresses.length < 4" class="empty-address-item">
-        <div>Ваш адрес</div>
-      </div>
-      <div v-if="addresses.length < 3" class="empty-address-item">
-        <div>Ваш адрес</div>
-      </div>
-      <div v-if="addresses.length < 2" class="empty-address-item">
-        <div>Ваш адрес</div>
-      </div>
-      <div v-if="addresses.length === 0" class="empty-address-item">
-        <div>Ваш адрес</div>
-      </div>
+      <template v-for="n in 4 - addresses.length" :key="'empty-' + n">
+        <div class="empty-address-item">
+          <div>Ваш адрес</div>
+        </div>
+      </template>
     </div>
   </div>
 </template>

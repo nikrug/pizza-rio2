@@ -1,5 +1,7 @@
 <script setup>
-import { ref, defineEmits, defineProps, watch } from 'vue';
+import { ref, defineEmits, defineProps, watch, onMounted } from 'vue';
+
+import Cleave from 'cleave.js';
 
 const props = defineProps({
   modelValue: {
@@ -38,20 +40,35 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  isPhoneInput: {  
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emit = defineEmits(['update:modelValue']);
 const password = ref(props.modelValue);
 const showPassword = ref(false);
+const phoneInput = ref(null); // Reference for the phone input
 
-// Метод для переключения состояния видимости
 const togglePassword = () => {
   showPassword.value = !showPassword.value;
 };
 
-// Эмит при изменении
 watch(password, (newValue) => {
   emit('update:modelValue', newValue);
+});
+
+// Initialize Cleave only for phone input
+onMounted(() => {
+  if (phoneInput.value && props.isPhoneInput) {
+    new Cleave(phoneInput.value, {
+      prefix: '+7',
+      delimiters: [' ', ' ', '-', '-'],
+      blocks: [2, 3, 3, 2, 2],
+      numericOnly: true
+    });
+  }
 });
 </script>
 
@@ -60,9 +77,19 @@ watch(password, (newValue) => {
     <div :class="inputLabel">{{ inputTextLabel }}</div>
     <div class="input__container">
       <input
+        ref="phoneInput"
+        v-if="isPhoneInput" 
+        type="text"
+        class="input-text"
+        :placeholder="inputPlaceholder"
+        v-model="password"
+        :maxlength="maxLength"
+      />
+      <input
+        v-else
         :type="showPassword ? 'text' : inputType"
         class="input-text"
-        :class="{ 'error': formSubmitted && !password }" 
+        :class="{ 'error': formSubmitted && !password }"
         :placeholder="inputPlaceholder"
         v-model="password"
         :maxlength="inputType === 'password' ? maxLength : undefined"
@@ -73,15 +100,11 @@ watch(password, (newValue) => {
         />
       </div>
     </div>
-          <slot></slot>
+    <slot></slot>
     <div class="input-subtext">{{ inputSubtext }}</div>
-    
   </div>
-
 </template>
 
 <style lang="scss">
 @import "./style";
-
-
 </style>

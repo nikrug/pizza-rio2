@@ -7,29 +7,32 @@ body {
   font-family:'Nekst';
 }
 
-.layout{
+.layout {
   background-image: url("/images/menu-item/pattern.png");
-  background-color:$green-bk;
+  background-color: $green-bk;
   padding: 100px 0;
+  min-height: 100vh;  // Ensure the layout takes at least the full height of the viewport
+  overflow: hidden;    // Prevent overflow causing unwanted space
 }
 
-@media(min-width:#{$br-tablet}px) {
-  .layout{
-    background-image: url("/images/menu-item/pattern.png");
-    background-color:$green-bk;
-    padding: 100px 0;
+@media (min-width: #{$br-tablet}px) {
+  .layout {
+    padding: 100px 0; // Adjust if needed per tablet layout
+  }
+}
+
+@media (min-width: #{$br-desktop}px) {
+  .layout {
+    padding: 100px 0; // Adjust if needed per desktop layout
+  }
+}
+      
+@media (max-width: #{$br-desktop-max}px) {
+  .layout {
+    padding: 100px 0; // Adjust padding for smaller screens if needed
+    height: auto; // Set height to auto if you want it flexible
   }
 
-}
-
-@media(min-width:#{$br-desktop}px){
-.layout{
-  background-image: url("/images/menu-item/pattern.png");
-  background-color:$green-bk;
-  padding: 100px 0;
-}
-
-        
 }
 h1,
 h2,

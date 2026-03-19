@@ -24,10 +24,26 @@
   ],
   "cart": [
     {
-      "id": "9-counter2",
-      "count": 10,
+      "id": "122-counter2",
+      "count": 6,
+      "price": 100500,
+      "label": "Гослинг",
+      "imageSrc": "/images/menu-item/303473_929890.jpg",
+      "weight": "прям как я"
+    },
+    {
+      "id": "6-counter1",
+      "count": 5,
+      "price": 975,
+      "label": "Манхеттен",
+      "imageSrc": "/images/menu-item/Manhattan.jpg",
+      "weight": "1330 г."
+    },
+    {
+      "id": "6-counter2",
+      "count": 4,
       "price": 550,
-      "label": "Манхеттен2",
+      "label": "Манхеттен",
       "imageSrc": "/images/menu-item/Manhattan.jpg",
       "weight": "690 г."
     }
