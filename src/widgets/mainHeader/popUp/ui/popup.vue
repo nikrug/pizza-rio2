@@ -25,13 +25,16 @@
           </div>
 
           <div class="popup__section" v-show="login">
-            <inputText inputPlaceholder="Введите адрес электронной почты" inputTextLabel="Электронная почта" v-model="form.email" :class="{ 'input-error': emailError }">
-              <div v-if="emailError" class="error-message">{{ emailError }}</div>
+            <inputText 
+            inputPlaceholder="Введите адрес электронной почты"
+            inputTextLabel="Электронная почта"
+            v-model="form.email" :class="{ 'input-error':isInteracted && emailError }">
+              <div v-if="isInteracted && emailError" class="error-message">{{ emailError }}</div>
             </inputText>
 
-            <inputText inputType="password" PasswordButton="show-button" v-model="form.password" :class="{ 'input-error': newPasswordError, loginError }" @input="validatePassword">
-              <div v-if="loginError" class="error-message">{{ loginError }}</div>
-              <div v-if="newPasswordError" class="error-message">{{ newPasswordError }}</div>
+            <inputText inputType="password" PasswordButton="show-button" v-model="form.password" :class="{ 'input-error':isInteracted && newPasswordError, loginError }" @input="validatePassword">
+              <div v-if="loginError && isInteracted" class="error-message">{{ loginError }}</div>
+              <div v-if="newPasswordError && isInteracted" class="error-message">{{ newPasswordError }}</div>
             </inputText>
 
             <inputCheckbox inputCheckboxLabel="Запомнить меня на сайте"></inputCheckbox>
@@ -45,14 +48,31 @@
           </div>
 
           <div class="popup__section" v-show="regist">
-            <inputText inputPlaceholder="Введите адрес электронной почты" inputTextLabel="Электронная почта" v-model="form.email" :class="{ 'input-error':  emailError,registerError}"></inputText>
-            <div v-if="emailError" class="error-message">{{ emailError }}</div>
-            <inputText inputType="password" PasswordButton="show-button" v-model="form.password" :class="{ 'input-error': newPasswordError,registerError }"></inputText>
-            <inputText inputType="password" PasswordButton="show-button" inputPlaceholder="Повторите пароль" inputTextLabel="Повторите пароль" v-model="form.confirmPassword" :class="{ 'input-error': newPasswordError,registerError }"></inputText>
-             <div v-if="newPasswordError" class="error-message">{{ newPasswordError }}</div>
-             <div v-if="registerError" class="error-message">{{ registerError }}</div>
+            <inputText 
+              inputPlaceholder="Введите адрес электронной почты"
+              inputTextLabel="Электронная почта"
+              v-model="form.email" :class="{ 'input-error': isInteracted && emailError,registerError}">
+            </inputText>
+            <div v-if="isInteracted && emailError" class="error-message">{{ emailError }}</div>
+
+            <inputText 
+              inputType="password" 
+              PasswordButton="show-button"
+              v-model="form.password" :class="{ 'input-error': isInteracted && newPasswordError,registerError }">
+            </inputText>
+
+            <inputText 
+              inputType="password"
+              PasswordButton="show-button" 
+              inputPlaceholder="Повторите пароль" 
+              inputTextLabel="Повторите пароль" 
+              v-model="form.confirmPassword" :class="{ 'input-error': isInteracted && newPasswordError,registerError }">
+            </inputText>
+             <div v-if="isInteracted && newPasswordError" class="error-message">{{ newPasswordError }}</div>
+             <div v-if="isInteracted && registerError" class="error-message">{{ registerError }}</div>
             <inputCheckbox inputCheckboxLabel="Я согласен на обработку персональных данных" v-model="form.agree"></inputCheckbox>
-            <customButton @click="handleRegister" ButtonText="Зарегистрироваться"></customButton>
+
+            <customButton @click="handleRegister" :class="{ 'disabled': isFormInvalidRegist }" :disabled="isFormInvalidRegist" ButtonText="Зарегистрироваться"></customButton>
 
           </div>
         </div>
@@ -102,7 +122,7 @@ const form = ref({
 
 const loginError = ref('');
 const registerError = ref('');
-
+const isInteracted = ref(false);
 const switchToLogin = () => {
   regist.value = false;
   login.value = true;
@@ -117,7 +137,9 @@ const switchToRegister = () => {
   regist.value = true;
   login.value = false;
 };
+
 const successfulLogin = ref(false); // Переменная для отслеживания успешного логина
+
 const handlePopupClick = () => {
   if (successfulLogin.value) {
     router.push('/office'); // Редирект на офис, если eспешный вход
@@ -125,6 +147,7 @@ const handlePopupClick = () => {
   } else {
     Popup.value = true; // Открыть попап, если неуспешный вход
     disableScroll(); // Блокируем прокрутку
+    isInteracted.value = false; // Сброс флага при открытии попапа
   }
 };
 
@@ -138,6 +161,8 @@ const enableScroll = () => {
 
 // Метод для входа
 const handleLogin = async () => {
+  // Указываем, что пользователь взаимодействовал с формой
+  isInteracted.value = true;
   clearErrors();
 
   // Валидация электронной почты
@@ -150,6 +175,7 @@ const handleLogin = async () => {
   const user = users[0];
 
   if (user && user.password === form.value.password) {
+    
     successfulLogin.value = true; // Устанавливаем успешный логин
     router.push('/office'); // Перенаправляем в офис
     Popup.value=false;
@@ -160,23 +186,28 @@ const handleLogin = async () => {
 };
 
 const isFormInvalid = computed(() => {
-  clearErrors(); // Сначала очищаем ошибки
+  clearErrors(); // Очищаем ошибки в начале вычислений
 
-  // Валидация электронной почты
+  // Проверяем валидность email и паролей
   validateEmail();
-
-  // Валидация пароля
   validatePassword();
 
-  if (emailError.value || newPasswordError.value) return true;
-
-  if (regist.value && (form.value.password !== form.value.confirmPassword || !form.value.agree)) {
-    return true; // Если пользователь в режиме регистрации, и пароли не совпадают или согласие не дано
-  }
-  
-  return false; // Если ошибок нет
+  if ( form.value.password && form.value.email) return false;
+  else return true
 });
 
+const isFormInvalidRegist = computed(() => {
+  clearErrors(); // Очищаем ошибки в начале вычислений
+
+  validateEmail();
+  validatePassword();
+
+    // Проверяем, если пользователь находится в режиме регистрации
+  if  (form.value.confirmPassword ) return false;
+    
+  
+  else return true; // Если ошибок нет
+});
 const isRegistering = ref(false); // Флаг для отслеживания процесса регистрации
 
 const handleRegister = async () => {
