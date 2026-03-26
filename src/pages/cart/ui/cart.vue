@@ -39,7 +39,7 @@
                                     <div class="cart__comment-label">Комментарии к заказу</div>
                                     <div class="cart__comment-sublabel">необязательно</div>
                                 </div>
-                                <inputTextarea></inputTextarea>
+                                 <inputTextarea v-model="textareaValue" :rows="5" :cols="40"></inputTextarea>
                             </div>
                             <inputCheckbox inputCheckboxLabel="Я согласен на обработку персональных данных"></inputCheckbox>
                                   <button class="cart__customButton">
@@ -65,7 +65,7 @@
                                     <div class="cart__comment-label">Комментарии к заказу</div>
                                     <div class="cart__comment-sublabel">необязательно</div>
                                 </div>
-                                 <inputTextarea></inputTextarea>
+                                 <inputTextarea v-model="textareaValue" :rows="5" :cols="40"></inputTextarea>
                             </div>
                             <inputCheckbox inputCheckboxLabel="Я согласен на обработку персональных данных"></inputCheckbox>
              
@@ -94,7 +94,7 @@ import cartList from '@widgets/cartList/ui/cartList.vue';
 import CartAlone from '@widgets/cartTest/CartAlone.vue';
 import CartSummary from '@widgets/cartTest/CartSummary.vue';
 
-
+const textareaValue = ref('');
 const delivery = ref(true);
 const yourown = ref(false);
 const selectedDeliveryOption = ref<string>('option1');

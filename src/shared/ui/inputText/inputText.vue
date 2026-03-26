@@ -1,5 +1,5 @@
-<script setup>
-import { ref, defineEmits, defineProps, watch, onMounted } from 'vue';
+<script setup lang="ts">
+import { ref,  watch, onMounted } from 'vue';
 
 import Cleave from 'cleave.js';
 
@@ -20,9 +20,9 @@ const props = defineProps({
     type: String,
     default: 'Введите пароль',
   },
-  PasswordButton: {
-    type: String,
-    default: 'hide-button',
+  passwordButton: {
+    type: Boolean,
+    default: false,
   },
   inputType: {
     type: String,
@@ -94,11 +94,12 @@ onMounted(() => {
         v-model="password"
         :maxlength="inputType === 'password' ? maxLength : undefined"
       />
-      <div :class="PasswordButton" @click="togglePassword">
+      <div v-if="passwordButton" class="show-button" @click="togglePassword">
         <img class="input__show-img"
           :src="showPassword ? '/images/headers/eye.svg' : '/images/headers/eye-close.svg'"
         />
       </div>
+      <div v-else></div>
     </div>
     <slot></slot>
     <div class="input-subtext">{{ inputSubtext }}</div>

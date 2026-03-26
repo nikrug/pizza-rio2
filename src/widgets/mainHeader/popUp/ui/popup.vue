@@ -32,12 +32,12 @@
               <div v-if="isInteracted && emailError" class="error-message">{{ emailError }}</div>
             </inputText>
 
-            <inputText inputType="password" PasswordButton="show-button" v-model="form.password" :class="{ 'input-error':isInteracted && newPasswordError, loginError }" @input="validatePassword">
+            <inputText inputType="password" :passwordButton=true v-model="form.password" :class="{ 'input-error':isInteracted && newPasswordError, loginError }" @input="validatePassword">
               <div v-if="loginError && isInteracted" class="error-message">{{ loginError }}</div>
               <div v-if="newPasswordError && isInteracted" class="error-message">{{ newPasswordError }}</div>
             </inputText>
 
-            <inputCheckbox inputCheckboxLabel="Запомнить меня на сайте"></inputCheckbox>
+            <inputCheckbox v-model="checkboxValue" inputCheckboxLabel="Запомнить меня на сайте"></inputCheckbox>
             
             <div class="popup__forget-button-block">
               <div @click="Popup = false, forgetPassword = true">
@@ -57,20 +57,20 @@
 
             <inputText 
               inputType="password" 
-              PasswordButton="show-button"
+              :passwordButton=true
               v-model="form.password" :class="{ 'input-error': isInteracted && newPasswordError,registerError }">
             </inputText>
 
             <inputText 
               inputType="password"
-              PasswordButton="show-button" 
+              :passwordButton=true 
               inputPlaceholder="Повторите пароль" 
               inputTextLabel="Повторите пароль" 
               v-model="form.confirmPassword" :class="{ 'input-error': isInteracted && newPasswordError,registerError }">
             </inputText>
              <div v-if="isInteracted && newPasswordError" class="error-message">{{ newPasswordError }}</div>
              <div v-if="isInteracted && registerError" class="error-message">{{ registerError }}</div>
-            <inputCheckbox inputCheckboxLabel="Я согласен на обработку персональных данных" v-model="form.agree"></inputCheckbox>
+            <inputCheckbox inputCheckboxLabel="Я согласен на обработку персональных данных" v-model="checkboxValue"></inputCheckbox>
 
             <customButton @click="handleRegister" :class="{ 'disabled': isFormInvalidRegist }" :disabled="isFormInvalidRegist" ButtonText="Зарегистрироваться"></customButton>
 
@@ -104,7 +104,7 @@ import { ref,computed } from 'vue';
 import { customButton, inputText, inputCheckbox } from '@shared/ui';
 import { useRouter } from 'vue-router';
 
-
+const checkboxValue = ref(false);
 const router = useRouter();
 const emailError = ref('');
 const newPasswordError = ref('');
@@ -202,11 +202,15 @@ const isFormInvalidRegist = computed(() => {
   validateEmail();
   validatePassword();
 
-    // Проверяем, если пользователь находится в режиме регистрации
-  if  (form.value.confirmPassword ) return false;
-    
-  
-  else return true; // Если ошибок нет
+  // Проверка состояния чекбокса
+  if (!checkboxValue.value) {
+    return true; // Форма недействительна, если чекбокс не отмечен
+  }
+
+  // Проверяем, если поле confirmPassword заполнено
+  if (form.value.confirmPassword) return false;
+
+  return true; // Если ошибок нет
 });
 const isRegistering = ref(false); // Флаг для отслеживания процесса регистрации
 

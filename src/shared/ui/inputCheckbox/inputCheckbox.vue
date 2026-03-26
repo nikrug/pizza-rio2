@@ -1,5 +1,6 @@
-<script setup>
-import { ref } from 'vue';
+<script setup lang="ts">
+import { ref, watch } from 'vue';
+
 const props = defineProps({
   inputCheckboxLabel: {
     type: String,
@@ -9,21 +10,39 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  modelValue: {
+    type: Boolean,
+    default: false, // Дефолтное значение для v-model
+  },
 });
-const isChecked = ref(false);
+
+const emit = defineEmits(['update:modelValue']); // Эмит для обновления modelValue
+const isChecked = ref(props.modelValue); // Локальная реактивная переменная для отслеживания состояния чекбокса
+
+// Синхронизация локального состояния с пропсом modelValue
+watch(() => props.modelValue, (newValue) => {
+  isChecked.value = newValue;
+});
 
 function toggleCheckbox() {
   isChecked.value = !isChecked.value;
+  emit('update:modelValue', isChecked.value); // Эмитим новое значение для обновления v-model
 }
 </script>
 
 <template>
   <div class="input-checkbox__block" @click="toggleCheckbox">
-    <input class="input-checkbox" type="checkbox" v-model="isChecked" ref="checkbox">
-    <div class="custom-checkbox" ></div>
+    <input
+      class="input-checkbox"
+      type="checkbox"
+      v-model="isChecked"
+      ref="checkbox"
+      @change="emit('update:modelValue', isChecked)"
+    />
+    <div class="custom-checkbox"></div>
     <div class="input-checkbox__label">
-      <div class="input-checkbox__text">{{ props.inputCheckboxLabel }}</div>
-      <div class="input-checkbox__sub-text">{{ props.inputCheckboxSubLabel }}</div>
+      <div class="input-checkbox__text">{{ inputCheckboxLabel }}</div>
+      <div class="input-checkbox__sub-text">{{ inputCheckboxSubLabel }}</div>
     </div>
   </div>
 </template>

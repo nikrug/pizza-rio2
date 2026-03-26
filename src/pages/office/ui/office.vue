@@ -39,7 +39,7 @@
                                 inputType="password"
                                 inputPlaceholder="Введите новый пароль"
                                 inputTextLabel="Новый пароль"
-                                PasswordButton="show-button"
+                                :passwordButton=true
                                 :class="{ 'input-error': newPasswordError }"
                             ></inputText>
                             <div v-if="newPasswordError" class="error-message">{{ newPasswordError }}</div>
@@ -49,7 +49,7 @@
                                 inputType="password"
                                 inputPlaceholder="Повторите пароль"
                                 inputTextLabel="Повторите пароль"
-                                PasswordButton="show-button"
+                                :passwordButton=true
                                 :class="{ 'input-error': newPasswordError }"
                             ></inputText>
                         </div>
@@ -62,7 +62,7 @@
                 <div class="office__list-addres">
                     <addressWidget></addressWidget>
                 </div>
-                <CartTestt></CartTestt>
+                
             </div> 
         </div>
     </div>
