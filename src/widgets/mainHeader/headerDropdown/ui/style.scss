@@ -68,7 +68,13 @@
     margin: 10px 0;
 
 }
+.link-dropdown{
 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
 
 body.no-scroll {
     overflow: hidden; /* Блокирует прокрутку */

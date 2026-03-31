@@ -16,7 +16,12 @@
                             </span>
                         </div>
                         <div class="cart__adres-delivery" v-show="delivery">
-                        <inputText inputPlaceholder="+7 (923)-640-12-98" inputTextLabel="Введите номер телефона"></inputText>
+                        <inputText                             
+                            v-model="phoneNumber"  
+                            inputPlaceholder="Введите номер телефона"
+                            inputTextLabel="Ваш телефон"
+                            isPhoneInput >
+                        </inputText>
                         <inputText inputPlaceholder="Ваши адреса" inputTextLabel="Адрес доставки"></inputText>
                         <inputText inputPlaceholder="Улица" inputTextLabel="Улица"></inputText>
                         <div class="cart__adres-street">
@@ -47,7 +52,12 @@
                                     </button>
                         </div>
                         <div class="cart__adres-delivery" v-show="yourown">
-                        <inputText inputPlaceholder="+7 (923)-640-12-98" inputTextLabel="Введите номер телефона"></inputText>
+                        <inputText                             
+                            v-model="phoneNumber"  
+                            inputPlaceholder="Введите номер телефона"
+                            inputTextLabel="Ваш телефон"
+                            isPhoneInput >
+                        </inputText>
                             <div class="cart__radioButtons">
                                 <div class="cart__label-small">Адрес самовывоза</div>
                                 <inputRadiobutton  v-model="selectedPickupOption" value="option4" label="Оплата пластиковой картой в зале" sublabel=""/>
@@ -94,6 +104,7 @@ import cartList from '@widgets/cartList/ui/cartList.vue';
 import CartAlone from '@widgets/cartTest/CartAlone.vue';
 import CartSummary from '@widgets/cartTest/CartSummary.vue';
 
+const phoneNumber = ref('');
 const textareaValue = ref('');
 const delivery = ref(true);
 const yourown = ref(false);

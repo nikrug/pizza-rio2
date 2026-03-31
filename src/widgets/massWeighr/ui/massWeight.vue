@@ -12,8 +12,12 @@
       </button>
     </div>
 
-    <slot v-if="selectedCounter === 'counter1'" name="counter1"></slot>
-    <slot v-else-if="selectedCounter === 'counter2'" name="counter2"></slot>
+    <div v-show="selectedCounter === 'counter1'">
+      <slot name="counter1"></slot>
+    </div>
+    <div v-show="selectedCounter === 'counter2'">
+      <slot name="counter2"></slot>
+    </div>
 
     <div :class="CustomInfoClass">
       <div
@@ -29,8 +33,8 @@
 </template>
 
 <script>
+import axiosInstance from '@widgets/menuBlock/api/axiosInstance';
 
-import axiosInstance from '@widgets/menuBlock/api/axiosInstance'; // Импортируем созданный экземпляр
 export default {
   name: 'PizzaWeightSelector',
   props: {
@@ -53,7 +57,7 @@ export default {
   },
   data() {
     return {
-      selectedCounter: 'counter1', // Добавлено начальное значение
+      selectedCounter: 'counter1',
       selectedWeight: null,
       weightOptions: [],
       totalPrice: 0,
@@ -71,8 +75,6 @@ export default {
         
         if (options.length > 0) {
           this.weightOptions = options;
-
-          // Установка начального веса и цены
           this.selectWeight(options[0].value, options[0].price, options[0].weight);
         }
       } catch (error) {
@@ -80,7 +82,6 @@ export default {
       }
     },
     selectWeight(value, price, weight) {
-      // Если выбранный вес не изменился, ничего не делаем
       if (this.selectedWeight === value) {
         return;
       }
@@ -88,11 +89,11 @@ export default {
       this.selectedWeight = value;
       this.totalPrice = price;
 
-      // Показать корзину на мгновение
-      this.showCartButton = true; // Показываем кнопку корзины
+      // Показываем кнопку корзины
+      this.showCartButton = true;
       setTimeout(() => {
-        this.showCartButton = false; // Скрываем через определенное время
-      }, 10); // Задержка
+        this.showCartButton = false;
+      }, 10);
 
       // Переключаем счетчики
       this.selectedCounter = this.selectedCounter === 'counter1' ? 'counter2' : 'counter1';
@@ -107,4 +108,5 @@ export default {
 
 <style lang="scss">
 @import "./style";
+// Здесь можно добавить стили, если нужно.
 </style>

@@ -3,7 +3,7 @@
     <burger :isOpen="isOpen" @toggle="toggleDropdown" @click="menuItems = !menuItems"/>
     <div class="overlay" v-if="isOpen"></div>
     <div class="dropdown" :class="{ show: isOpen }" >
-      <ScrollDownmenu LinkClass="dropdownl" ButtonClass="cardbutton-none" :onLinkClick="toggleDropdown"></ScrollDownmenu>
+      <ScrollDownmenu LinkClass="dropdownl" ButtonClass="cardbutton-none" CustomClass2="link-dropdown"  CustomClass3="link-dropdown" :onLinkClick="toggleDropdown"></ScrollDownmenu>
       <ul class="dropdown-list" >
         <q-btn @click="toggleDropdown" class="dropdown-link"
           v-for="link in navMenu"
@@ -65,6 +65,5 @@ onBeforeUnmount(() => {
 
 <style lang="scss" scoped>
 @import './style.scss';
-
 
 </style>

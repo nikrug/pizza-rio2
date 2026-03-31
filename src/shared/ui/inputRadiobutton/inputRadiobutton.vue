@@ -19,7 +19,7 @@
 
 
 <script lang="ts" setup>
-import { computed, defineProps, defineEmits } from 'vue';
+import { computed } from 'vue';
 // Определяем пропсы
 const props = defineProps<{
   modelValue: string;   // Значение из родительского компонента

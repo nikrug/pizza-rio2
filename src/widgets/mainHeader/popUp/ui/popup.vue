@@ -5,6 +5,7 @@
       <div class="icon_hover"></div>
     </div>
   </div>
+  <teleport to="body">
   <Transition name="v-faid">
     <div v-show="Popup" class="popup-overlay" @mousedown="closePopup">
       <form @submit.prevent="handleRegister">
@@ -80,7 +81,7 @@
 
     </div>
   </Transition>
-              <div v-show="forgetPassword" class="popup-overlay">
+      <div v-show="forgetPassword" class="popup-overlay">
                 <div class="popup-content">
                             <div class="popup__close">
                               <img src="/images/headers/logo-popup.svg">
@@ -94,7 +95,8 @@
                               <customButton ButtonText="Восстановить пароль"></customButton>
                             </div>
                 </div>
-            </div>
+      </div>
+  </teleport>
 </template>
 
 

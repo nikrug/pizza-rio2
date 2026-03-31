@@ -1,5 +1,10 @@
 @import "@shared/styles";
 
+.scrolldownmenu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 .scrolldownmenu__list{
     display: flex;
@@ -12,12 +17,39 @@
     align-items: center;
     width: 100%;
 }
+
+
+.scrolldownmenu__link-element{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.scrolldownmenu__elements{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 1294px;
+  margin-right: 15px;
+  justify-content: space-between;
+
+}
+.link-dropdown{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
 .dropdownl{
     gap: 1rem;
     display: flex;
     flex-wrap: wrap;
     margin: 1rem;
 }
+
 .dropdownl a{
   background-color: $pure-white;
   border-radius: 20px;
@@ -43,6 +75,15 @@
   .scrolldownmenu__list-link {
   color:$pure-black;
   }
+  .scrolldownmenu__elements{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 1276px;
+    margin-right: 4px;
+    justify-content: space-between;
+  }
+
 }
 
   .scrolldownmenu__logo{
@@ -123,6 +164,7 @@
   }
   .scrolldownmenu__logo.active {
     display: flex; // Или другой стиль, который должен применяться, когда элемент активен
+
   }
 
   .scrolldownmenu__logo {
@@ -155,6 +197,7 @@
     color:$pure-black;
     .scrolldownmenu__logo{
     display:flex;
+    margin: 7px 0 0;
   }
 }
     

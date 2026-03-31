@@ -1,20 +1,26 @@
 <template>
 
     <div :class="CustomClass" >
-        <div :class="LinkClass" >
-            <img class="scrolldownmenu__logo" src="/images/drop-down-menu/dropdown-logo.svg">
-            <a class="scrolldownmenu__list-link" href="#Pizza" @click="handleClick('Pizza')">Пицца </a>
-            <a class="scrolldownmenu__list-link" href="#BeriPeki" @click="handleClick('BeriPeki')">Заготовка пиццы «Бери-пеки»</a>
-            <a class="scrolldownmenu__list-link" href="#Snacks"  @click="handleClick('Snacks')">Закуски</a>
-            <a class="scrolldownmenu__list-link" href="#Mexican" @click="handleClick('Mexican')">Мексиканские блюда</a>
-            <a class="scrolldownmenu__list-link" href="#Salat" @click="handleClick('Salat') ">Салаты</a>
-            <a class="scrolldownmenu__list-link" href="/">Супы</a>
-            <a class="scrolldownmenu__list-link" href="/">Напитки</a>
-            <a class="scrolldownmenu__list-link" href="/">Десерты</a>
-            <a class="scrolldownmenu__list-link" href="/">Другое</a>
-            <router-link :to="{ path: '/cart' }" :class="ButtonClass">
-                  <CartButton :cartItems="cartItems" :onRemoveItem="removeFromCart" />
-            </router-link>
+        <div :class="LinkClass" > 
+          <div :class="CustomClass2">
+            <div :class="CustomClass3">
+              <img class="scrolldownmenu__logo" src="/images/drop-down-menu/dropdown-logo.svg">
+              <a class="scrolldownmenu__list-link" href="#Pizza" @click="handleClick('Pizza')">Пицца </a>
+              <a class="scrolldownmenu__list-link" href="#BeriPeki" @click="handleClick('BeriPeki')">Заготовка пиццы «Бери-пеки»</a>
+              <a class="scrolldownmenu__list-link" href="#Snacks"  @click="handleClick('Snacks')">Закуски</a>
+              <a class="scrolldownmenu__list-link" href="#Mexican" @click="handleClick('Mexican')">Мексиканские блюда</a>
+              <a class="scrolldownmenu__list-link" href="#Salat" @click="handleClick('Salat') ">Салаты</a>
+              <a class="scrolldownmenu__list-link" href="/">Супы</a>
+              <a class="scrolldownmenu__list-link" href="/">Напитки</a>
+              <a class="scrolldownmenu__list-link" href="/">Десерты</a>
+              <a class="scrolldownmenu__list-link" href="/">Другое</a>
+            </div>
+            <div class="scrolldownmenu__button-element">
+              <router-link :to="{ path: '/cart' }" :class="ButtonClass">
+                    <CartButton :cartItems="cartItems" :onRemoveItem="removeFromCart" />
+              </router-link>
+            </div>
+          </div>
         </div>
     </div>
 </template>
@@ -31,7 +37,14 @@ const props = defineProps({
     type: String,
     default: 'scrolldownmenu',
   },
-  
+  CustomClass2: {
+    type: String,
+    default: 'scrolldownmenu__elements',
+  },
+    CustomClass3: {
+    type: String,
+    default: 'scrolldownmenu__link-element',
+  },
   ButtonClass:{
     type: String,
     default: '',

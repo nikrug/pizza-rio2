@@ -1,6 +1,6 @@
 <template>
   <q-layout  view="lHh Lpr lFf">
-    <q-toolbar class="header">
+    <q-toolbar class="header career-header">
         <a href="/">
           <img  src="/images/headers/header-logo.svg">
         </a>
@@ -83,6 +83,7 @@
             </div>
         <div class="carrer__comments">
         <div class="carrer__comments-label">Впечатление о первом дне</div>
+        <div class="carrer__comments-block">
           <div class="carrer__comments-reply">
             <carrerComment 
               commentImgclass="carrier__coment-img-none" 
@@ -100,39 +101,40 @@
           commentTitle="Алёна"
           commentText="Запомнилось количество супов, в которых я утонула... Было сложно, но мне понравился процесс работы" 
           commentTime="13:25">
-        </carrerComment>
+          </carrerComment>
 
-        <carrerComment 
-          commentImg="/images/carrer/Ola.png" 
-          commentTitle="Оля"
-          commentText="Была в шоке от того, что приходили много гостей) Запомнился дружный коллектив, потому что все помогали друг другу" 
-          commentTime="13:37">
-        </carrerComment>
+          <carrerComment 
+            commentImg="/images/carrer/Ola.png" 
+            commentTitle="Оля"
+            commentText="Была в шоке от того, что приходили много гостей) Запомнился дружный коллектив, потому что все помогали друг другу" 
+            commentTime="13:37">
+          </carrerComment>
 
-        <carrerComment 
-          commentImg="/images/carrer/Tanya.png" 
-          commentTitle="Танюша"
-          commentText="Вкусный запах заведения, коллектив дружный и приветливый. Было очень интересно побыть со стороны работника" 
-          commentTime="13:45">
-        </carrerComment>
+          <carrerComment 
+            commentImg="/images/carrer/Tanya.png" 
+            commentTitle="Танюша"
+            commentText="Вкусный запах заведения, коллектив дружный и приветливый. Было очень интересно побыть со стороны работника" 
+            commentTime="13:45">
+          </carrerComment>
 
-        <carrerComment 
-          commentImg="/images/carrer/Vova.png" 
-          commentTitle="Вова"
-          commentText="Меня удивило не стандартное обслуживание Гостей, то есть мы не подходим к столикам, не берем заказы. Запомнились коллеги-учителя (к сожалению которые сейчас не работают).
-          Простота выполнения функций. Хороший и активный персонал, с которым в рабочее и внерабочее время приятно проводить время и общаться" 
-          commentTime="14:15">
-        </carrerComment>
+          <carrerComment 
+            commentImg="/images/carrer/Vova.png" 
+            commentTitle="Вова"
+            commentText="Меня удивило не стандартное обслуживание Гостей, то есть мы не подходим к столикам, не берем заказы. Запомнились коллеги-учителя (к сожалению которые сейчас не работают).
+            Простота выполнения функций. Хороший и активный персонал, с которым в рабочее и внерабочее время приятно проводить время и общаться" 
+            commentTime="14:15">
+          </carrerComment>
 
-        <div class="carrer__comments-reply">
-            <carrerComment 
-              commentImgclass="carrier__coment-img-none" 
-              commentTitle=""
-              commentImgsee=""
-              commentTextBox="carrier__coment-text-box2"
-              commentText="Спасибо! Классно работать вместе с вами! Сейчас добавлю новенького." 
-              commentTime="14:17">
-            </carrerComment>
+          <div class="carrer__comments-reply">
+              <carrerComment 
+                commentImgclass="carrier__coment-img-none" 
+                commentTitle=""
+                commentImgsee=""
+                commentTextBox="carrier__coment-text-box2"
+                commentText="Спасибо! Классно работать вместе с вами! Сейчас добавлю новенького." 
+                commentTime="14:17">
+              </carrerComment>
+          </div>
         </div>
         <div class="carrer__comments-add-text">
           <div>ПиццеРио добавил Коля</div>
@@ -179,5 +181,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 <style lang="scss">
 @import '/node_modules/swiper/swiper-bundle.min.css';
 @import './style.scss';
-
+.career-header{
+  gap:1rem;
+}
 </style>
