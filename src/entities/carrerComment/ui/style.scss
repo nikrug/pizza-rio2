@@ -50,7 +50,7 @@ display: none;
         width: 50px;
         background-size: cover; /* Заполнение псевдоэлемента изображением */
         background-position: center; /* Позиционирование изображения */
-        z-index: 1; 
+        z-index:$ui-index-1; 
 }
 
 .carrier__coment-text-box2{
@@ -78,7 +78,7 @@ display: none;
         width: 50px;
         background-size: cover; /* Заполнение псевдоэлемента изображением */
         background-position: center; /* Позиционирование изображения */
-        z-index: 1; 
+        z-index: $ui-index-1; 
 }
 
 .carrier__coment-title{

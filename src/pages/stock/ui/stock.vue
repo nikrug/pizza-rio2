@@ -1,6 +1,4 @@
 <template>
-    <div class="stock">
-        <div class="stock__page">
         <div class="stock__label-block">
                 <div class="stock__label">Акции</div>
                 <div class="stock__sublabel">Акции и скидки не суммируются</div>
@@ -22,8 +20,6 @@
                         >
                 </StockCard>
         </div> 
-    </div>
-    </div>
 </template>
 
 <script setup lang="ts">

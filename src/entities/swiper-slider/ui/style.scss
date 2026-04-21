@@ -72,7 +72,7 @@
 
    .noUi-base, .noUi-connects {
     position: relative;
-    z-index: 1;
+    z-index: $ui-index-1;
 
     width: 100%;
     height: 4px;
@@ -109,7 +109,7 @@
     @include font-style(400, .75rem, 1.1rem, $description-dark);
   
     left: 0;
-     z-index: 10;
+     z-index: $ui-index-4;
   
      padding: 5px;
   

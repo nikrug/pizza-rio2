@@ -13,18 +13,20 @@
                             inputPlaceholder="Введите адрес электронной почты"
                             inputTextLabel="Ваша электронная почта"
                             :class="{ 'input-error': emailError }"
-                        ></inputText>
-                        <div v-if="emailError" class="error-message">{{ emailError }}</div>
+                        >
+                            <div v-if="emailError" class="error-message">{{ emailError }}</div>
+                        </inputText>
+                       
                         
                       <inputText
                             v-model="phoneNumber"  
                             inputPlaceholder="Введите номер телефона"
                             inputTextLabel="Ваш телефон"
                             isPhoneInput 
-                        ></inputText>
+                        >
+                            <div v-if="phoneError" class="error-message">{{ phoneError }}</div>
+                        </inputText>
 
-
-                        <div v-if="phoneError" class="error-message">{{ phoneError }}</div>
                         
                         <div class="office__new-password-label" @click="newPassword = !newPassword">
                             {{ newPassword ? 'Хочу оставить старый пароль' : 'Сменить пароль' }}

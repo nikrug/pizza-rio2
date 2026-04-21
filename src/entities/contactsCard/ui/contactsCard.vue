@@ -26,8 +26,8 @@ const props = defineProps({
                 <div class="contacts__yellow-text">Режим работы</div>
                     <div class="contacs__work">
                         <div class="contacts__work-date">
-                            <div>Торговый зал</div>
-                            <div>
+                            <div class="contacts__work-label">Торговый зал</div>
+                            <div class="contacts__work-day">
                                 вс-чт<br>
                                 вс-чт<br>
                                 вс-чт<br>
@@ -43,8 +43,8 @@ const props = defineProps({
                     </div>
                     <div class="contacs__work">
                         <div class="contacts__work-date-out">
-                            <div>На заказы с собой</div>
-                            <div>
+                            <div class="contacts__work-label">На заказы с собой</div>
+                            <div class="contacts__work-day">
                                 вс-чт<br>
                                 вс-чт<br>
                                 вс-чт<br>
@@ -71,5 +71,20 @@ const props = defineProps({
   
 <style lang="scss">
 @import './style.scss';
+.contacts__work-day{
+    white-space: normal;
+    display: flex;
+    flex-wrap: wrap;
+    width: 45px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
 
+.contacts__work-label{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 140px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
 </style>

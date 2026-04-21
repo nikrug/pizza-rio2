@@ -1,5 +1,4 @@
 <template>
-    <div class="contacts">
         <div class="contacts__list">
         <div class="contacts__label">Контакты</div>
         <ContactsCard >
@@ -17,7 +16,6 @@
         <ContactsCard contactsName="ул. Говорова, 19в" contactsNumber="+7(3822) 72 55 44">
             <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/67/tomsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Томск</a><a href="https://yandex.ru/maps/67/tomsk/house/ulitsa_govorova_19v/bE0Yfw9lS0IHQFtsfXlxeHViZQ==/?ll=84.985270%2C56.509911&utm_medium=mapframe&utm_source=maps&z=17.12" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты</a><iframe class="ymaps"  src="https://yandex.ru/map-widget/v1/?ll=84.985270%2C56.509911&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDkzMzg3NDYwEjvQoNC-0YHRgdC40Y8sINCi0L7QvNGB0LosINGD0LvQuNGG0LAg0JPQvtCy0L7RgNC-0LLQsCwgMTnQkiIKDXX4qUIVJgpiQg%2C%2C&z=17.12" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
         </ContactsCard>
-    </div>
     </div>
 </template>
 

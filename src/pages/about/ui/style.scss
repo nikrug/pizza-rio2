@@ -10,11 +10,14 @@
 // }
 
 .about__block{
-        max-width: 100%;
+        max-width: calc(100% + 35px);
         margin: 0;
         background-color: $pure-white;
         border-radius:0;
         padding:12px;
+        width: calc(100% + 35px);
+        margin: 0 0 0 -1rem;
+        padding: 1rem;
 }
 
 .about-list{
@@ -44,7 +47,6 @@
         flex-direction: column;
         gap:1.5rem;
         width: 100%;
-        padding:  0 0 1rem 0;
         justify-content: none;
 }
 
@@ -67,7 +69,7 @@
 .about__title{
  font-size:48px;
  color:$pure-white;
- padding: 0 1rem  0;
+ padding: 0 0 1rem  0;
 }
 
 .about__label{
@@ -240,7 +242,6 @@
         flex-direction: column;
         gap:1.5rem;
         max-width: 1980px;
-        padding: 2rem;
         justify-content: center;
 }
 
@@ -254,6 +255,9 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         padding:12px;
+        width: calc(100% + 50px);
+        margin: 0 0 0 -2rem;
+        padding: 2rem;
 }
 
         .about__text-block{
@@ -272,12 +276,9 @@
 .about__title{
  font-size:48px;
  color:$pure-white;
- padding: 0 2rem  0;
+ padding: 0 0 2rem  0;
 }
-.swiper-button-next,
-.swiper-button-prev {
-  display: none;
-}
+
 
 }
 
@@ -324,6 +325,7 @@
                 background-repeat: no-repeat;
                 top: 200px;
                 left: 10px;
+                background-position: center;
 }
 
 
@@ -337,15 +339,22 @@
                 border-radius: 30px;
                 width: 48px; /* Ширина кнопок */
                 height: 48px; /* Высота кнопок */
-                z-index: 10; /* Обеспечение правильного наложения */
+                z-index: $ui-index-4; /* Обеспечение правильного наложения */
                 background-image: url(/images/menu-item/arrow-right.svg);
                 background-repeat: no-repeat;
+                background-position: center;
 }
 .swiper-button-next,
 .swiper-button-prev {
   display: flex;
 }
 
+.swiper-button-prev:hover {
+  background-color: $orange;
+}
+.swiper-button-next:hover {
+  background-color: $orange;
+}
 .about__text-production{
         font-size: 28px;
 }
@@ -371,6 +380,9 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         padding:42px;
+        width: auto;
+        //margin: 0 0 0 -1rem;
+        //padding: 1rem;
 }
 
 .about__slider{
@@ -403,7 +415,7 @@
 .about__title{
  font-size:48px;
  color:$pure-white;
- padding: 2rem 0;
+ padding: 0 0 2rem 0; 
 }
 
 .about__label{

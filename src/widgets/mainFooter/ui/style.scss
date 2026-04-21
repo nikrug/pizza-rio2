@@ -208,7 +208,7 @@
       text-align: right;
       justify-content: end;
       gap:1rem;
-      padding: 2.3rem 0;
+      padding: 2.3rem 1rem 0 0;
     }
     .footer__body {
       flex-direction: column;
@@ -222,15 +222,16 @@
     }
   
     .footer__container{
-      max-width: 1280px;
+      max-width: 1346px;
       margin: auto;
     }
   
     .footer__logo-top{
         display: flex;
-        gap: 17rem;
-        max-width: 1280px;
+        justify-content: space-between;
+        width: 100%;
         margin: auto;
+        padding: 2rem 1rem 2rem 2rem;
     }
   
     .footer__img-box{
@@ -249,7 +250,7 @@
     @include font-styles('Nekst',400, 1rem, 1.0625rem, $pure-white);
         row-gap: 3rem;
         padding: 2.5rem 0;
-        gap: 0rem;
+        gap: 3rem;
         align-content: baseline;
         display: flex;
         flex-direction: row;

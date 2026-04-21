@@ -1,12 +1,14 @@
 @import "src/shared/styles";
 
 .menu__item {
-    width: 100%;
+    width: calc(100% + 70px);
     border-radius: 0;
     display: flex;  /* Используйте flex для дочерних элементов */
     align-items: center;  /* Вертикально центрируем */
     justify-content: space-between;  /* Центрируем изображения */
     background-color: $pure-white;
+    margin:0 -2rem 0 -2rem;
+    padding: 0 0 0 24px;
     flex-direction: column;
     border-bottom:1px solid $white;
     border-top:1px solid $white;
@@ -31,7 +33,7 @@
     border-radius: 50%; /* Круглая кнопка */
     height: 48px;
     width: 48px;
-    z-index: 1;
+    z-index: $ui-index-1;
     display: flex; /* Обеспечиваем выравнивание */
     justify-content: center; /* Выравнивание по горизонтали */
     align-items: center; /* Выравнивание по вертикали */
@@ -82,7 +84,8 @@
     height: 100%;
     left: 0;
     overflow: hidden; /* Позволяет скрыть выходящее за пределы контейнера */
-    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     position: relative; /* Применяется для более точного позиционирования */
 }
 
@@ -178,7 +181,7 @@
   width: 100%;
   height: 100%;
   background-color: $pure-white;
-  z-index: 30; /* Поверх фона */
+  z-index: $ui-index-5; /* Поверх фона */
   overflow: auto;
 }
 /* Контейнер для фона */
@@ -189,7 +192,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(1, 53, 11, 0.5); 
-  z-index: 10000;
+  z-index: $ui-index-6;
 }
 
 
@@ -228,7 +231,7 @@
   top: 8px; /* Положение сверху 0 */
   right: 8px; /* Положение слева 0 */
   pointer-events: none; /* Отключает взаимодействие с наложенным изображением, позволяет кликами проходить к нижнему */
-  z-index: 10;
+  z-index:$ui-index-4;
   transform:scale(70%);
 
 }
@@ -277,7 +280,7 @@
   top: 20px; /* Положение сверху 0 */
   left: 20px; /* Положение слева 0 */
   pointer-events: none; /* Отключает взаимодействие с наложенным изображением, позволяет кликами проходить к нижнему */
-  z-index: 10;
+  z-index: $ui-index-4;
   transform: none;
   width: auto;
   height: auto;
@@ -288,6 +291,7 @@
   .menu__text-img{
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
   .menu__over-img {
   position: absolute; /* Позволяет наложить изображение поверх другого */
@@ -303,7 +307,7 @@
   width: 720px;
   margin: auto;
   background-color: $pure-white;
-  z-index: 30; /* Поверх фона */
+  z-index: $ui-index-5; /* Поверх фона */
   top: 50%; /* Центрировать по вертикали */
   left: 50%; /* Центрировать по горизонтали */
   transform: translate(-50%, -50%); /* Центрирует элемент по его середине */
@@ -327,7 +331,7 @@
   top: 20px; /* Положение сверху 0 */
   left: 20px; /* Положение слева 0 */
   pointer-events: none; /* Отключает взаимодействие с наложенным изображением, позволяет кликами проходить к нижнему */
-  z-index: 10;
+  z-index: $ui-index-4;
   transform: none;
 }
 .menu__item-description-container {
@@ -353,7 +357,7 @@
   height: 500px;
   width: 840px;
   background-color: $pure-white;
-  z-index: 30; /* Поверх фона */
+  z-index: $ui-index-5; /* Поверх фона */
   top: 50%; /* Центрировать по вертикали */
   left: 50%; /* Центрировать по горизонтали */
   transform: translate(-50%, -50%); /* Центрирует элемент по его середине */
@@ -366,7 +370,8 @@
     }
 
     .menu__item-img-container {
-
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
     .menu__item-name-popup{
      @include font-style(400, 1.75rem, 1.875rem, $pure-black );
@@ -383,7 +388,6 @@
 }
 
     .menu__item-img{
-    border-radius: 20px;
     width: 100%;
     height: 272px;
     object-fit: cover;
@@ -391,6 +395,8 @@
 
     .menu__item {
     width: calc(50% - 20px);
+        margin:0 ;
+    padding: 0 ;
     border-bottom:0px solid $white;
     border-top:0px solid $white;
     }
@@ -414,7 +420,7 @@
     border-radius: 50%; /* Круглая кнопка */
     height: 48px;
     width: 48px;
-    z-index: 1;
+    z-index: $ui-index-1;
     display: flex; /* Обеспечиваем выравнивание */
     justify-content: center; /* Выравнивание по горизонтали */
     align-items: center; /* Выравнивание по вертикали */
@@ -437,7 +443,10 @@
     background-repeat: no-repeat; /* Избегаем повторения фона */
     transition: opacity 0.2s ease; /* Плавный переход для opacity */
 }
-
+    .menu__item-img-container {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
 .menu-close-button::before {
     background-image: url("/images/menu-item/icon-Close.svg"); /* Иконка для состояния по умолчанию */
     opacity: 1; /* Показываем первую иконку */
@@ -461,7 +470,6 @@
     opacity: 1; /* Показываем вторую иконку */
 }
     .menu__item-img{
-        border-radius: 10px;
         width: 100%;
 
         object-fit: cover;
@@ -496,6 +504,8 @@
     .menu__item {
         width: calc(33% - 26.6px);
         border-radius: 10px;
+        margin:0 ;
+        padding: 0;
         display: flex;  /* Используйте flex для дочерних элементов */
         align-items: center;  /* Вертикально центрируем */
         justify-content: space-between;  /* Центрируем изображения */

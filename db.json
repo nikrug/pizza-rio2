@@ -22,24 +22,7 @@
       "quantity": 0
     }
   ],
-  "cart": [
-    {
-      "id": "2-counter2",
-      "count": 4,
-      "price": 545,
-      "label": "Арканзас",
-      "imageSrc": "/images/menu-item/Archcansas.png",
-      "weight": "690 г."
-    },
-    {
-      "id": "2-counter1",
-      "count": 6,
-      "price": 1065,
-      "label": "Арканзас",
-      "imageSrc": "/images/menu-item/Archcansas.png",
-      "weight": "1330 г."
-    }
-  ],
+  "cart": [],
   "users": [
     {
       "id": "cad7",
@@ -361,7 +344,7 @@
     {
       "id": "23",
       "name": "Сухарики к пиву",
-      "description": "(В 100 гр.: 275 ккал/1550 кДж)ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+      "description": "(В 100 гр.: 275 ккал/1550 кДж)",
       "weight": "",
       "weightName": "Сухарики2",
       "CustomClass": "option-none",
@@ -372,7 +355,7 @@
     {
       "id": "24",
       "name": "Соус Сальса классический",
-      "description": "(В 100 гр.: 275 ккал/1550 кДж)ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+      "description": "(В 100 гр.: 275 ккал/1550 кДж)",
       "weight": "",
       "weightName": "Сальса",
       "imageSrc": "/images/menu-item/spicy-sous.png",
@@ -382,7 +365,7 @@
     {
       "id": "25",
       "name": "Соус Тар-тар",
-      "description": "(В 100 гр.: 275 ккал/1550 кДж)ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+      "description": "(В 100 гр.: 275 ккал/1550 кДж)",
       "weight": "",
       "weightName": "Тар-Тар",
       "imageSrc": "/images/menu-item/spicy-sous.png",
@@ -392,7 +375,7 @@
     {
       "id": "26",
       "name": "Соус сырный",
-      "description": "(В 100 гр.: 275 ккал/1550 кДж)ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+      "description": "(В 100 гр.: 275 ккал/1550 кДж)",
       "weight": "",
       "weightName": "Сырный",
       "imageSrc": "/images/menu-item/spicy-sous.png",
@@ -412,7 +395,7 @@
     {
       "id": "28",
       "name": "Соус Сальса классический",
-      "description": "(В 100 гр.: 275 ккал/1550 кДж)ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+      "description": "(В 100 гр.: 275 ккал/1550 кДж)",
       "weight": "",
       "weightName": "Сырный",
       "imageSrc": "/images/menu-item/spicy-sous.png",
@@ -422,7 +405,7 @@
     {
       "id": "29",
       "name": "Сухарики к пиву",
-      "description": "(В 100 гр.: 275 ккал/1550 кДж)ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+      "description": "(В 100 гр.: 275 ккал/1550 кДж)",
       "weight": "",
       "weightName": "Сухарики",
       "CustomClass": "option-none",

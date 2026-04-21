@@ -13,8 +13,10 @@
     padding:10px;
     justify-items: center;
     background-color:$pure-white;
-    border-radius: 10px;
-
+    border-radius: 0;
+    width: calc(100% + 35px);
+    margin: 0 0 0 -1rem;
+    padding: 1rem;
 }
 
 
@@ -82,7 +84,10 @@
     gap:20px;
     padding:10px;
     background-color:$pure-white;
-    border-radius: 10px;
+    border-radius: 0;
+    width: calc(100% + 35px);
+    margin: 0 0 0 -1rem;
+    padding: 1rem;
 }
 .stock__page{
     max-width: 1280px;
@@ -104,8 +109,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap:40px;
     margin: auto;
-    max-width: 1280px;
+    width: 100%;
     padding: 40px;
+    border-radius: 10px;
 }
     // .stock{
     // background-image: url("/images/menu-item/pattern.png");
@@ -117,6 +123,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+         margin:0 0 2rem 0;
 }
 .stock__page{
     max-width: 1346px;

@@ -19,7 +19,6 @@
 // }
 
 .contacts__list{
-    max-width: 1280px;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -42,7 +41,6 @@
 // }
 
 .contacts__list{
-    max-width: 1280px;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -56,11 +54,12 @@
     width: 620px;
 }
     .contacts__list{
-    max-width: 1280px;
     display: flex;
+    margin: 0;
     flex-direction: column;
-    margin: 2rem auto ;
     gap: 2rem;
+    margin: 0 auto;
+    max-width: 1280px;
 }
 // .contacts{
 //     background-image: url("/images/menu-item/pattern.png");

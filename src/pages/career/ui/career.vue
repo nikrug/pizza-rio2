@@ -19,8 +19,7 @@
       </div>
       <HeaderDropDown/>
     </q-toolbar>
-    <q-page-container>
-      <div class="carrer">
+    <q-page-container class="layout">
         <div class="carrer__body">
           <div class="carrer__welcome">
             <div class="carrer__welcome-label">Карьера в ПиццеРио </div>
@@ -64,8 +63,9 @@
                 el:'.swiper-pagination',
                 type:'bullets'
               }"
-              :navigation="true"
+              :navigation="{ nextEl: '.swiper-button-next-career', prevEl: '.swiper-button-prev-career' }"
               :modules="modules"
+              :loop="true"
               class="mySwiperr"
             >
               <swiper-slide class="swiper-slide"> <carrerStory></carrerStory></swiper-slide
@@ -79,7 +79,10 @@
               ><swiper-slide> <carrerStory></carrerStory></swiper-slide>
               <div class="swiper-pagination"></div>
             </swiper>
-
+              <div class="swiper-button-container-career">
+                <div class="swiper-button-next-career"></div>
+                <div class="swiper-button-prev-career"></div>
+              </div>
             </div>
         <div class="carrer__comments">
         <div class="carrer__comments-label">Впечатление о первом дне</div>
@@ -159,7 +162,6 @@
           </div>
         </div>
         </div>
-      </div>
     </q-page-container>
     <MainFooterComponent />
   </q-layout>

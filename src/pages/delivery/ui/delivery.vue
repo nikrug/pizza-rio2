@@ -1,7 +1,6 @@
 <template>
 
-<div class="delivery">
-        <div class="delivery__list">
+<div>
         <div class="delivery__label">Доставка и оплата</div>
         <div class="delivery__pay-block">
             <div class="delivery__item-top">
@@ -136,7 +135,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 </div>
 

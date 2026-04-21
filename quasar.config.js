@@ -99,11 +99,11 @@ module.exports = configure(function(ctx) {
           .set('@pages', path.resolve(__dirname, './src/pages'))
           .set('@app', path.resolve(__dirname, './src/app'))
           .set('@fonts', path.resolve(__dirname, './src/app/styles/fonts'))
-                  config.plugin('copy').use(CopyWebpackPlugin, [{
+        config.plugin('copy').use(CopyWebpackPlugin, [{
           patterns: [
             {
               from: path.resolve(__dirname, 'db.json'), // замените на путь к вашему db.json
-              to: path.resolve(__dirname, 'dist/spa/json/db.json') // или другой выходной путь
+              to: path.resolve(__dirname, 'dist/db.json') // или другой выходной путь
             }
           ]
         }]);

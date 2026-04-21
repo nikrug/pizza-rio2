@@ -1,5 +1,9 @@
 <template>
-  <div class="menu">
+
+    <div class="swiper-button-container-index">
+      <div class="swiper-button-next-index"></div>
+      <div class="swiper-button-prev-index"></div>
+    </div>
   <swiper
     :slidesPerView="1"
     :spaceBetween="30"
@@ -9,7 +13,7 @@
       clickable: true,
       el:'.swiper-pagination'
     }"
-    :navigation="true"
+    :navigation="{ nextEl: '.swiper-button-next-index', prevEl: '.swiper-button-prev-index' }"
     :modules="modules"
     class="IndexSwiper"
   >
@@ -25,52 +29,18 @@
     ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide
     ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide
     ><swiper-slide class="swiper-slide"> <img class="swiper-img" src="/images/menu-item/add-banner.png"></swiper-slide>
-
   </swiper>
-      <div class="swiper-pagination"></div>
+    <div class="swiper-pagination"></div>
     <div class="menu-list">
       <menuPizza></menuPizza>
     </div>
-  </div>
+ 
 </template>
 
 <style lang="scss" scoped>
 @import './style.scss';
 @import '/node_modules/swiper/swiper-bundle.min.css';
-.swiper{
-  width: 90%;
-}
-@media(min-width:1520px){
 
-.swiper-button-prev {
-  background-color: $pure-white;
-  border-radius: 30px;
-  bottom: 300px;
-  left: -740px;
-  width: 48px; /* Ширина кнопок */
-  height: 48px; /* Высота кнопок */
-  z-index: 10; /* Обеспечение правильного наложения */
-  background-image: url(/images/menu-item/arrow-left.svg);
-  background-repeat: no-repeat;
-  background-position: center; /* Центрирование изображения */
-  background-size: 24px 24px; /* Вы можете изменить размер изображения, если необходимо */
-}
-
-.swiper-button-next {
-  display: flex;
-  background-color: $pure-white;
-  border-radius: 30px;
-  bottom: 325px;
-        left: 740px;
-  width: 48px; /* Ширина кнопок */
-  height: 48px; /* Высота кнопок */
-  z-index: 10; /* Обеспечение правильного наложения */
-  background-image: url(/images/menu-item/arrow-right.svg);
-  background-repeat: no-repeat;
-  background-position: center; /* Центрирование изображения */
-  background-size: 24px 24px; /* Вы можете изменить размер изображения, если необходимо */
-}
-}
 </style>
 
 <script setup lang="ts">

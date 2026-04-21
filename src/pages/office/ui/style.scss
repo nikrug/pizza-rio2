@@ -23,7 +23,6 @@
 
 .office__list-form{
     display: flex;
-    width: 100%;
     flex-direction: column;
     gap:20px;
     padding:40px;
@@ -31,7 +30,9 @@
     text-align: left;
     background-color:$pure-white;
     border-radius: 0;
-
+    width: calc(100% + 35px);
+    margin: 0 0 0 -1rem;
+    padding: 1rem;
 }
 .imggg {
     height: 10px;
@@ -44,10 +45,11 @@
 .office__list-addres{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: calc(100% + 35px);
+    margin: 0 0 0 -1rem;
+    padding: 1rem;
     height: max-content;
     justify-content: start;
-    padding: 2rem;
     text-align: left;
     border-radius: 0;
     background-color:$pure-white;
@@ -105,9 +107,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: left;
-      margin-bottom:1rem;
-      margin-top: 2rem;
-      margin-left: .4rem;
+      margin-bottom:2rem;
 }
 
 .office__label{
@@ -168,7 +168,6 @@
 
 .office__list-form{
     display: flex;
-    width: 100%;
     flex-direction: column;
     gap:20px;
     padding:40px;
@@ -176,15 +175,19 @@
     text-align: left;
     background-color:$pure-white;
     border-radius: 0;
+    width: calc(100% + 35px);
+    margin: 0 0 0 -1rem;
+    padding: 1rem;
 
 }
 
 .office__list-addres{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: calc(100% + 35px);
+    margin: 0 0 0 -1rem;
+    padding: 1rem;
     justify-content: start;
-    padding: 2rem;
     text-align: left;
     border-radius: 0;
     background-color:$pure-white;
@@ -199,7 +202,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap:45px;
     width: 100%;
-    padding:10px;
+    padding: 0 0 0 18px;
     justify-items: center;
     border-radius: 10px;
 }

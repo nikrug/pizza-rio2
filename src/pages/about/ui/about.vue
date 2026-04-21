@@ -1,6 +1,4 @@
 <template>
-<div class="about">
-  <div class="about-list">
     <div class="about__title">О компании</div>
     <div class="about__slider">
         <div class="about__text-block-img">
@@ -80,8 +78,6 @@
             <img src="/images/about/desert.png" alt="Десерт">
         </div>
     </div>
-</div> 
-</div>
 </template>
 
 <script>

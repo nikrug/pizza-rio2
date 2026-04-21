@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ref,  watch, onMounted } from 'vue';
+import { ref, watch } from 'vue';
 
-import Cleave from 'cleave.js';
+import { MaskInput } from 'vue-3-mask';
+
 
 const props = defineProps({
   modelValue: {
@@ -49,42 +50,34 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue']);
 const password = ref(props.modelValue);
 const showPassword = ref(false);
-const phoneInput = ref(null); // Reference for the phone input
 
-const togglePassword = () => {
-  showPassword.value = !showPassword.value;
-};
-
-watch(password, (newValue) => {
-  emit('update:modelValue', newValue);
+// Следим за внешними изменениями (от родителя)
+watch(() => props.modelValue, (newVal) => {
+  password.value = newVal;
 });
 
-// Initialize Cleave only for phone input
-onMounted(() => {
-  if (phoneInput.value && props.isPhoneInput) {
-    new Cleave(phoneInput.value, {
-      prefix: '+7',
-      delimiters: [' ', ' ', '-', '-'],
-      blocks: [2, 3, 3, 2, 2],
-      numericOnly: true
-    });
-  }
+// Следим за внутренними изменениями (ввод пользователя)
+watch(password, (newValue) => {
+  emit('update:modelValue', newValue);
 });
 </script>
 
 <template>
   <div class="input">
     <div :class="inputLabel">{{ inputTextLabel }}</div>
+    <!-- Внутри <template> вашего inputText.vue -->
     <div class="input__container">
-      <input
-        ref="phoneInput"
-        v-if="isPhoneInput" 
-        type="text"
+      <!-- Если передан флаг isPhoneInput, показываем маску -->
+      <MaskInput
+        v-if="isPhoneInput"
+        v-model="password" 
+        mask="+7 (###) ###-##-##"
         class="input-text"
+        :class="{ 'error': formSubmitted && !password }"
         :placeholder="inputPlaceholder"
-        v-model="password"
-        :maxlength="maxLength"
       />
+
+      <!-- Иначе обычный ввод -->
       <input
         v-else
         :type="showPassword ? 'text' : inputType"
@@ -92,14 +85,8 @@ onMounted(() => {
         :class="{ 'error': formSubmitted && !password }"
         :placeholder="inputPlaceholder"
         v-model="password"
-        :maxlength="inputType === 'password' ? maxLength : undefined"
+        :maxlength="maxLength"
       />
-      <div v-if="passwordButton" class="show-button" @click="togglePassword">
-        <img class="input__show-img"
-          :src="showPassword ? '/images/headers/eye.svg' : '/images/headers/eye-close.svg'"
-        />
-      </div>
-      <div v-else></div>
     </div>
     <slot></slot>
     <div class="input-subtext">{{ inputSubtext }}</div>

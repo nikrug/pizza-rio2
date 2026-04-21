@@ -5,8 +5,9 @@
     flex-direction: column;
     border-radius: 0px;
     background-color: $pure-white;
-    max-width: 1280px;
-
+    margin: 0 0 0 -24px;
+    width: calc(100% + 40px);
+    padding:  0 ;
     overflow: hidden;
 }
 
@@ -108,9 +109,10 @@
     flex-direction: column;
     border-radius: 0px;
     background-color: $pure-white;
-    max-width: 1280px;
-    margin: 0;
     overflow: hidden;
+    margin: 0 0 0 -24px;
+    width: calc(100% + 40px);
+    padding:  0 24px 0 0;
 }
 
 .contacts__card-info{
@@ -180,8 +182,10 @@
     flex-direction: row;
     border-radius: 10px;
     background-color: $pure-white;
-    width: 1280px;
+    width: 100%;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .contacts__card-img-block{
@@ -211,7 +215,8 @@
 .contacts__work-date{
     display: flex;
     flex-direction: row;
-    gap:5rem;
+       justify-content: space-between;
+       width: 220px;
 
 }
 
@@ -224,20 +229,17 @@
 .contacts__work-date-out{
     display: flex;
     flex-direction: row;
-    gap:2.66rem;
-
-}
-
-.contacs__work{
-    display: flex;
-    flex-direction: row;
-    gap:5rem;
-}
-.contacs__work{
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
+           width: 220px;
+
 }
+
+.contacs__work{
+    display: flex;
+    flex-direction: row;
+        justify-content: space-between;
+}
+
 .contacts__map{
     width: 680px;
     height: 468px;

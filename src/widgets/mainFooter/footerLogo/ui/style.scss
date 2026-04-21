@@ -47,7 +47,9 @@
       
   @media(min-width:#{$br-desktop}px){
     .footer-logo {
-  
-      margin: 3rem 0 5rem 0rem;
-    }
+      justify-content: space-between;
+      margin: 3rem 0 0rem 0rem;
+      align-self: center;
+      gap:3.8rem;
+          }
     }

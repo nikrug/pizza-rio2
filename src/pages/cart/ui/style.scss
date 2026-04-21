@@ -33,6 +33,7 @@
         color:$gray-subtitle;
     }
 }
+
 .cart__customButton{
     padding: 14px 34px;
     display: flex;
@@ -44,6 +45,10 @@
     justify-content: center;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+}
+
+.invisible{
+    display: none;
 }
 
 .cart__customButton:hover{
@@ -78,7 +83,10 @@
     border-radius: 0px;
     height: fit-content;
     gap: 1rem;
-       width: 100%;
+    width: 100%;
+    width: calc(100% + 35px);
+    margin: 0 0 0 -1rem;
+    padding: 1rem;
     .cart__adres-street{
         display: inline-flex;
         gap:1rem;

@@ -42,7 +42,7 @@
 
 .popup-delete {
   position: absolute;
-  z-index: 1;
+  z-index: $ui-index-1;
   background-color: $pure-white;
   border-radius: 10px;
   text-align: center;

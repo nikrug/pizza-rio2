@@ -50,7 +50,7 @@
 }
 
 .swiper {
-    width: 90%;
+    width: 93%;
     border-radius: 10px;
 }
 .carrer{
@@ -179,17 +179,18 @@
   display:none;
 }
 
-
-.swiper-button-next,
-.swiper-button-prev {
-  display: none;
+.swiper-button-container{
+  display: flex;
+  flex-direction: row;
 }
-
-.swiper-button-next,
-.swiper-button-prev {
-  display: none;
+.swiper-button-next-career::after, .swiper-button-next-career::after {
+  font-family: swiper-icons;
+  font-size: 0;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
 }
-
 @media(min-width:780px){
   .carrer__head-hunter-text-block{
   display: flex;
@@ -252,27 +253,25 @@
   transform: rotate(10deg);
 }
 
-.swiper-button-prev {
+.swiper-button-prev-career {
   background-color: $pure-white;
   border-radius: 30px;
   position: relative;
-  bottom: 300px;
-  left: -640px;
+  display: none;
   width: 48px; /* Ширина кнопок */
   height: 48px; /* Высота кнопок */
-  z-index: 10; /* Обеспечение правильного наложения */
+  z-index: $ui-index-4; /* Обеспечение правильного наложения */
   background-image: url(/images/menu-item/arrow-left.svg);
   background-repeat: no-repeat;
 }
-.swiper-button-next {
+.swiper-button-next-career {
   background-color: $pure-white;
   position: relative;
-  bottom: 325px;
-  left: 640px;
+  display: none;
   border-radius: 30px;
   width: 48px; /* Ширина кнопок */
   height: 48px; /* Высота кнопок */
-  z-index: 10; /* Обеспечение правильного наложения */
+  z-index: $ui-index-4; /* Обеспечение правильного наложения */
   background-image: url(/images/menu-item/arrow-right.svg);
   background-repeat: no-repeat;
 }
@@ -285,7 +284,7 @@
 }
 }
 
-@media(min-width:1200px){
+@media(min-width:1280px){
 .popup-content {
         background: $pure-white;
         background-image: none;
@@ -311,33 +310,12 @@
   background-color: $pure-white;
   border-radius: 20px;
 }
-.swiper-button-prev {
-  background-color: $pure-white;
-  border-radius: 30px;
-  width: 48px; /* Ширина кнопок */
-  height: 48px; /* Высота кнопок */
-  z-index: 10; /* Обеспечение правильного наложения */
-  background-image: url(/images/menu-item/arrow-left.svg);
-  background-repeat: no-repeat;
-  background-position: center; /* Центрирование изображения */
-  background-size: 24px 24px; /* Вы можете изменить размер изображения, если необходимо */
-}
+
 .swiper-paggination{
   position: absolute;
   top: 10px;
 }
-.swiper-button-next {
-  display: flex;
-  background-color: $pure-white;
-  border-radius: 30px;
-  width: 48px; /* Ширина кнопок */
-  height: 48px; /* Высота кнопок */
-  z-index: 10; /* Обеспечение правильного наложения */
-  background-image: url(/images/menu-item/arrow-right.svg);
-  background-repeat: no-repeat;
-  background-position: center; /* Центрирование изображения */
-  background-size: 24px 24px; /* Вы можете изменить размер изображения, если необходимо */
-}
+
 .slider-card-info{
     overflow: hidden;
   border-radius: 10px;
@@ -346,7 +324,7 @@
 }
 
 .swiper{
-    width: 1420px;
+    width: 100%;
     border-radius: 10px;
     height: 590px;
     justify-items: center;
@@ -371,71 +349,61 @@
   font-size: 28px;
   max-width: 600px;
 }
-.swiper-button-next{
+.swiper-button-next-career{
   display: flex;
   background-color: $pure-white;
   border-radius: 30px;
   width: 48px; /* Ширина кнопок */
-  top: -325px;
+  //top: -342px;
+  //left: 11px;
   height: 48px; /* Высота кнопок */
-  z-index: 10; /* Обеспечение правильного наложения */
+  z-index: $ui-index-4; /* Обеспечение правильного наложения */
   font-weight: 700;
   transition: background-color 0.3s ease;
   background-image: url(/images/menu-item/arrow-right.svg);
   background-repeat: no-repeat;
+  background-position: center; /* Центрирование изображения */
+  cursor:pointer;
 }
-.swiper-button-prev{
+.swiper-button-prev-career{
   display: flex;
   background-color: $pure-white;
   border-radius: 30px;
-  top: -300px;
+  //top: -300px;
+  //left: 70px;
   width: 48px; /* Ширина кнопок */
   height: 48px; /* Высота кнопок */
-  z-index: 10; /* Обеспечение правильного наложения */
+  z-index: $ui-index-4; /* Обеспечение правильного наложения */
   font-weight: 700;
   transition: background-color 0.3s ease;
   background-image: url(/images/menu-item/arrow-left.svg);
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
+  background-position: center; /* Центрирование изображения */
+  cursor:pointer;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
+.swiper-button-container-career{
+  position: relative;
+  bottom: 350px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 1200px;
+  max-width: calc(99% - 130px);
+
+}
+
+.swiper-button-next-career:hover,
+ {
   background-color: $orange;
 }
-
+.swiper-button-prev-career:hover{
+   background-color: $orange;
+} 
 }
 @media(max-width:1244px){
 
-.swiper-button-prev,.swiper-button-next {
-
-  display: none;
-}
 
 
-}
-@media(max-width:1519px){
 
-.swiper-button-prev {
-  bottom: 300px;
-  left: -510px;
-
-}
-
-.swiper-button-next {
-  bottom: 325px;
-  left: 510px;
-
-}
-}
-@media(min-width:1520px){
-
-.swiper-button-prev {
-  bottom: 300px;
-  left: -640px;
-}
-
-.swiper-button-next {
-  bottom: 325px;
-  left: 640px;
-}
 }
