@@ -23,6 +23,7 @@
                             inputPlaceholder="Введите номер телефона"
                             inputTextLabel="Ваш телефон"
                             isPhoneInput 
+                            :class="{ 'input-error': phoneError }"
                         >
                             <div v-if="phoneError" class="error-message">{{ phoneError }}</div>
                         </inputText>
@@ -154,8 +155,8 @@ const validateEmail = () => {
 };
 
 const validatePhone = () => {
-    const phonePattern = /^\+?[1-9]\d{1,14}$/; // Пример простого регулярного выражения для проверки телефону
-    phoneError.value = phonePattern.test(phone.value) ? '' : 'Введите корректный номер телефона.';
+    const phonePattern = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/; 
+    phoneError.value = phonePattern.test(phoneNumber.value) ? '' : 'Введите корректный номер телефона.';
 };
 
 const validateNewPassword = () => {
