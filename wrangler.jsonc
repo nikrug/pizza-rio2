@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "misty-thunder-15b3",
+  "compatibility_date": "2026-05-05",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "src"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
