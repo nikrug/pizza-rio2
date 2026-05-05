@@ -22,7 +22,32 @@
       "quantity": 0
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "lO_ewOZMhXQ",
+      "count": 1,
+      "price": 545,
+      "label": "Дженнифер",
+      "imageSrc": "/images/menu-item/Jeniffer.jpg",
+      "weight": "690 г."
+    },
+    {
+      "id": "owBv2VhZLdE",
+      "count": 1,
+      "price": 545,
+      "label": "Арканзас",
+      "imageSrc": "/images/menu-item/Archcansas.png",
+      "weight": "690 г."
+    },
+    {
+      "id": "SgD31k7msmw",
+      "count": 1,
+      "price": 545,
+      "label": "Арканзас",
+      "imageSrc": "/images/menu-item/Archcansas.png",
+      "weight": "690 г."
+    }
+  ],
   "users": [
     {
       "id": "cad7",
@@ -1044,5 +1069,6 @@
         "price": 187
       }
     ]
-  }
+  },
+  "$schema": "./node_modules/json-server/schema.json"
 }

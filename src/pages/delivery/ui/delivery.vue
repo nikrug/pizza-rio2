@@ -27,20 +27,22 @@
                 <div class="delivery__text-label ">Минимальная стоимость заказа</div>
                 <div class="delivery__text">По городу от 400 руб.</div>
             </div>
-            <div class="delivery__item-top">
-                <div class="delivery__text-label ">Принимаем к оплате банковские карты</div>
-                <div class="delivery__img-block">
-                    <img class="delivery__img1" src="/images/delivery/mir 1.svg" alt="Picky Picks">
-                    <img class="delivery__img2" src="/images/delivery/Visa_Inc._logo 1.svg" alt="Picky Picks">
-                    <img class="delivery__img3" src="/images/delivery/Mastercard_Logo_2016 1.svg" alt="Picky Picks">
+        </div>
+        <div class="delivery__item-topbottom">
+                <div class="delivery__item-top">
+                    <div class="delivery__text-label ">Принимаем к оплате банковские карты</div>
+                    <div class="delivery__img-block">
+                        <img class="delivery__img1" src="/images/delivery/mir 1.svg" alt="Picky Picks">
+                        <img class="delivery__img2" src="/images/delivery/Visa_Inc._logo 1.svg" alt="Picky Picks">
+                        <img class="delivery__img3" src="/images/delivery/Mastercard_Logo_2016 1.svg" alt="Picky Picks">
+                    </div>
+                </div>
+                <div class="delivery__text-label delivery__text-white">
+                    Все блюда, выбранные Вами, готовятся только после принятия заказа из свежих и качественных продуктов и исключительно для Вас. 
+                    Продукция доставляется в одноразовой индивидуальной упаковке. 
+                    На каждой упаковке указана дата, время изготовления, состав продукции, калории, условия и срок хранения.
                 </div>
             </div>
-            <div class="delivery__text-label delivery__text-white">
-                Все блюда, выбранные Вами, готовятся только после принятия заказа из свежих и качественных продуктов и исключительно для Вас. 
-                Продукция доставляется в одноразовой индивидуальной упаковке. 
-                На каждой упаковке указана дата, время изготовления, состав продукции, калории, условия и срок хранения.
-            </div>
-        </div>
 
         <div class="delivery__label">Способы заказа</div>
         <div class="delivery__way-order">
@@ -69,19 +71,20 @@
                 <div class="delivery__item">
                     <div class="delivery__text-label">Доставка</div>
                     <div class="delivery__pay-label">
-                    Доставка на дом или в офис по городу Томску осуществляется бесплатно и в течение 1 часа. 
-                    В зависимости от ситуации на дорогах и уровня загруженности производства, время доставки может измениться. 
-                    По районам доставки существуют ограничения, 
-                    при заказе уточняйте у диспетчера.
+                    Безопасность платежей обеспечивается с помощью Банка-эквайера (ПАО "МТС-БАНК"),
+                    функционирующего на основе современных протоколов и технологий,
+                    разработанных платежными системами MirAccept,
+                    Visa International и MasterCard Worldwide (3D-Secure: MirAccept, Verified by VISA, MasterCard SecureCode).
+                    Обработка полученных конфиденциальных данных Держателя карты производитсяв процессинговом центре Банка-эквайера,сертифицированного по стандарту PCI DSS.
                     </div>
                 </div>
 
                 <div class="delivery__item">
                     <div class="delivery__text-label">Оплата</div>
                     <div class="delivery__pay-label">
-                        Оплата производится при получении заказа наличными, либо банковской картой, в рублях.
-                        Возможна online оплата на сайте. При получении заказа Вам выдается товарная накладная с расшифровкой вашего заказа, 
-                        фискальный чек приходит в SMS сообщении на телефон в течение суток.
+                        Безопасность передаваемой информации обеспечиваетсяс помощью современных протоколов обеспечения безопасности в Интернет.
+                        К оплате принимаются банковские карты платежных систем МИР, Visa и MasterCard.
+                         Если карта подключенак системе безопасных платежей 3D-Secure (можно уточнитьв банке, выдавшем карту), то Держатель карты подтверждает каждую операцию по своей карте специальным одноразовым паролем.
                     </div>
                 </div>
             </div>
@@ -143,14 +146,6 @@
 
 <style lang="scss" scoped>
 @import './style.scss';
-.delivery__img1{
-    width: calc(30%);
-}
-.delivery__img2{
-    width: calc(30%);
-}
-.delivery__img3{
-    width: calc(15%);
-}
+
 </style>
 
